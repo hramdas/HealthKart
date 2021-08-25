@@ -1,1 +1,1 @@
-We are cloaning https://www.healthkart.com/ 
+We are cloning https://www.healthkart.com/ 
