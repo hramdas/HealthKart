@@ -104,6 +104,10 @@ function showProteins() {
         let quick_btn = document.createElement('button')
         quick_btn.innerText = '🗲Quick Buy';
 
+        quick_btn.onclick = function () {
+            location.href = "/address.html";
+         };
+
         price_quick.append(p_price, quick_btn);
         div.append(p_image, p_name, p_rating, price_quick);
 
