@@ -1,3 +1,192 @@
+/* pooja css -1sr */
+*{
+margin: 0;
+padding: 0;
+font-family: Roboto,sans-serif;
+}
+ul li{
+list-style: none;
+}
+.clear{
+clear: both;
+}
+#navbar{
+width: 100%;
+box-sizing: border-box;
+height: 87px;
+background-color:white ;
+border-bottom: 1px solid #d3cfcf;
+}
+#navbar .container{
+padding:4px 180px;
+display: flex;
+}
+.logo img{
+width: 197px;
+height: 80px;
+}
+form{
+ margin: 20px 10px 30px 28px;
+}
+#search{
+    border: 1px solid #a0a0a0;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    color: #3c3c3c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .55px;
+    line-height: 19px;
+    margin: 0;
+    padding: 10px 10px 10px 39px;
+    height: 15px;
+    width: 350px;
+}
+#searchIcon{
+position: absolute;
+    margin-left: 15px;
+    top: 33px;
+}
+.margin{
+margin: 30px 10px;
+display: flex;
+font-size: 13px;
+cursor: pointer;
+}
+.borderLine{
+border: 1px solid rgb(112, 109, 109);
+height: 15px;
+margin: 28px 0px;
+}
+
+.margin:hover{
+ color: #00a0a0
+}
+.fa-user-o{
+margin: 0px 3px;
+}
+
+.arrow{
+font-weight: lighter;
+width: 3px;
+color: rgb(112, 109, 109);
+margin: 0px 10px;
+}
+.arrow:hover{
+ color: #00a0a0
+
+}
+#cartItem {
+margin: 18px 15px;
+font-size: 30px !important;
+color: rgb(112, 109, 109);
+}
+/* aftar navbar categories part */
+#categories{
+top:0;
+background-color:white ;
+position: sticky;
+width: 100%;
+border-bottom: 1px solid #d3cfcf;
+display: flex;
+z-index: 999999;
+}
+#categories .container{
+display: flex;
+margin:10px 190px;
+}
+#catLinks {
+display: flex;
+
+}
+#catLinks li {
+margin:5px 18px;
+font-size: 13.5px;
+}
+#catLinks   ul li{
+position: relative;
+}
+
+#catLinks li:hover{
+ color: #00a0a0;
+cursor: pointer;
+}
+.dropdown{
+margin-top: 1rem;
+text-transform: none;
+display: none;
+position: absolute;
+width: 250px;
+height: 300px;
+background-color: whitesmoke;
+}
+#catLinks:hover .dropdown{
+display: block;
+}
+#catLinks:hover .dropdown li{
+margin: 10px;
+}
+.rightSideContaint{
+margin: 0px 80px;
+}
+.rightPart{
+display: flex;
+margin: 0px 10px;
+font-size: 13.5px;
+}
+.rightPart .consult{
+margin: 0px 10px;
+display: flex;
+background-color: #d8faf9;
+padding: 5px;
+border-radius: 4px;
+font-weight: 700;
+
+}
+.rightPart .consult i{
+margin: 1px 5px;
+}
+.rightPart .findStore {
+margin: 0px 10px;
+display: flex;
+background-color: #e3e3e3;
+padding: 5px;
+border-radius: 4px;
+}
+.rightPart .findStore i{
+margin: 1px 5px;
+}
+
+/* CARSOUEL PART */
+#carousel{
+width: 100%;
+background-color: #f7f7f7;;
+}
+#carousel img{
+margin: 0px 50px;
+
+}
+#carousel .fa-chevron-right{
+position: absolute;
+margin: 170px 94rem ;
+font-size: 25px !important;
+cursor: pointer;
+}
+
+#carousel .fa-chevron-left{
+position: absolute;
+margin: 170px 80px ;
+font-size: 25px !important;
+cursor: pointer;
+}
+
+
+
+
+
+
+
+/* bhargave 1st file */
 #data{
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
@@ -11,8 +200,8 @@
      background-color: white;
      border-radius: 2%;
 
-    
+
  }
- img{
+ #data img{
      width: 40%;
  }
