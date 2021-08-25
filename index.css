@@ -4,8 +4,16 @@ margin: 0;
 padding: 0;
 font-family: Roboto,sans-serif;
 }
+body{
+width: 100vw;
+background-color: #f7f7f7;;
+
+}
 ul li{
 list-style: none;
+}
+a{
+text-decoration: none;
 }
 .clear{
 clear: both;
@@ -18,7 +26,7 @@ background-color:white ;
 border-bottom: 1px solid #d3cfcf;
 }
 #navbar .container{
-padding:4px 180px;
+padding:4px 200px;
 display: flex;
 }
 .logo img{
@@ -53,6 +61,7 @@ display: flex;
 font-size: 13px;
 cursor: pointer;
 }
+
 .borderLine{
 border: 1px solid rgb(112, 109, 109);
 height: 15px;
@@ -60,7 +69,7 @@ margin: 28px 0px;
 }
 
 .margin:hover{
- color: #00a0a0
+ color: #00a0a0;
 }
 .fa-user-o{
 margin: 0px 3px;
@@ -74,57 +83,112 @@ margin: 0px 10px;
 }
 .arrow:hover{
  color: #00a0a0
-
+}
+.userBox {
+display: flex;
+}
+.userLogin{
+z-index: 9999999;
+position: absolute;
+width: 330px;
+height: 125px;
+background-color: whitesmoke;
+display: none;
+margin-top:30px;
+right: 18rem;
+}
+.userLogin > button{
+display: block;
+padding: 14px;
+width: 310px;
+margin: 10px 10px;
+cursor: pointer;
+font-size: 13px;
+}
+.userLogin > button:nth-child(1){
+background-color: #00afae;
+border: 1px solid #00c2c1;
+}
+.margin:hover > .userLogin {
+display: block;
 }
 #cartItem {
-margin: 18px 15px;
-font-size: 30px !important;
+margin: 26px 15px;
 color: rgb(112, 109, 109);
+width: 30px !important;
+position: absolute;
 }
+#cartOnNum{
+position: relative;
+margin: 35px 35px;
+color: rgb(112, 109, 109);
+font-size: 12px;
+width: 18px;
+height: 18px;
+border: 1px solid white;
+border-radius: 50px;
+background-color: chocolate;
+color: white;
+text-align: center;
+padding-top: 2px;
+}
+
+
 /* aftar navbar categories part */
-#categories{
+
+ #categories{
 top:0;
-background-color:white ;
 position: sticky;
-width: 100%;
+background-color:white ;
+width: 100vw;
 border-bottom: 1px solid #d3cfcf;
 display: flex;
 z-index: 999999;
 }
 #categories .container{
 display: flex;
-margin:10px 190px;
+margin:10px 210px;
 }
 #catLinks {
 display: flex;
 
 }
+
 #catLinks li {
 margin:5px 18px;
 font-size: 13.5px;
 }
-#catLinks   ul li{
-position: relative;
-}
 
+#catLinks  li a{
+color: black;
+}
 #catLinks li:hover{
  color: #00a0a0;
 cursor: pointer;
 }
-.dropdown{
-margin-top: 1rem;
-text-transform: none;
-display: none;
+
+#catLinks li .dropdown{
+top: 2rem;
 position: absolute;
 width: 250px;
-height: 300px;
+height: 200px;
 background-color: whitesmoke;
 }
-#catLinks:hover .dropdown{
+li .dropdown{
+margin-top: 10px;
+display: none;
+}
+li .dropdown li{
+display: block;
+float: none;
+cursor: pointer;
+}
+#catLinks li:hover .dropdown{
 display: block;
 }
 #catLinks:hover .dropdown li{
 margin: 10px;
+font-size: 14px;
 }
 .rightSideContaint{
 margin: 0px 80px;
@@ -163,7 +227,7 @@ width: 100%;
 background-color: #f7f7f7;;
 }
 #carousel img{
-margin: 0px 50px;
+margin: 0px 42px;
 
 }
 #carousel .fa-chevron-right{
@@ -187,11 +251,17 @@ cursor: pointer;
 
 
 /* bhargave 1st file */
+/* Flash Sale Part */
+#FlashSale{
+width: 100vw;
+}
+#FlashSale .container{
+margin:10px 210px;
+}
 #data{
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     gap: 5%;
-    background-color: aliceblue;
  }
  #data div{
      display: flex;
@@ -205,3 +275,88 @@ cursor: pointer;
  #data img{
      width: 40%;
  }
+
+
+/* Srinivs 1st file*/
+/* What are you looking for? */
+
+      .h1{
+          font-weight: 900;
+          width: 80%;
+          margin: auto;
+          color: black;
+          margin-bottom: 30px;
+      }
+      #grid {
+          width: 100vw;
+          display:grid;
+          grid-gap:30px;
+          grid-template-columns:250px 250px 250px 250px;
+          height: 200px;
+          margin-left: 150px;
+          margin-bottom: 30px;
+
+      }
+      #grid  div {
+        border-radius: 10px;
+        background-color:whitesmoke;
+
+      }
+      #grid_box img {
+           max-width: 40%;
+           float: right;
+
+       }
+       #grid_box > h3 {
+           float:left;
+           line-height: 21px;
+           clear: both;
+           margin-left: 10px;
+       }
+       #grid_box a {
+            float:left;
+            font-family: sans-serif;
+            font-weight: 800;
+            margin-bottom: 20px;
+            clear: both;
+       }
+
+       #cl{
+           clear: both;
+           margin-bottom: 220px;
+       }
+       #sports {
+        width:72%;
+        margin-left: 150px;
+        background-color:white;
+        height: 320px;
+        margin-bottom: 50px;
+
+       }
+      .second {
+        width:97%;
+        background-color:whitesmoke;
+        padding-left: 30px;
+        border-radius: 10px;
+        padding-bottom: 1px;
+        padding-top: 1px;
+        margin-bottom: 10px;
+      }
+      #pop {
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px 200px;
+        width:100%;
+        grid-gap: 20px;
+        background-color:white;
+        float: left;
+        margin-right: 50px;
+
+
+      } #pop div {
+        background-color:whitesmoke;
+        padding-left: 10px;
+        padding-top: 10px;
+        border-radius: 10px;
+        text-align: center;
+
+      }
