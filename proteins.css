@@ -1,0 +1,96 @@
+.cont{
+    background: #f7f5f5;
+    padding: 5px;
+}
+#container {
+    /* max-width: 1000px; */
+    margin: auto 5%;
+    display: grid;
+    grid-template-columns: 20% 75%;
+    grid-gap: 5%;
+    
+}
+#offers_filt{
+    height : 200px;
+    overflow-y: scroll;
+    border: 1px solid rgb(184, 184, 184);
+    background: white;
+
+    padding: 5px;
+}
+
+#simple-box {
+    border: 1px solid rgb(184, 184, 184);
+    padding: 5px;
+    background-color: white;
+}
+#filters{
+    display : grid;
+    grid-gap : 5px;
+}
+#grid-row {
+    display : grid;
+    grid-template-columns: 50% 40%;
+    grid-gap: 10%;
+}
+
+#float-left{
+    float: left;
+   
+}
+#float-right{
+    float: right;
+}
+
+#discount-filter{
+    clear : left;
+}
+
+#items {
+    display : grid;
+    grid-template-columns :32% 32% 32%;
+    grid-gap: 3%;
+    font-family: roboto, arial, helvetica, sans-serif;
+    font-weight: bold;
+ 
+    
+}
+#items > div{
+    background-color: white;
+    padding: 10px;
+    display : grid;
+}
+
+img{
+    width: 100%;
+}
+#items > div >div {   /*price_quick*/
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 8%;
+    /* margin: auto auto; */
+}
+#items > div >div > span {
+   
+    font-size: 18px;
+}
+#items > div > span {  /* */
+
+    font-size: 12px
+   
+}
+#items > div > b {   /* Product name */
+  
+    font-size: 15px;
+   
+}
+
+#items button{
+    border: 1px solid  rgb(0, 148, 148);
+    border-radius: 4px;
+    height: 30px;
+    font-size: 12px;
+    font-weight:600;
+    background-color: white;
+    color: rgb(0, 148, 148);
+}
