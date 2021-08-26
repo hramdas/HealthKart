@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+       text-align: center;
+    }
+
+     form{
+        display: grid;
+        max-width: 300px;
+        grid-gap: 9%;
+        margin: auto auto;
+    }
+    input{
+            font-size: 18px;
+            padding: 5px;
+    }
+    #btn{
+        background-color: green;
+        color: white;
+        border-radius: 7px;
+    }
+    </style>
+</head>
+<body>
+
+    <h2>Inter card details</h2> 
+    <form action="/success.html">
+        <input type="text" placeholder="Name on card" required>
+        <input type="number" placeholder="Card number" required>
+        <input type="date" placeholder="Card date" required>
+        <input type="cvv" placeholder="CVV" required>
+        <input id="btn" type="submit" value="Place Order" id >
+    </form>
+    
+</body>
+</html>
