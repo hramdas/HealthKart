@@ -41,13 +41,17 @@ box-sizing: border-box;
 height: 87px;
 background-color:white ;
 border-bottom: 1px solid #d3cfcf;
+
+/* border:1px solid red; */
 }
 #navbar .container{
-margin:0% 13%;
+width: 85%;
+margin: auto;
 display: flex;
+/* border:1px solid red; */
 }
 .logo img{
-width: 197px;
+width: 220px;
 height: 80px;
 }
 form{
@@ -65,7 +69,7 @@ form{
     margin: 0;
     padding: 10px 10px 10px 39px;
     height: 15px;
-    width: 300px;
+    width: 350px;
 }
 #searchIcon{
 position: absolute;
@@ -75,7 +79,7 @@ position: absolute;
 .margin{
 margin: 30px 10px;
 display: flex;
-font-size: 13px;
+font-size: 14px;
 cursor: pointer;
 }
 
@@ -182,26 +186,36 @@ display: block;
 /* aftar navbar categories part */
 
  #categories{
+/* margin-top: 10px; */
 top:0;
 position: sticky;
-background-color:white ;
-width: 100%;
+background-color:white;
 border-bottom: 1px solid #d3cfcf;
 display: flex;
 z-index: 999999;
 }
-#categories .container{
-display: flex;
-margin:10px 210px;
-}
-#catLinks {
-display: flex;
 
+#categories .container{
+ /* border: 1px solid green; */
+width: 73%;
+height: 50px;
+
+display: flex;
+margin-left: 155px;
+}
+
+#catLinks {
+/* border: 1px solid green; */
+display: flex;
+justify-content: space-between;
+width: 100%;
 }
 
 #catLinks li {
-margin:5px 18px;
-font-size: 13.5px;
+margin:5px;
+font-size: 14px;
+padding-left: 10px;
+margin-top: 15px;
 }
 
 #catLinks  li a{
@@ -235,59 +249,67 @@ display: block;
 margin: 10px;
 font-size: 14px;
 }
-.rightSideContaint{
-margin: 0px 80px;
-}
+
 .rightPart{
+/* border:1px solid red; */
 display: flex;
-margin: 0px 10px;
 font-size: 13.5px;
-}
-.rightPart .consult{
-margin: 0px 10px;
-display: flex;
-background-color: #d8faf9;
-padding: 5px;
-border-radius: 4px;
-font-weight: 700;
+width: 260px;
+margin-left: 100px;
+margin-top: 5px;
 
 }
-.rightPart .consult i{
-margin: 1px 5px;
+.rightPart .consult{
+width: 100px;
+height:30px ;
+display: flex;
+background-color: #d8faf9;
+border-radius: 4px;
+margin-left: 40px;
 }
+.rightPart .consult p{
+    text-align: center;
+    margin-top: 7px;
+    font-weight: 900;
+
+}
+
+.rightPart .consult i{
+margin: 8px 7px;
+
+}
+
 .rightPart .findStore {
-margin: 0px 10px;
+width: 100px;
+height:30px ;
 display: flex;
 background-color: #e3e3e3;
-padding: 5px;
 border-radius: 4px;
+margin-left: 20px;
+}
+.rightPart .findStore p{
+    text-align: center;
+    margin-top: 7px;
+    font-weight: 600;
+
+
 }
 .rightPart .findStore i{
-margin: 1px 5px;
+    margin: 8px 7px;
 }
 
 /* CARSOUEL PART */
 #carousel{
-width: 100%;
-background-color: #f7f7f7;;
+width: 97%;
+margin: auto;
+/* background-color: #e3e3e3; */
 }
 #carousel img{
-margin: 0px 42px;
-width: 92%;
-}
-/* #carousel .fa-chevron-right{
-position: absolute;
-margin: 170px 90rem ;
-font-size: 25px !important;
-cursor: pointer;
+width: 100%;
+margin: auto;
 }
 
-#carousel .fa-chevron-left{
-position: absolute;
-margin: 170px 80px ;
-font-size: 25px !important;
-cursor: pointer;
-} */
+
 
 /* Pop up */
 
@@ -295,35 +317,99 @@ cursor: pointer;
 
 
 
-/* bhargave 1st file */
+/* bhargav 1st file */
 /* Flash Sale Part */
 #FlashSale{
+
+border: 1px solid grey;
+border-radius: 4px;
+width: 80%;
+margin: 20px auto;
+/* padding: 20px; */
 }
 #FlashSale .container{
-margin:3% 20%;
+/* border: 1px solid red; */
+background-color: white;
+/* margin: 20px 0px; */
+/* margin-top: 5px; */
+/* margin-left: 30px; */
+padding-left: 20px;
+height: 65px;
+display: flex;
+}
+#FlashSale .container img{
+/* border: 1px solid red; */
+height: 25px;
+margin: 8px 0;
+margin-left:15px;
+margin-top: 17px;
+padding-left: 5px;
+}
+
+#FlashSale .container p:nth-child(2){
+/* border: 1px solid red;  */
+font-size: 23px;
+font-weight: 600;
+padding: 15px 15px;
+margin-right: 20px;
+
+}
+
+#FlashSale .container p:nth-child(3){
+border: 1px solid #00c2c1;
+background-color: #00c2c1;
+padding: 10px;
+font-size: 16px;
+border-radius: 3px;
+margin: 11px;
+margin-left: 840px;
+}
+
+#FlashSale hr{
+    width: 90%;
+    margin: auto;
+    border: 0.001em solid #bababa;
+    border-radius: 0.01em;
+}
+
+#FlashSale .container a{
+color: #f7f7f7;
+padding:  20px;
 }
 #data{
+    width: 96%;
+        /* border: 1px solid red; */
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    gap: 5%;
+    grid-template-columns: 25% 25% 25% 25%;
+    /* gap: 0.5%; */
+    margin: auto;
+    
+     
+
  }
  #data div{
+/* border: 1px solid red; */
+margin: 10px;
      display: flex;
      flex-direction: column;
      align-items: center;
      background-color: white;
-     border-radius: 2%;
+     border-radius: 8px;
+     height: 370px;
  }
  #data img{
-     width: 100%;
+     width: 60%;
+     height: 150px;
+     
  }
 #data button{
-width: 20%;
+width: 30%;
+
 }
 
 
 /* Srinivs 1st file*/
-/* What are you looking for? */
+/* /* What are you looking for? */
 
 
       #grid {
