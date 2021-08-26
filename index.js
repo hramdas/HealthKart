@@ -124,6 +124,15 @@ window.onload = slidingShows;
 
  
     medProduct();
+
+
+
+  // srinivas footer code
+
+  function function1() {
+    alert('subscribed successfully')
+}
+
     if(localStorage.getItem("cart")===null){
         localStorage.setItem("cart",JSON.stringify([]));
     }
@@ -132,3 +141,4 @@ window.onload = slidingShows;
          cart_data.push(p);
          localStorage.setItem("cart", JSON.stringify(cart_data));
     }
+
