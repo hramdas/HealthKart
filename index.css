@@ -268,26 +268,16 @@ margin: 1px 5px;
 
 /* CARSOUEL PART */
 #carousel{
-width: 100%;
-background-color: #f7f7f7;;
+width: 90%;
+margin: auto;
+background-color: #e3e3e3;
 }
 #carousel img{
-margin: 0px 42px;
-width: 92%;
-}
-/* #carousel .fa-chevron-right{
-position: absolute;
-margin: 170px 90rem ;
-font-size: 25px !important;
-cursor: pointer;
+width: 100%;
+margin: auto;
 }
 
-#carousel .fa-chevron-left{
-position: absolute;
-margin: 170px 80px ;
-font-size: 25px !important;
-cursor: pointer;
-} */
+
 
 /* Pop up */
 
@@ -295,19 +285,54 @@ cursor: pointer;
 
 
 
-/* bhargave 1st file */
+/* bhargav 1st file */
 /* Flash Sale Part */
-/* #FlashSale{
+#FlashSale{
+/* border: 1px solid red; */
+width: 80%;
+margin: 20px auto;
+padding: 20px;
 }
 #FlashSale .container{
-margin:3% 20%;
+/* border: 1px solid red; */
+background-color: white;
+margin: 10px 0px;
+display: flex;
+
+}
+#FlashSale .container img{
+border: 1px solid red;
+
+}
+#FlashSale .container p:nth-child(2){
+font-size: 25px;
+font-weight: 600;
+padding: 10px 15px;
+
+}
+
+#FlashSale .container p:nth-child(3){
+border: 1px solid #00c2c1;
+background-color: #00c2c1;
+padding: 10px;
+font-size: 13px;
+border-radius: 3px;
+margin: 10px;
+}
+#FlashSale .container a{
+color: #f7f7f7;
+padding:  20px;
 }
 #data{
+/* border: 1px solid red; */
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     gap: 5%;
  }
  #data div{
+/* border: 1px solid red; */
+margin: 10px;
+
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -323,7 +348,7 @@ width: 20%;
 
 
 /* Srinivs 1st file*/
-/* What are you looking for? */
+/* /* What are you looking for? */
 
 
       #grid {
