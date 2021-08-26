@@ -1,32 +1,49 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+
 /* pooja css -1sr */
 *{
 margin: 0;
 padding: 0;
-font-family: Roboto,sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 body{
-width: 100vw;
-background-color: #f7f7f7;;
-
+/* width: 100%; */
+background-color: #f7f7f7;
 }
 ul li{
 list-style: none;
+font-family: 'Source Sans Pro', sans-serif;
+color: #3c3c3c;
 }
 a{
 text-decoration: none;
+}
+ h1{
+font-family: 'Roboto', sans-serif;
+}
+h2{
+font-family: 'Roboto', sans-serif;
+}
+p{
+font-family: 'Roboto', sans-serif;
+    color: #3c3c3c;
+
+
 }
 .clear{
 clear: both;
 }
 #navbar{
-width: 100%;
+/* width: 100%; */
 box-sizing: border-box;
 height: 87px;
 background-color:white ;
 border-bottom: 1px solid #d3cfcf;
 }
 #navbar .container{
-padding:4px 200px;
+margin:0% 13%;
 display: flex;
 }
 .logo img{
@@ -48,12 +65,12 @@ form{
     margin: 0;
     padding: 10px 10px 10px 39px;
     height: 15px;
-    width: 350px;
+    width: 300px;
 }
 #searchIcon{
 position: absolute;
     margin-left: 15px;
-    top: 33px;
+    top: 30px;
 }
 .margin{
 margin: 30px 10px;
@@ -95,7 +112,7 @@ height: 125px;
 background-color: whitesmoke;
 display: none;
 margin-top:30px;
-right: 18rem;
+right: 21rem;
 }
 .userLogin > button{
 display: block;
@@ -117,6 +134,7 @@ margin: 26px 15px;
 color: rgb(112, 109, 109);
 width: 30px !important;
 position: absolute;
+cursor: pointer;
 }
 #cartOnNum{
 position: relative;
@@ -131,16 +149,43 @@ background-color: chocolate;
 color: white;
 text-align: center;
 padding-top: 2px;
+cursor: pointer;
+
 }
-
-
+.cartShowsItem{
+display: flex;
+}
+.cartAdd{
+background-color: whitesmoke;
+z-index: 9999999;
+width: 280px;
+margin-top:70px;
+right: 25rem;
+padding: 10px;
+display: none;
+cursor: pointer;
+}
+.cartAdd p{
+text-align: center;
+margin: 5px 15px;
+}
+.cartAdd > button{
+padding: 14px;
+width: 260px;
+margin: 10px 10px;
+cursor: pointer;
+font-size: 13px;
+}
+ #cartItem:hover > .cartAdd {
+display: block;
+}
 /* aftar navbar categories part */
 
  #categories{
 top:0;
 position: sticky;
 background-color:white ;
-width: 100vw;
+width: 100%;
 border-bottom: 1px solid #d3cfcf;
 display: flex;
 z-index: 999999;
@@ -228,11 +273,11 @@ background-color: #f7f7f7;;
 }
 #carousel img{
 margin: 0px 42px;
-
+width: 92%;
 }
-#carousel .fa-chevron-right{
+/* #carousel .fa-chevron-right{
 position: absolute;
-margin: 170px 94rem ;
+margin: 170px 90rem ;
 font-size: 25px !important;
 cursor: pointer;
 }
@@ -242,9 +287,9 @@ position: absolute;
 margin: 170px 80px ;
 font-size: 25px !important;
 cursor: pointer;
-}
+} */
 
-
+/* Pop up */
 
 
 
@@ -252,11 +297,10 @@ cursor: pointer;
 
 /* bhargave 1st file */
 /* Flash Sale Part */
-#FlashSale{
-width: 100vw;
+/* #FlashSale{
 }
 #FlashSale .container{
-margin:10px 210px;
+margin:3% 20%;
 }
 #data{
     display: grid;
@@ -269,33 +313,32 @@ margin:10px 210px;
      align-items: center;
      background-color: white;
      border-radius: 2%;
-
-
  }
  #data img{
-     width: 40%;
+     width: 100%;
  }
+#data button{
+width: 20%;
+}
 
 
 /* Srinivs 1st file*/
 /* What are you looking for? */
 
-      .h1{
-          font-weight: 900;
-          width: 80%;
-          margin: auto;
-          color: black;
-          margin-bottom: 30px;
-      }
+
       #grid {
-          width: 100vw;
           display:grid;
           grid-gap:30px;
           grid-template-columns:250px 250px 250px 250px;
           height: 200px;
-          margin-left: 150px;
           margin-bottom: 30px;
 
+      }
+  .h1{
+          font-weight: 900;
+          margin: auto;
+          color: black;
+          margin-bottom: 30px;
       }
       #grid  div {
         border-radius: 10px;
@@ -303,7 +346,6 @@ margin:10px 210px;
 
       }
       #grid_box img {
-           max-width: 40%;
            float: right;
 
        }
@@ -311,7 +353,6 @@ margin:10px 210px;
            float:left;
            line-height: 21px;
            clear: both;
-           margin-left: 10px;
        }
        #grid_box a {
             float:left;
@@ -326,8 +367,6 @@ margin:10px 210px;
            margin-bottom: 220px;
        }
        #sports {
-        width:72%;
-        margin-left: 150px;
         background-color:white;
         height: 320px;
         margin-bottom: 50px;
@@ -336,7 +375,6 @@ margin:10px 210px;
       .second {
         width:97%;
         background-color:whitesmoke;
-        padding-left: 30px;
         border-radius: 10px;
         padding-bottom: 1px;
         padding-top: 1px;
@@ -345,16 +383,13 @@ margin:10px 210px;
       #pop {
         display: grid;
         grid-template-columns: 200px 200px 200px 200px 200px;
-        width:100%;
         grid-gap: 20px;
         background-color:white;
         float: left;
-        margin-right: 50px;
 
 
       } #pop div {
         background-color:whitesmoke;
-        padding-left: 10px;
         padding-top: 10px;
         border-radius: 10px;
         text-align: center;
