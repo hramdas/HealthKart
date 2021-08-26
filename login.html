@@ -59,15 +59,28 @@
     }
 
     .rightSidePopUp .loginPage {
-        margin: 20px 5px;
+
+        margin: 30px 5px;
     }
 
     .rightSidePopUp .loginPage h1 {
         float: right;
-    }
 
+    }
+#timeBar{
+margin-right: 20px;
+cursor: pointer;
+}
+.userPanel{
+display: flex;
+ margin:  20px 35px;
+padding: 2px;
+
+}
+#signup{
+margin: 0px 20px;
+}
     .rightSidePopUp .loginPage h3 {
-        margin: 35px 10px;
         color: rgb(112, 109, 109);
         font-size: 20px;
     }
@@ -97,7 +110,7 @@
         color: #f7f7f7;
     }
 
-    .rightSidePopUp .loginPage a {
+    .rightSidePopUp .loginPage .passwordForget {
         margin: 10px 35px;
     }
 
@@ -168,15 +181,18 @@
             </div>
             <div class="rightSidePopUp">
                 <div class="loginPage">
-                    <h1>&times</h1>
-                    <h3>Login</h3>
+                    <h1 id="timeBar">&times</h1>
+                    <div class="userPanel">
+                        <h3>Login</h3>
+                        <h3 id="signup">Signup</h3>
+                        </div>
                     <form action="">
                         <label for="mobile">Mobile Number</label><br>
                         <input type="text" name="mobile" id="mobileNo" placeholder="Enter 10 digit no."><br><br>
                         <label for="password">Password</label><br>
                         <input type="password" name="password" id="password" placeholder="Enter Password"><br><br>
-                        <a href="#">Forget Password</a>
-                        <a href="#">Login Password</a><br>
+                        <a href="#" class="passwordForget">Forget Password</a>
+                        <a href="#" class="passwordForget">Login Password</a><br>
                         <button id="btn">Login</button>
                     </form>
                     <div class="lines">
@@ -189,8 +205,7 @@
                         <a href="#" id="social">Facebook</a>
                     </div>
                     <div class="hr"></div>
-                    <p id="pTaglast">By logging in you agree to our Terms & Conditions</p>
-
+                    <p id="pTaglast">By logging in you agree to our <a href="#">Terms & Conditions</a></p>
                 </div>
             </div>
         </div>

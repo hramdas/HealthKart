@@ -99,7 +99,10 @@ window.onload = slidingShows;
             m_price2.innerText = products.price2;
 
             let m_button = document.createElement('button');
-            m_button.innerHTML = products.button;
+            m_button.innerHTML = "Add To Cart";
+            m_button.onclick = function (){
+                addtocart(products);
+            };
 
             let m_discount = document.createElement('p');
             m_discount.innerText = products.discount;
@@ -113,14 +116,15 @@ window.onload = slidingShows;
             let m_rating = document.createElement('p');
             m_rating.innerHTML = products.rating;
 
-
             div.append(image,m_discount,m_name, m_rating, m_price1, m_price2, m_button,m_pricefinal);
             div_data.append(div);
 
         });
     }
 
+ 
     medProduct();
+
 
 
   // srinivas footer code
@@ -128,3 +132,13 @@ window.onload = slidingShows;
   function function1() {
     alert('subscribed successfully')
 }
+
+    if(localStorage.getItem("cart")===null){
+        localStorage.setItem("cart",JSON.stringify([]));
+    }
+    function addtocart(p){
+         let cart_data = JSON.parse(localStorage.getItem("cart"));
+         cart_data.push(p);
+         localStorage.setItem("cart", JSON.stringify(cart_data));
+    }
+

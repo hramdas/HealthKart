@@ -1,262 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Kart</title>
     <link rel="stylesheet" href="index.css">
-<!-- icon CDN Link -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- icon CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
-<!-- NAVBAR START -->
-<div id="navbar">
-    <div class="container">
-        <div class="logo">
-            <img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png" alt="">
-        </div>
-        <form action="">
-            <a><i class="fa fa-search" id="searchIcon" aria-hidden="true"></i></a>
-            <input type="text" id="search" placeholder="Search for products, brands or Health Goals">
-        </form>
-        <div class="oneItem margin">
-            <p>Loyalty Rewards</p>
-        </div>
-        <p class="borderLine"></p>
-        <div class="twoItem margin">
-            <p>Coustomer Support</p>
-            <i class="fa fa-chevron-down arrow"></i>
-        </div>
-        <p class="borderLine"></p>
-
-        <div class="threeItem margin">
-    <div class="userBox">
-
-            <i class="fa fa-user-o" aria-hidden="true"></i>
-            <p>My Account & Orders</p>
-
-<i class="fa fa-chevron-down arrow"></i>
-</div>
-<div class="userLogin">
-    <button onclick="login()" id="loginBtn">Login</button>
-    <button onclick="SingUp()" id="signUp">New User?/ Sign Up</button>
-</div>
-</div>
-        <p class="borderLine"></p>
-        <a href="#"><img src="https://img2.hkrtcdn.com/react/static/media/common/header/cart.svg" alt="" id="cartItem"></a>
-        <p id="cartOnNum">0</p>
-    </div>
-</div>
-<div class="clear"></div>
-<!-- aftar navbar categories part -->
-<div id="categories">
-    <div class="container">
-        <ul id="catLinks">
-            <li>
-                <a href="#">Category</a>
-                <ul class="dropdown">
-                    <li><a href="sports-nutrition.html">Sports Nutrition</a></li>
-                    <li><a href="#">Vitamins & Supplements</a></li>
-                    <li><a href="#">Ayurveda & Herbs</a></li>
-                    <li><a href="#">Health Food & Drinks</a></li>
-                    <li><a href="#">Fitness</a></li>
-                    <li><a href="#">Wellness</a></li>
-                    <li><a href="#">Service Program</a></li>
-                </ul>
-            </li>
-            <li>Brand</li>
-            <li>Gender</li>
-            <li>Goal</li>
-            <li>Bestsellers</li>
-            <li>Deals</li>
-            <li>Gift Cart</li>
-            <li>Blog Videos & More</li>
-        </ul>
-        <div class="rightSideContaint"></div>
-        <div class="rightPart">
-            <div class="consult">
-                <i class="fa fa-video-camera"></i>
-                <p>Hk Consult</p>
+    <!-- NAVBAR START -->
+    <div id="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
+                    alt="">
             </div>
-            <div class="findStore">
-                <i class="fa fa-map-marker"></i>
-                <p>Find a Store</p>
+            <form action="">
+                <a><i class="fa fa-search" id="searchIcon" aria-hidden="true"></i></a>
+                <input type="text" id="search" placeholder="Search for products, brands or Health Goals">
+            </form>
+            <div class="oneItem margin">
+                <p>Loyalty Rewards</p>
+            </div>
+            <p class="borderLine"></p>
+            <div class="twoItem margin">
+                <p>Customer Support</p>
+                <i class="fa fa-chevron-down arrow"></i>
+            </div>
+            <p class="borderLine"></p>
+
+            <div class="threeItem margin">
+                <div class="userBox">
+
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    <p>My Account & Orders</p>
+
+                    <i class="fa fa-chevron-down arrow"></i>
+
+                </div>
+                <div class="userLogin">
+                    <button onclick="login()" id="loginBtn">Login</button>
+                    <button onclick="SingUp()" id="signUp">New User?/ Sign Up</button>
+
+                </div>
+            </div>
+            <p class="borderLine"></p>
+            <a href="cart.html"><img src="https://img2.hkrtcdn.com/react/static/media/common/header/cart.svg" alt=""
+                    id="cartItem"></a>
+            <p id="cartOnNum">0</p>
+            <div class="cartAdd">
+                <p>Your Cart is Empty!</p>
+                <button onclick="cartBtn()" id="cart">Proceed to Cart</button>
             </div>
         </div>
     </div>
-</div>
-<!-- NAVBAR END -->
+    <div class="clear"></div>
+    <!-- aftar navbar categories part -->
+    <div id="categories">
+        <div class="container">
+            <ul id="catLinks">
+                <li>
+                    <a href="#">Category</a>
+                    <ul class="dropdown">
+                        <li id="li"><a href="nutrients.html">Sports Nutrition</a></li>
+                        <li id="li">Vitamins & Supplements</li>
+                        <li id="li">Ayurveda & Herbs</li>
+                        <li id="li">Health Food & Drinks</li>
+                        <li id="li">Fitness</li>
+                        <li id="li">Wellness</li>
+                        <li id="li">Service Program</li>
+                    </ul>
+                </li>
+                <li>Brand</li>
+                <li>Gender</li>
+                <li>Goal</li>
+                <li>Bestsellers</li>
+                <li>Deals</li>
+                <li>Gift Cart</li>
+                <li>Blog, Videos & More</li>
+            </ul>
+            <!-- <div class="rightSideContaint"></div> -->
+            <div class="rightPart">
+                <div class="consult">
+                    <i class="fa fa-video-camera"></i>
+                    <p>Hk Consult</p>
+                </div>
+                <div class="findStore">
+                    <i class="fa fa-map-marker"></i>
+                    <p>Find a Store</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NAVBAR END -->
 
-<!-- CAROUSEL START -->
-<div id="carousel">
-    <i class="fa fa-chevron-left"></i>
-    <i class="fa fa-chevron-right"></i>
-    <img name='silde'>
-</div>
-<!-- CAROUSEL END -->
+    <!-- CAROUSEL START -->
+    <div id="carousel">
+        <!-- <i class="fa fa-chevron-left"></i>
+                                                                        <i class="fa fa-chevron-right"></i> -->
+        <img name='silde'>
+    </div>
+    <!-- CAROUSEL END -->
 
-<!-- FLASH SALES START  -->
-<div id="FlashSale">
-    <div class="container">
-    <h1>Flash Sale</h1>
+    <!-- FLASH SALES START  -->
+    <div id="FlashSale">
+            <div class="container">
+            <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/flash-sale-black.svg" alt="">
+            <p>Flash Sale</p>
+            <p><a href="#">View All</a> </p>
+            
+            </div>
 
-    <div id="data"></div>
-</div>
-</div>
+            <hr>
+
+            <div id="data"></div>
+    </div>
     <!-- FLASH SALES END  -->
 
-<!-- Srinivas -->
+    <!-- Srinivas -->
 
-<!-- What are you looking for -->
-<h1 class="h1">Hi, What are you looking for?</h1>
-<div id="grid">
-    <div id="grid_box">
-        <h3>Sports <br> Nutrition</h3>
-        <img src="https://img10.hkrtcdn.com/6544/bnr_654359_o.png" />
-        <a href="#"> View all --></a>
-    </div>
-    <div id="grid_box">
-        <h3>Vitamins & <br> Supplements</h3>
-        <img src="https://img4.hkrtcdn.com/6543/bnr_654233_o.png" />
-        <a href="#"> View all --></a>
-    </div>
-    <div id="grid_box">
-        <h3>Ayurveda & <br> Herbs</h3>
-        <img src="https://img2.hkrtcdn.com/6544/bnr_654351_o.png" />
-        <a href="#"> View all --></a>
-    </div>
-    <div id="grid_box">
-        <h3> Health Food <br>& Drinks</h3>
-        <img src="https://img8.hkrtcdn.com/4044/bnr_404387_o.png" />
-        <a href="#"> View all --></a>
-    </div>
-    <div id="grid_box">
-        <h3>weight Loss</h3>
-        <img src="https://img6.hkrtcdn.com/6542/bnr_654165_o.png" />
-        <a href="#"> View all --></a>
-    </div>
-    <div id="grid_box">
-        <h3>Wellness</h3>
-        <img src="https://img4.hkrtcdn.com/6544/bnr_654353_o.png" />
-        <a href="#"> View all --></a>
-    </div>
-    <div id="grid_box">
-        <h3>Immunity & <br> Wellbeing</h3>
-        <img src="https://img4.hkrtcdn.com/6543/bnr_654213_o.png" />
-        <a href="#"> View all --></a>
-    </div>
-    <div id="grid_box">
-        <h3>Fitness</h3>
-        <img src="https://img6.hkrtcdn.com/3802/bnr_380125_o.png" />
-        <a href="#"> View all --></a>
-    </div>
-</div>
-<div id="cl"></div>
-<div id="sports">
-    <div class="second">
-        <h1>Popular in Sports Nutrition</h1>
-    </div>
-    <div id="pop">
-        <div>
-            <img src="https://img2.hkrtcdn.com/6544/bnr_654341_o.png" />
-            <h4>Whey Protiens</h4>
+    <!-- What are you looking for -->
+    <div>
+        <h1 class="h1">Hi, What are you looking for?</h1>
+        <div id="grid">
+
+            <div id="grid_box">
+                <h3>Sports <br> Nutrition</h3>
+                <img src="https://img10.hkrtcdn.com/6544/bnr_654359_o.png" />
+                <a href="#"> View all --></a>
+            </div>
+            <div id="grid_box">
+                <h3>Vitamins & <br> Supplements</h3>
+                <img src="https://img4.hkrtcdn.com/6543/bnr_654233_o.png" />
+                <a href="#"> View all --></a>
+            </div>
+            <div id="grid_box">
+                <h3>Ayurveda & <br> Herbs</h3>
+                <img src="https://img2.hkrtcdn.com/6544/bnr_654351_o.png" />
+                <a href="#"> View all --></a>
+            </div>
+            <div id="grid_box">
+                <h3> Health Food <br>& Drinks</h3>
+                <img src="https://img8.hkrtcdn.com/4044/bnr_404387_o.png" />
+                <a href="#"> View all --></a>
+            </div>
+            <div id="grid_box">
+                <h3>weight Loss</h3>
+                <img src="https://img6.hkrtcdn.com/6542/bnr_654165_o.png" />
+                <a href="#"> View all --></a>
+            </div>
+            <div id="grid_box">
+                <h3>Wellness</h3>
+                <img src="https://img4.hkrtcdn.com/6544/bnr_654353_o.png" />
+                <a href="#"> View all --></a>
+            </div>
+            <div id="grid_box">
+                <h3>Immunity & <br> Wellbeing</h3>
+                <img src="https://img4.hkrtcdn.com/6543/bnr_654213_o.png" />
+                <a href="#"> View all --></a>
+            </div>
+            <div id="grid_box">
+                <h3>Fitness</h3>
+                <img src="https://img6.hkrtcdn.com/3802/bnr_380125_o.png" />
+                <a href="#"> View all --></a>
+            </div>
         </div>
-        <div>
-            <img src="https://img6.hkrtcdn.com/6544/bnr_654345_o.png" />
-            <h4>Whey Protien Isolate</h4>
-        </div>
-        <div>
-            <img src="https://img4.hkrtcdn.com/6544/bnr_654343_o.png" />
-            <h4>Mass Gainers</h4>
-        </div>
-        <div>
-            <img src="https://img8.hkrtcdn.com/6544/bnr_654347_o.png" />
-            <h4>Amino Acids / BCAAs</h4>
-        </div>
-        <div>
-            <img src="https://img10.hkrtcdn.com/6544/bnr_654349_o.png" />
-            <h4>Pre-Workout</h4>
-        </div>
-    </div>
-</div>
-</div>
-<div id="sports">
-    <div class="second">
-        <h1>Popular in Weight Loss</h1>
-    </div>
-    <div id="pop">
-        <div>
-            <img src="https://img6.hkrtcdn.com/6542/bnr_654165_o.png" />
-            <h4>Meal Replacement</h4>
-        </div>
-        <div>
-            <img src="https://img6.hkrtcdn.com/9523/bnr_952235_o.png" />
-            <h4>Energy Drinks</h4>
-        </div>
-        <div>
-            <img src="https://img8.hkrtcdn.com/4045/bnr_404407_o.png" />
-            <h4>Green coffee Bean extract</h4>
-        </div>
-        <div>
-            <img src="https://img8.hkrtcdn.com/6543/bnr_654237_o.png" />
-            <h4>Probiotics</h4>
-        </div>
-        <div>
-            <img src="https://img6.hkrtcdn.com/6543/bnr_654235_o.png" />
-            <h4>Green Tea</h4>
+
+        <div id="cl"></div>
+        <div id="sports">
+            <div class="second">
+                <h1>Popular in Sports Nutrition</h1>
+            </div>
+            <div id="pop">
+                <div>
+                    <img src="https://img2.hkrtcdn.com/6544/bnr_654341_o.png" />
+                    <h4>Whey Protiens</h4>
+                </div>
+                <div>
+                    <img src="https://img6.hkrtcdn.com/6544/bnr_654345_o.png" />
+                    <h4>Whey Protien Isolate</h4>
+                </div>
+                <div>
+                    <img src="https://img4.hkrtcdn.com/6544/bnr_654343_o.png" />
+                    <h4>Mass Gainers</h4>
+                </div>
+                <div>
+                    <img src="https://img8.hkrtcdn.com/6544/bnr_654347_o.png" />
+                    <h4>Amino Acids / BCAAs</h4>
+                </div>
+                <div>
+                    <img src="https://img10.hkrtcdn.com/6544/bnr_654349_o.png" />
+                    <h4>Pre-Workout</h4>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<div id="sports">
-    <div class="second">
-        <h1>Popular in Health Foods & Drinks</h1>
-    </div>
-    <div id="pop">
-        <div>
-            <img src="https://img2.hkrtcdn.com/6543/bnr_654291_o.png" />
-            <h4>Apple Cedar Venigar</h4>
+    <div id="sports">
+        <div class="second">
+            <h1>Popular in Weight Loss</h1>
         </div>
-        <div>
-            <img src="https://img4.hkrtcdn.com/6543/bnr_654293_o.png" />
-            <h4>Penaut Butter</h4>
-        </div>
-        <div>
-            <img src="https://img2.hkrtcdn.com/6544/bnr_654301_o.png" />
-            <h4>Protein bars</h4>
-        </div>
-        <div>
-            <img src="https://img10.hkrtcdn.com/6543/bnr_654299_o.png" />
-            <h4>Cerals</h4>
-        </div>
-        <div>
-            <img src="https://img6.hkrtcdn.com/6543/bnr_654295_o.png" />
-            <h4>Nutrition For Chlidren</h4>
-        </div>
-    </div>
-</div>
-<div id="sports">
-    <div class="second">
-        <h1>Popular In Fitness</h1>
-    </div>
-    <div id="pop">
-        <div>
-            <img src="https://img2.hkrtcdn.com/3802/bnr_380131_o.png" />
-            <h4>Gym Essentials</h4>
-        </div>
-        <div>
-            <img src="https://img2.hkrtcdn.com/3801/bnr_380091_o.png" />
-            <h4>Fitness Equipment</h4>
-        </div>
-        <div>
-            <img src="https://img6.hkrtcdn.com/3802/bnr_380125_o.png" />
-            <h4>Gym Accessories</h4>
-        </div>
-        <div>
-            <img src="https://img10.hkrtcdn.com/3802/bnr_380129_o.png" />
-            <h4>Gym Supports</h4>
+        <div id="pop">
+            <div>
+                <img src="https://img6.hkrtcdn.com/6542/bnr_654165_o.png" />
+                <h4>Meal Replacement</h4>
+            </div>
+            <div>
+                <img src="https://img6.hkrtcdn.com/9523/bnr_952235_o.png" />
+                <h4>Energy Drinks</h4>
+            </div>
+            <div>
+                <img src="https://img8.hkrtcdn.com/4045/bnr_404407_o.png" />
+                <h4>Green coffee Bean extract</h4>
+            </div>
+            <div>
+                <img src="https://img8.hkrtcdn.com/6543/bnr_654237_o.png" />
+                <h4>Probiotics</h4>
+            </div>
+            <div>
+                <img src="https://img6.hkrtcdn.com/6543/bnr_654235_o.png" />
+                <h4>Green Tea</h4>
+            </div>
         </div>
     </div>
+    <div id="sports">
+        <div class="second">
+            <h1>Popular in Health Foods & Drinks</h1>
+        </div>
+        <div id="pop">
+            <div>
+                <img src="https://img2.hkrtcdn.com/6543/bnr_654291_o.png" />
+                <h4>Apple Cedar Venigar</h4>
+            </div>
+            <div>
+                <img src="https://img4.hkrtcdn.com/6543/bnr_654293_o.png" />
+                <h4>Penaut Butter</h4>
+            </div>
+            <div>
+                <img src="https://img2.hkrtcdn.com/6544/bnr_654301_o.png" />
+                <h4>Protein bars</h4>
+            </div>
+            <div>
+                <img src="https://img10.hkrtcdn.com/6543/bnr_654299_o.png" />
+                <h4>Cerals</h4>
+            </div>
+            <div>
+                <img src="https://img6.hkrtcdn.com/6543/bnr_654295_o.png" />
+                <h4>Nutrition For Chlidren</h4>
+            </div>
+        </div>
+    </div>
+    <div id="sports">
+        <div class="second">
+            <h1>Popular In Fitness</h1>
+        </div>
+        <div id="pop">
+            <div>
+                <img src="https://img2.hkrtcdn.com/3802/bnr_380131_o.png" />
+                <h4>Gym Essentials</h4>
+            </div>
+            <div>
+                <img src="https://img2.hkrtcdn.com/3801/bnr_380091_o.png" />
+                <h4>Fitness Equipment</h4>
+            </div>
+            <div>
+                <img src="https://img6.hkrtcdn.com/3802/bnr_380125_o.png" />
+                <h4>Gym Accessories</h4>
+            </div>
+            <div>
+                <img src="https://img10.hkrtcdn.com/3802/bnr_380129_o.png" />
+                <h4>Gym Supports</h4>
+            </div>
+        </div>
+    </div>
+
 </div>
 <!-- srinivas footer -->
 <div id="foot">
@@ -376,6 +396,9 @@
 <div class="bottom_left">
     <p>Copyright © 2021, HealthKart.com, or its affiliates</p>
 </div>
+
+
 </body>
+
 </html>
 <script src="index.js"></script>
