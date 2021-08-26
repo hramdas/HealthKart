@@ -121,3 +121,10 @@ window.onload = slidingShows;
     }
 
     medProduct();
+
+
+  // srinivas footer code
+
+  function function1() {
+    alert('subscribed successfully')
+}
