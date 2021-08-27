@@ -335,9 +335,10 @@ margin-left: 20px;
 
 }
 
-/* #left-sidebar{
-   
-} */
+#left-sidebar{
+   display: sticky;
+   margin-top: 0;
+}
 
 #left-sidebar > div{
     margin-top: 10px;

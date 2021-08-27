@@ -1,5 +1,6 @@
 let cart_data = JSON.parse(localStorage.getItem("cart"));
 let data_div = document.getElementById("cart_data");
+
 cart_data.forEach(function(product) {
 
            let div = document.createElement("div");
@@ -28,4 +29,7 @@ cart_data.forEach(function(product) {
             div.append(image,m_discount,m_name, m_rating, m_price1, m_price2, m_button,m_pricefinal);
             cart_data.append(div);
 
+           
+
     });
+//     console.log(cart-data.length);
