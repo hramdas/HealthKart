@@ -557,11 +557,9 @@ width: 40%;
         grid-gap: 0px;
         margin: auto;
         height:270px;
-padding: 20px;
+        padding: 20px;
     }
-.footer{
 
-}
     #foot div {
         border:1px solid black;
         text-align: center;
@@ -621,7 +619,4 @@ padding: 20px;
         float: right;
         margin-right: 180px;
         margin-top: 20px;
-    }
-    .bottom_left {
-        /* margin-left: 150px; */
     }

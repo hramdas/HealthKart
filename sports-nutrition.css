@@ -403,8 +403,13 @@ margin-left: 20px;
 }
 
 hr{
-    margin: 7px auto;
-    color: #a0a0a0;
+    border: .5px solid rgb(218, 217, 217);
+    margin: 15px auto;
+}
+.trending h2{
+    font-size:24px;
+    font-weight: 400;
+    margin: 15px auto;
 }
 
 
@@ -443,7 +448,8 @@ img{
    
 }
 #items > div > b {   /* Product name */
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 600;
    
 }
 #items   button:nth-child(1){
