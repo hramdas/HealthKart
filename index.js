@@ -31,8 +31,8 @@ window.onload = slidingShows;
         {
         image: "https://img4.hkrtcdn.com/14798/prd_1479773-HealthKart-HK-Vitals-Healthy-Joints-60-tablets_c_t.jpg",
           name : "MuscleBlaze Mass Gainer XXL, 11 lb Chocolate",
-          Price1 : "Rs. 4535",
-          price2 : "Rs 5399",
+        Price1: " 4535",
+        price2: " 5399",
         discount: "16% off",
           button: "Add",
           pricefinal : "Premium Price : 4324",
@@ -41,43 +41,35 @@ window.onload = slidingShows;
         {
           image: "https://img6.hkrtcdn.com/11003/prd_1100235-MuscleBlaze-Gold-Gainer-XXL-2.2-lb-Chocolate-Bliss_c_t.jpg",
           name : "MuscleBlaze Mass Gainer XXL, 11 lb Chocolate",
-          Price1 : "Rs. 4535",
-          price2 : "Rs 5399",
+          Price1: " 4535",
+          price2: " 5399",
           discount: "16% off",
           button: "Add",
           pricefinal : "Premium Price : 4324",
-          rating : "4.6(1234)",
-
-
+          rating: "4.6(1234)",
         },
         {
           image: "https://img4.hkrtcdn.com/11965/prd_1196443-MuscleBlaze-High-Protein-Natural-Peanut-Butter-Unsweetened-0.750-kg-Crunchy_c_t.jpg",
           name : "MuscleBlaze Mass Gainer XXL, 11 lb Chocolate",
-          Price1 : "Rs. 4535",
-          price2 : "Rs 5399",
+          Price1: " 4535",
+          price2: " 5399",
           discount: "16% off",
           button: "Add",
           pricefinal : "Premium Price : 4324",
-          rating : "4.6(1234)",
-
-
+          rating: "4.6(1234)",
         },
         {
           image: "https://img10.hkrtcdn.com/15757/prd_1575689_c_t.jpg",
           name : "MuscleBlaze Mass Gainer XXL, 11 lb Chocolate",
-          Price1 : "Rs. 4535",
-          price2 : "Rs 5399",
+          Price1: " 4535",
+          price2: " 5399",
           discount: "16% off",
           button: "Add",
           pricefinal : "Premium Price : 4324",
-          rating : "4.6(1234)",
-
-
-
+          rating: "4.6(1234)",
         },
 
     ]
-
     const medicine_json = JSON.stringify(medicine);
     localStorage.setItem("MyMedicine", medicine_json);
     let med = localStorage.getItem("MyMedicine");
@@ -121,9 +113,7 @@ window.onload = slidingShows;
 
         });
     }
-
-
-    medProduct();
+medProduct();
 
 
 

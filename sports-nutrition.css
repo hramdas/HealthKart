@@ -303,7 +303,7 @@ margin-left: 20px;
 .rightPart .findStore i{
     margin: 8px 7px;
 }
-    
+
 
 .cont{
     padding-top: 10px;
@@ -322,7 +322,7 @@ margin-left: 20px;
     display: grid;
     grid-template-columns: 18% 77%;
     grid-gap: 5%;
-    
+
 }
 #left-sidebar > div  > a{
     font-size: 12px ;
@@ -358,7 +358,7 @@ margin-left: 20px;
 
 /* #float-left{
     float: left;
-   
+
 }
 #float-right{
     float: right;
@@ -397,7 +397,7 @@ margin-left: 20px;
     grid-gap: 3%;
     font-family: roboto, arial, helvetica, sans-serif;
     font-weight: bold;
-    
+
 }
 #items > div{
     background-color: white;
@@ -406,7 +406,7 @@ margin-left: 20px;
 }
 
 #items > div:hover {
-    box-shadow: 0px 0px 18px rgba(33,33,33,.2); 
+    box-shadow: 0px 0px 18px rgba(33,33,33,.2);
   }
 
 img{
@@ -418,16 +418,16 @@ img{
     grid-gap: 8%;
     /* margin: auto auto; */
 }
-#items > div >div > span { 
+#items > div >div > span {
     font-size: 18px;
 }
 #items > div > span {  /* */
     font-size: 12px
-   
+
 }
 #items > div > b {   /* Product name */
     font-size: 13px;
-   
+
 }
 
 #items button{

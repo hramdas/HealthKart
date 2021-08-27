@@ -4,69 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add to Cart</title>
-</head>                             
-<style>
+<link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Navbar Start -->
+    <div id="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
+                    alt="">
+            </div>
+            <div class="process">
+                <img src="https://img5.hkrtcdn.com/react/static/media/checkout/blue-tick.svg" alt="">
+                <p>cart</p>
+                <p class="cartline"></p>
+                <img src="https://img5.hkrtcdn.com/react/static/media/checkout/blue-tick.svg" alt="">
+                <p>address</p>
+                <p class="cartline"></p>
+                <img src="https://img5.hkrtcdn.com/react/static/media/checkout/blue-tick.svg" alt="">
+                <p>payment</p>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <div class="allItems">
+        <div class="leftSide">
+            <div id="cartItem"></div>
+            <div id="cart_data">
 
-    img {
-        width: 20%;
-    }
+            </div>
+        </div>
+        <div class="rightSide">
+            <div id="pincode"></div>
+            <div id="coupon"></div>
+            <div id="proceedtopay"></div>
+            <div id="order"></div>
+            <div id="shipping"></div>
+            <div id="totalAmount"></div>
+        </div>
 
-    #cart_data {
-        display: grid;
-        grid-template-rows: 40% 40%;
-        gap: 10%; 
-        width: 40%;
-        margin:auto;
-    }
-
-    #cart_data div{
-        display: grid;
-  }
-
-</style>
-<body >
-    <h1>Cart Page</h1>
-   <div id="cart_data"></div>
+        </div>
 </body>
 
-<script>
-let cart_data = JSON.parse(localStorage.getItem("cart"));
-let data_div = document.querySelector("#cart_data");
-function Cart_items(){
-
-cart_data.forEach(function(product) {
-
-           let div = document.createElement("div");
-
-            let m_name = document.createElement('p');
-            m_name.innerText = product.name;
-
-            let m_price1 = document.createElement('p');
-            m_price1.innerText = product.Price1;
-
-
-            let m_price2 = document.createElement('p');
-            m_price2.innerText = product.price2;
-
-            let m_discount = document.createElement('p');
-            m_discount.innerText = product.discount;
-
-            let image = document.createElement('img');
-            image.src = product.image;
-
-            let m_pricefinal = document.createElement('p');
-            m_pricefinal.innerText = product.pricefinal;
-
-            let m_rating = document.createElement('p');
-            m_rating.innerHTML = product.rating;
-
-            div.append(image,m_name,m_price1);
-            data_div.append(div);
-
-    });
-};
-Cart_items();
-</script>
+<script src="cart.js"></script>
 
 </html>
 
