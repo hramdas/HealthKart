@@ -476,18 +476,18 @@ padding: 7px;
 /* /* What are you looking for? */
 
 
-      #grid {
-          display:grid;
-          grid-gap:30px;
-          grid-template-columns:250px 250px 250px 250px;
-margin-left: 250px;
+#grid {
+    display:grid;
+    grid-gap:30px;
+    grid-template-columns:20% 20% 20% 20%;
+    margin :auto  15%;
  }
 
   .h1{
-          font-weight: 900;
-          margin-left: 245px;
-          color: black;
-          margin-bottom: 30px;
+        font-weight: 900;
+        margin-left: 245px;
+        color: black;
+        margin-bottom: 30px;
       }
       #grid  div {
         border-radius: 10px;
