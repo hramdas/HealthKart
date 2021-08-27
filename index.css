@@ -11,6 +11,7 @@ font-family: 'Roboto', sans-serif;
 body{
 /* width: 100%; */
 background-color: #f7f7f7;
+
 }
 ul li{
 list-style: none;
@@ -32,7 +33,7 @@ font-family: 'Roboto', sans-serif;
 
 
 }
-.clear{
+.clearDiv{
 clear: both;
 }
 #navbar{
@@ -41,6 +42,7 @@ box-sizing: border-box;
 height: 87px;
 background-color:white ;
 border-bottom: 1px solid #d3cfcf;
+
 /* border:1px solid red; */
 }
 #navbar .container{
@@ -88,7 +90,10 @@ height: 15px;
 margin: 28px 0px;
 }
 
-.margin:hover{
+.userBox:hover{
+ color: #00a0a0;
+}
+#hover:hover{
  color: #00a0a0;
 }
 .fa-user-o{
@@ -111,19 +116,25 @@ display: flex;
 z-index: 9999999;
 position: absolute;
 width: 330px;
-height: 135px;
-background-color: whitesmoke;
+background-color: white;
 display: none;
 margin-top:30px;
 right: 21rem;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+
 }
 .userLogin > button{
 display: block;
-padding: 14px;
+padding: 10px;
 width: 310px;
 margin: 10px 10px;
 cursor: pointer;
 font-size: 19px;
+border-radius: 2px;
+background-color:transparent;
+border: 1px solid black;
+font-size: 15px;
+
 }
 .userLogin a{
 color: white;
@@ -155,44 +166,54 @@ width: 18px;
 height: 18px;
 border: 1px solid white;
 border-radius: 50px;
-background-color: chocolate;
+background: #f70;
 color: white;
 text-align: center;
 padding-top: 2px;
 cursor: pointer;
 
 }
-.cartShowsItem{
+#cartClick{
 display: flex;
 }
 .cartAdd{
-background-color: whitesmoke;
 z-index: 9999999;
-width: 280px;
-margin-top:70px;
-right: 25rem;
-padding: 10px;
+position: absolute;
+width: 290px;
+/* height: 100px; */
+background-color: white;
 display: none;
-cursor: pointer;
+margin-top:60px;
+right: 17rem;
+box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
 }
 .cartAdd p{
 text-align: center;
 margin: 5px 15px;
+font-size: 14px;
 }
+.cartAdd a{
+color: #fff;
+}
+
 .cartAdd > button{
-padding: 14px;
+padding: 10px;
 width: 260px;
-margin: 10px 10px;
+margin: 10px 15px;
 cursor: pointer;
-font-size: 20px;
+font-size: 13px;
+background: #df4723;
+border: 1px solid #df4723;
+
 }
- #cartItem:hover > .cartAdd {
+ #cartClick:hover  .cartAdd {
 display: block;
 }
+
+
 /* aftar navbar categories part */
 
  #categories{
-/* margin-top: 10px; */
 top:0;
 position: sticky;
 background-color:white;
@@ -202,10 +223,8 @@ z-index: 999999;
 }
 
 #categories .container{
- /* border: 1px solid green; */
 width: 73%;
 height: 50px;
-
 display: flex;
 margin-left: 155px;
 }
@@ -262,7 +281,7 @@ display: flex;
 font-size: 13.5px;
 width: 260px;
 margin-left: 100px;
-margin-top: 5px;
+margin-top: 10px;
 
 }
 .rightPart .consult{
@@ -326,49 +345,43 @@ margin: auto;
 /* bhargav 1st file */
 /* Flash Sale Part */
 #FlashSale{
-
-border: 1px solid grey;
+box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
 border-radius: 4px;
-width: 80%;
-margin: 20px auto;
-/* padding: 20px; */
+width: 70%;
+margin: 50px auto;
 }
 #FlashSale .container{
-/* border: 1px solid red; */
-background-color: white;
-/* margin: 20px 0px; */
-/* margin-top: 5px; */
-/* margin-left: 30px; */
+ background: #fff;
 padding-left: 20px;
-height: 65px;
+height: 50px;
 display: flex;
 }
 #FlashSale .container img{
-/* border: 1px solid red; */
-height: 25px;
-margin: 8px 0;
+height: 19px;
 margin-left:15px;
-margin-top: 17px;
+margin-top: 14px;
 padding-left: 5px;
 }
+.flashColor{
+ background: #f8f8f8;
 
+}
 #FlashSale .container p:nth-child(2){
-/* border: 1px solid red;  */
 font-size: 23px;
 font-weight: 600;
-padding: 15px 15px;
-margin-right: 20px;
+padding: 10px 5px;
 
 }
 
 #FlashSale .container p:nth-child(3){
+
 border: 1px solid #00c2c1;
 background-color: #00c2c1;
-padding: 10px;
-font-size: 16px;
+font-size: 15px;
 border-radius: 3px;
-margin: 11px;
-margin-left: 840px;
+margin: 11px 0;
+padding-top: 3px;
+margin-left: 800px;
 }
 
 #FlashSale hr{
@@ -383,34 +396,79 @@ color: #f7f7f7;
 padding:  20px;
 }
 #data{
-    width: 96%;
-        /* border: 1px solid red; */
+    width: 100%;
+    height: 410px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    /* gap: 0.5%; */
     margin: auto;
-
-
-
  }
  #data div{
-/* border: 1px solid red; */
-margin: 10px;
+     margin: 10px;
      display: flex;
      flex-direction: column;
-     align-items: center;
      background-color: white;
      border-radius: 8px;
-     height: 370px;
+     height: 380px;
  }
  #data img{
-     width: 60%;
+     width: 70%;
      height: 150px;
-
+margin: auto;
  }
-#data button{
-width: 30%;
 
+
+#data h4{
+white-space: normal;
+color: #25292b;
+font-size: 15px;
+font-weight: 400;
+line-height: 20px;
+}
+#data h5{
+margin: 20px 10px;
+padding: 2px;
+font-size: 13px;
+width: 50px;
+font-weight:500;
+color: red;
+text-align: center;
+border: 1px solid red;
+}
+
+#data h3{
+margin: 5px 0px;
+font-size: 12px;
+color: #575b5e;
+}
+#data p{
+font-size: 15px;
+margin: 10px 5px;
+}
+#data h6{
+font-size: 18px;
+margin: 11px 0px;
+padding: 5px;
+font-weight: 400;
+text-align: center;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+    background: #edfffe;
+color: #25292b;
+
+}
+#data button{
+width: 25%;
+height: 50px;
+margin-left: 5px;
+background-color: rgb(204, 218, 218);
+border: 1px solid rgb(204, 218, 218);
+color: rgb(32, 50, 51);
+font-size: 12px;
+text-transform: uppercase;
+font-weight: 600;
+border-radius: 2px;
+cursor: pointer;
+padding: 7px;
 }
 
 
@@ -422,80 +480,88 @@ width: 30%;
           display:grid;
           grid-gap:30px;
           grid-template-columns:250px 250px 250px 250px;
-          height: 200px;
-          margin-bottom: 30px;
+margin-left: 250px;
+ }
 
-      }
   .h1{
           font-weight: 900;
-          margin: auto;
+          margin-left: 245px;
           color: black;
           margin-bottom: 30px;
       }
       #grid  div {
         border-radius: 10px;
-        background-color:whitesmoke;
-
+        background-color:#fff;
       }
       #grid_box img {
            float: right;
-
        }
        #grid_box > h3 {
            float:left;
            line-height: 21px;
            clear: both;
+          margin: 12px 10px;
+        font-size: 18px;
        }
        #grid_box a {
-            float:left;
-            font-family: sans-serif;
-            font-weight: 800;
+                float:left;
+                font-family: sans-serif;
+                font-weight: 700;
+            font-size: 15px;
+            color: #00afae;
+                clear: both;
+            margin: 2px 10px;
             margin-bottom: 20px;
-            clear: both;
+            text-transform: capitalize;
        }
 
        #cl{
            clear: both;
-           margin-bottom: 220px;
        }
        #sports {
-        background-color:white;
-        height: 320px;
-        margin-bottom: 50px;
-
+box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+border-radius: 4px;
+width: 68%;
+margin: 50px auto;
        }
+#sports h1{
+padding: 0px 20px;
+background-color: #fff;
+}
       .second {
         width:97%;
-        background-color:whitesmoke;
         border-radius: 10px;
         padding-bottom: 1px;
         padding-top: 1px;
-        margin-bottom: 10px;
+        /* margin-bottom: 10px; */
       }
       #pop {
         display: grid;
         grid-template-columns: 200px 200px 200px 200px 200px;
         grid-gap: 20px;
-        background-color:white;
         float: left;
-
-
       } #pop div {
-        background-color:whitesmoke;
         padding-top: 10px;
         border-radius: 10px;
         text-align: center;
-
       }
+#pop img{
+width: 40%;
+}
       /* srinivas footer code */
       #foot {
-        display: grid;
-        grid-template-columns: 300px 300px 300px 300px;
-        width:80%;
+       background-color: #fff;
+  display: grid;
+        grid-template-columns: 280px 280px 280px 280px;
+        width:100%;
         grid-gap: 0px;
         margin: auto;
-        height:300px;
+        height:270px;
+padding: 20px;
     }
+.footer{
+
+}
     #foot div {
         border:1px solid black;
         text-align: center;
@@ -549,7 +615,7 @@ width: 30%;
         grid-gap: 40px;
         float: left;
         height: 530px;
-        margin-top: 40px;  
+        margin-top: 40px;
     }
     .bottom {
         float: right;
@@ -557,5 +623,5 @@ width: 30%;
         margin-top: 20px;
     }
     .bottom_left {
-        margin-left: 150px;
+        /* margin-left: 150px; */
     }

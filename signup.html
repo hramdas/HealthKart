@@ -228,12 +228,18 @@
                 rePassword: document.getElementById('rePassword').value
             }
             if (password.value !== rePassword.value) {
-                alert("Not match")
+                alert("Not match");
+                window.location.href = "signup.html"
+
+            }
+
+            else {
+                window.location.href = "login.html"
+
             }
 
             localStorage.setItem("Data-User", JSON.stringify(userData));
             console.log(userData);
-            window.location.href = "login.html"
 
         }
 
