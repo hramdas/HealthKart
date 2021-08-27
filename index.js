@@ -81,18 +81,16 @@ window.onload = slidingShows;
         let div_data = document.getElementById("data");
         med.forEach(function(products) {
             let div = document.createElement('div');
+            let pricecart = document.createElement('div');
 
           let m_name = document.createElement('h4');
             m_name.innerText = products.name;
 
-            let m_price1 = document.createElement('p');
-            m_price1.innerText = products.Price1;
-
-            let m_price2 = document.createElement('p');
-            m_price2.innerText = products.price2;
+            let m_price = document.createElement('b');
+            m_price.innerText = '₹'+ products.Price1;
 
             let m_button = document.createElement('button');
-            m_button.innerHTML = "Add";
+            m_button.innerHTML = "🛒 ADD";
             m_button.onclick = function (){
                 addtocart(products);
             };
@@ -106,10 +104,11 @@ window.onload = slidingShows;
           let m_pricefinal = document.createElement('h6');
             m_pricefinal.innerText = products.pricefinal;
 
-          let m_rating = document.createElement('h3');
-          m_rating.innerHTML = '★' + '★' + '★' + '★' + products.rating;
+          let m_rating = document.createElement('p');
+          m_rating.innerHTML = '★ ' + products.rating;
 
-            div.append(image,m_discount,m_name, m_rating, m_price1, m_button,m_pricefinal);
+          pricecart.append(m_price, m_button)
+            div.append(image,m_discount,m_name, m_rating, pricecart, m_pricefinal);
             div_data.append(div);
 
         });
