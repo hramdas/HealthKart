@@ -33,11 +33,10 @@ text-decoration: none;
         background-color: burlywood;
         position: fixed;
         display: flex;
-<<<<<<< HEAD
+
         margin-left: 450px;
-=======
+
         margin: auto 28%;
->>>>>>> 5a41b34467bc68aa328ea6eb4afcf1c94090223d
     }
 
     .leftSidePopUp {
@@ -66,28 +65,15 @@ text-decoration: none;
     }
 
     .rightSidePopUp .loginPage {
-
-        margin: 30px 5px;
+        margin: 20px 5px;
     }
 
     .rightSidePopUp .loginPage h1 {
         float: right;
-
     }
-#timeBar{
-margin-right: 20px;
-cursor: pointer;
-}
-.userPanel{
-display: flex;
- margin:  20px 35px;
-padding: 2px;
 
-}
-#signup{
-margin: 0px 20px;
-}
     .rightSidePopUp .loginPage h3 {
+        margin: 35px 10px;
         color: rgb(112, 109, 109);
         font-size: 20px;
     }
@@ -117,7 +103,7 @@ margin: 0px 20px;
         color: #f7f7f7;
     }
 
-    .rightSidePopUp .loginPage .passwordForget {
+    .rightSidePopUp .loginPage a {
         margin: 10px 35px;
     }
 
@@ -188,15 +174,20 @@ cursor: pointer;
             </div>
             <div class="rightSidePopUp">
                 <div class="loginPage">
+
                     <h1 id="timeBar">&times</h1>
                     <div class="userPanel">
                         <h3>Login</h3>
                         <h3 id="signup"><a class="singup" href="signup.html">Signup</a></h3>
                         </div>
                     <form action="" id="loginForm">
+
                         <label for="mobile">Mobile Number</label><br>
                         <input type="text" name="mobile" id="mobileNo" placeholder="Enter Mobile Number" required>
                         <label for="password">Password</label><br>
+                        <input type="password" name="password" id="password" placeholder="Enter Password"><br><br>
+                       
+
                         <input type="password" name="password" id="password" placeholder="Enter Password" autocomplete="on" required>
                         <a href="#" class="passwordForget">Forget Password</a>
                         <a href="#" class="passwordForget">Login Password</a><br>
@@ -212,7 +203,8 @@ cursor: pointer;
                         <a href="https://www.facebook.com/" id="social">Facebook</a>
                     </div>
                     <div class="hr"></div>
-                    <p id="pTaglast">By logging in you agree to our <a href="#">Terms & Conditions</a></p>
+                    <p id="pTaglast">By logging in you agree to our Terms & Conditions</p>
+
                 </div>
             </div>
         </div>

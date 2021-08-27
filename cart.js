@@ -1,4 +1,5 @@
 let cart_data = JSON.parse(localStorage.getItem("cart"));
+<<<<<<< HEAD
 let data_div = document.querySelector("#cart_data");
 let totalAmount = document.getElementById('totalAmount');
 let proceedToPay = document.getElementById('proceedtopay');
@@ -8,6 +9,11 @@ let coupon = document.getElementById('coupon');
 let order = document.getElementById('order');
 let shipping = document.getElementById('shipping');
 let count = 0;
+=======
+let data_div = document.getElementById("cart_data");
+
+cart_data.forEach(function(product) {
+>>>>>>> 78561b44a73945a46d737debd530f6036434768b
 
 function Cart_items() {
         let total = 0;
@@ -65,3 +71,10 @@ function Cart_items() {
 };
 Cart_items();
 
+<<<<<<< HEAD
+=======
+           
+
+    });
+//     console.log(cart-data.length);
+>>>>>>> 78561b44a73945a46d737debd530f6036434768b

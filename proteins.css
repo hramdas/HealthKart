@@ -358,6 +358,38 @@ margin-left: 20px;
     clear : left;
 }
 
+.main-poster{
+    display : grid;
+    grid-template-columns: 63% 35%;
+    grid-gap: 3%;
+    /* margin-bottom: 10px auto; */
+}
+#read-text div{
+    display : grid;
+    grid-template-columns: 50% 24% 24%;
+    margin: 20px auto;
+}
+#read-text p{
+    font-size: 13px;
+}
+#read-text div > span{
+    display : grid;
+    grid-template-columns: 30px 65%;
+    grid-gap: 3%;
+    margin: auto auto;
+    font-size: 15px;
+}
+#read-text img{
+    /* width: 40px; */
+    margin: auto auto;
+    /* width: 100%; */
+    /* height: 0%; */
+}
+
+hr{
+    border: .5px solid rgb(218, 217, 217);
+    margin: 15px auto;
+}
 #items {
     display : grid;
     grid-template-columns :32% 32% 32%;
@@ -399,7 +431,18 @@ img{
    
 }
 
-#items button{
+#items   button:nth-child(1){
+    float: right;
+    width: 20px;
+    /* margin: 0 80%; */
+    margin-left: 80% ;
+    text-align: right;
+    border : none;
+    background-color : white;
+    font-size: 28px;
+}
+
+#items > div div button{
     border: 1px solid  rgb(0, 148, 148);
     border-radius: 4px;
     height: 30px;

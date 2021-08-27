@@ -46,7 +46,11 @@ window.onload = slidingShows;
           discount: "16% off",
           button: "Add",
           pricefinal : "Premium Price : 4324",
+<<<<<<< HEAD
           rating: "4.6(1234)",
+=======
+          rating : "4.6(1234)",
+>>>>>>> 78561b44a73945a46d737debd530f6036434768b
         },
         {
           image: "https://img4.hkrtcdn.com/11965/prd_1196443-MuscleBlaze-High-Protein-Natural-Peanut-Butter-Unsweetened-0.750-kg-Crunchy_c_t.jpg",
@@ -74,7 +78,7 @@ window.onload = slidingShows;
     localStorage.setItem("MyMedicine", medicine_json);
     let med = localStorage.getItem("MyMedicine");
     med = JSON.parse(med);
-    console.log("med", med);
+    // console.log("med", med);
 
     function medProduct(){
         let div_data = document.getElementById("data");
@@ -131,4 +135,3 @@ medProduct();
          cart_data.push(p);
          localStorage.setItem("cart", JSON.stringify(cart_data));
     }
-
