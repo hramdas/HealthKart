@@ -24,16 +24,21 @@
   }
 
 </style>
-<body >
+<body>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
     <h1>Cart Page</h1>
    <div id="cart_data"></div>
+   <h1 id ="total_cart"></h1>
 </body>
 
 <script>
 let cart_data = JSON.parse(localStorage.getItem("cart"));
 let data_div = document.querySelector("#cart_data");
+let total = 0;
 function Cart_items(){
-
 cart_data.forEach(function(product) {
 
            let div = document.createElement("div");
@@ -44,29 +49,20 @@ cart_data.forEach(function(product) {
             let m_price1 = document.createElement('p');
             m_price1.innerText = product.Price1;
 
-
-            let m_price2 = document.createElement('p');
-            m_price2.innerText = product.price2;
-
-            let m_discount = document.createElement('p');
-            m_discount.innerText = product.discount;
-
             let image = document.createElement('img');
             image.src = product.image;
-
-            let m_pricefinal = document.createElement('p');
-            m_pricefinal.innerText = product.pricefinal;
-
-            let m_rating = document.createElement('p');
-            m_rating.innerHTML = product.rating;
 
             div.append(image,m_name,m_price1);
             data_div.append(div);
 
+            total+= Number(product.price2);
     });
+    let total_cart = document.getElementById("total_cart");
+    total_cart.innerHTML= `Total Price ${total}`
 };
 Cart_items();
 </script>
+
 
 </html>
 
