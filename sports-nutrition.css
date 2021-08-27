@@ -1,165 +1,308 @@
-    *{
-    font-family: Roboto,sans-serif;
-    
-    }
-    body {
-        background-color: #f5f5f5;
-    }
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
 
-    ul li{
-    list-style: none;
-    }
-    .clear{
-    clear: both;
-    }
-    #navbar{
-    width: 100%;
-    box-sizing: border-box;
-    height: 80px;
-    background-color:white ;
-    border-bottom: 1px solid #d3cfcf;
-    }
-    #navbar .container{
-    padding:5px 10%;
-    display: flex;
-    }
-    .logo img{
-    width: 197px;
-    /* height: 60px; */
-    }
-    form{
-     margin: 20px 10px 30px 28px;
-    }
-    #search{
-        border: 1px solid #a0a0a0;
-        border-radius: 3px;
-        background-color: #f7f7f7;
-        color: #3c3c3c;
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: .55px;
-        line-height: 19px;
-        margin: 0;
-        padding: 5px 10px 5px 39px;
-        height: 15px;
-        width: 250px;
-    }
-    #searchIcon{
-    position: absolute;
-        margin-left: 15px;
-        top: 33px;
-    }
-    .margin{
-    margin: 30px 10px;
-    display: flex;
-    font-size: 13px;
-    cursor: pointer;
-    }
-    .borderLine{
-    border: 1px solid rgb(112, 109, 109);
+/* pooja css -1sr */
+*{
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+}
+body{
+/* width: 100%; */
+background-color: #f7f7f7;
+}
+ul li{
+list-style: none;
+font-family: 'Source Sans Pro', sans-serif;
+color: #3c3c3c;
+}
+a{
+text-decoration: none;
+}
+ h1{
+font-family: 'Roboto', sans-serif;
+}
+h2{
+font-family: 'Roboto', sans-serif;
+}
+p{
+font-family: 'Roboto', sans-serif;
+    color: #3c3c3c;
+
+
+}
+.clear{
+clear: both;
+}
+#navbar{
+/* width: 100%; */
+box-sizing: border-box;
+height: 87px;
+background-color:white ;
+border-bottom: 1px solid #d3cfcf;
+/* border:1px solid red; */
+}
+#navbar .container{
+width: 85%;
+margin: auto;
+display: flex;
+/* border:1px solid red; */
+}
+.logo img{
+width: 220px;
+height: 80px;
+}
+form{
+ margin: 20px 10px 30px 28px;
+}
+#search{
+    border: 1px solid #a0a0a0;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    color: #3c3c3c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .55px;
+    line-height: 19px;
+    margin: 0;
+    padding: 10px 10px 10px 39px;
     height: 15px;
-    margin: 28px 0px;
-    }
-    
-    .margin:hover{
-     color: #00a0a0
-    }
-    .fa-user-o{
-    margin: 0px 3px;
-    }
-    
-    .arrow{
-    font-weight: lighter;
-    width: 3px;
-    color: rgb(112, 109, 109);
-    margin: 0px 10px;
-    }
-    .arrow:hover{
-     color: #00a0a0
-    
-    }
-    #cartItem {
-    margin: 18px 15px;
-    font-size: 30px !important;
-    color: rgb(112, 109, 109);
-    }
-    /* aftar navbar categories part */
-    #categories{
-    top:0;
-    background-color:white ;
-    position: sticky;
-    width: 100%;
-    border-bottom: 1px solid #d3cfcf;
-    display: flex;
-    z-index: 999999;
-    }
-    #categories .container{
-    display: flex;
-    margin:10px 190px;
-    }
-    #catLinks {
-    display: flex;
-    
-    }
-    #catLinks li {
-    margin:5px 18px;
-    font-size: 13.5px;
-    }
-    #catLinks   ul li{
-    position: relative;
-    }
-    
-    #catLinks li:hover{
-     color: #00a0a0;
-    cursor: pointer;
-    }
-    .dropdown{
-    margin-top: 1rem;
-    text-transform: none;
-    display: none;
-    position: absolute;
-    width: 250px;
-    height: 300px;
-    background-color: whitesmoke;
-    }
-    #catLinks:hover .dropdown{
-    display: block;
-    }
-    #catLinks:hover .dropdown li{
-    margin: 10px;
-    }
-    .rightSideContaint{
-    margin: 0px 80px;
-    }
-    .rightPart{
-    display: flex;
-    margin: 0px 10px;
-    font-size: 13.5px;
-    }
-    .rightPart .consult{
-    margin: 0px 10px;
-    display: flex;
-    background-color: #d8faf9;
-    padding: 5px;
-    border-radius: 4px;
-    font-weight: 700;
-    
-    }
-    .rightPart .consult i{
-    margin: 1px 5px;
-    }
-    .rightPart .findStore {
-    margin: 0px 10px;
-    display: flex;
-    background-color: #e3e3e3;
-    padding: 5px;
-    border-radius: 4px;
-    }
-    .rightPart .findStore i{
-    margin: 1px 5px;
-    }
+    width: 350px;
+}
+#searchIcon{
+position: absolute;
+    margin-left: 15px;
+    top: 30px;
+}
+.margin{
+margin: 30px 10px;
+display: flex;
+font-size: 14px;
+cursor: pointer;
+}
 
-    /* Head part end */
+.borderLine{
+border: 1px solid rgb(112, 109, 109);
+height: 15px;
+margin: 28px 0px;
+}
+
+.margin:hover{
+ color: #00a0a0;
+}
+.fa-user-o{
+margin: 0px 3px;
+}
+
+.arrow{
+font-weight: lighter;
+width: 3px;
+color: rgb(112, 109, 109);
+margin: 0px 10px;
+}
+.arrow:hover{
+ color: #00a0a0
+}
+.userBox {
+display: flex;
+}
+.userLogin{
+z-index: 9999999;
+position: absolute;
+width: 330px;
+height: 135px;
+background-color: whitesmoke;
+display: none;
+margin-top:30px;
+right: 21rem;
+}
+.userLogin > button{
+display: block;
+padding: 14px;
+width: 310px;
+margin: 10px 10px;
+cursor: pointer;
+font-size: 19px;
+}
+.userLogin a{
+color: white;
+}
+.userLogin #a{
+color: black;
+}
+.userLogin > button:nth-child(1){
+background-color: #00afae;
+border: 1px solid #00c2c1;
+color: white;
+}
+.margin:hover > .userLogin {
+display: block;
+}
+#cartItem {
+margin: 26px 15px;
+color: rgb(112, 109, 109);
+width: 30px !important;
+position: absolute;
+cursor: pointer;
+}
+#cartOnNum{
+position: relative;
+margin: 35px 35px;
+color: rgb(112, 109, 109);
+font-size: 12px;
+width: 18px;
+height: 18px;
+border: 1px solid white;
+border-radius: 50px;
+background-color: chocolate;
+color: white;
+text-align: center;
+padding-top: 2px;
+cursor: pointer;
+
+}
+.cartShowsItem{
+display: flex;
+}
+.cartAdd{
+background-color: whitesmoke;
+z-index: 9999999;
+width: 280px;
+margin-top:70px;
+right: 25rem;
+padding: 10px;
+display: none;
+cursor: pointer;
+}
+.cartAdd p{
+text-align: center;
+margin: 5px 15px;
+}
+.cartAdd > button{
+padding: 14px;
+width: 260px;
+margin: 10px 10px;
+cursor: pointer;
+font-size: 20px;
+}
+ #cartItem:hover > .cartAdd {
+display: block;
+}
+/* aftar navbar categories part */
+
+ #categories{
+/* margin-top: 10px; */
+top:0;
+position: sticky;
+background-color:white;
+border-bottom: 1px solid #d3cfcf;
+display: flex;
+z-index: 999999;
+}
+
+#categories .container{
+ /* border: 1px solid green; */
+width: 73%;
+height: 50px;
+
+display: flex;
+margin-left: 155px;
+}
+
+#catLinks {
+/* border: 1px solid green; */
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+
+#catLinks li {
+margin:5px;
+font-size: 14px;
+padding-left: 10px;
+margin-top: 15px;
+}
+
+#catLinks  li a{
+color: black;
+}
+#catLinks li:hover{
+ color: #00a0a0;
+cursor: pointer;
+}
+
+#catLinks li .dropdown{
+top: 2rem;
+position: absolute;
+width: 250px;
+height: 200px;
+background-color: whitesmoke;
+}
+li .dropdown{
+margin-top: 10px;
+display: none;
+}
+li .dropdown li{
+display: block;
+float: none;
+cursor: pointer;
+}
+#catLinks li:hover .dropdown{
+display: block;
+}
+#catLinks:hover .dropdown li{
+margin: 10px;
+font-size: 14px;
+}
+
+.rightPart{
+/* border:1px solid red; */
+display: flex;
+font-size: 13.5px;
+width: 260px;
+margin-left: 100px;
+margin-top: 5px;
+
+}
+.rightPart .consult{
+width: 100px;
+height:30px ;
+display: flex;
+background-color: #d8faf9;
+border-radius: 4px;
+margin-left: 40px;
+}
+.rightPart .consult p{
+    text-align: center;
+    margin-top: 7px;
+    font-weight: 900;
+
+}
+
+.rightPart .consult i{
+margin: 8px 7px;
+
+}
+
+.rightPart .findStore {
+width: 100px;
+height:30px ;
+display: flex;
+background-color: #e3e3e3;
+border-radius: 4px;
+margin-left: 20px;
+}
+.rightPart .findStore p{
+    text-align: center;
+    margin-top: 7px;
+    font-weight: 600;
+
+
+}
+.rightPart .findStore i{
+    margin: 8px 7px;
+}
     
 
 .cont{

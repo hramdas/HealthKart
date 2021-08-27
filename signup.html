@@ -25,13 +25,15 @@
         height: 800vh;
         background-attachment: fixed;
         padding: 5% 0px;
+        margin: auto;
     }
 
     #login .container {
         width: 700px;
         height: 600px;
         background-color: burlywood;
-        margin-left: 450px;
+        /* margin-left: 450px; */
+        margin: auto 25%;
         position: fixed;
         display: flex;
     }
@@ -117,8 +119,6 @@
         color: #f7f7f7;
     }
 
-
-
     .rightSidePopUp .loginPage #or {
         margin: 0px 5px;
         font-size: 20px;
@@ -192,13 +192,13 @@
                     </div>
                     <form action="" id="loginForm" onsubmit="formSubmit(event)">
                         <label for="name">Full Name</label>
-                        <input type="text" name="fullname" id="name" placeholder="Enter Your Full Name">
+                        <input type="text" name="fullname" id="name" placeholder="Enter Your Full Name" required>
                         <label for="mobile">Mobile Number</label>
-                        <input type="text" name="mobile" id="mobileNo" placeholder="Enter 10 digit no.">
+                        <input type="text" name="mobile" id="mobileNo" placeholder="Enter 10 digit no." required>
                         <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Enter Password" autocomplete="on">
+                        <input type="password" id="password" placeholder="Enter Password" autocomplete="on" required>
                         <label for="password">Re-Enter Password</label>
-                        <input type="password" id="rePassword" placeholder="Re-Enter Password" autocomplete="on">
+                        <input type="password" id="rePassword" placeholder="Re-Enter Password" autocomplete="on" required>
                         <button id="btn">Sign Up</button>
                     </form>
                     <div class="lines">
