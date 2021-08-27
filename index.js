@@ -141,4 +141,3 @@ window.onload = slidingShows;
          cart_data.push(p);
          localStorage.setItem("cart", JSON.stringify(cart_data));
     }
-

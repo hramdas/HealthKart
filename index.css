@@ -325,6 +325,7 @@ margin-left: 20px;
 
 /* CARSOUEL PART */
 #carousel{
+/* border: 1px solid red; */
 width: 97%;
 margin: auto;
 /* background-color: #e3e3e3; */
@@ -334,15 +335,11 @@ width: 100%;
 margin: auto;
 }
 
-
-
 /* Pop up */
 
 
-
-
-
 /* bhargav 1st file */
+
 /* Flash Sale Part */
 #FlashSale{
 box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
@@ -477,123 +474,221 @@ padding: 7px;
 
 
       #grid {
-          display:grid;
-          grid-gap:30px;
-          grid-template-columns:250px 250px 250px 250px;
-margin-left: 250px;
- }
+            display:grid;
+            grid-gap:30px;
+            grid-template-columns:250px 250px 250px 250px;
+            margin-left: 250px;
+            /* border: 1px solid red; */
+            margin:auto;
+            width: 70%;
+         }
 
   .h1{
-          font-weight: 900;
-          margin-left: 245px;
+          font-weight: 800;
+          /* border: 1px solid red; */
+          width: 60%;
+          margin: auto;
           color: black;
           margin-bottom: 30px;
+          margin-left: 230px;
       }
+
       #grid  div {
         border-radius: 10px;
         background-color:#fff;
+        /* border: 1px solid red; */
+        margin:auto;
+        width: 250px;
+        border: 0.01em solid #dddada;       
       }
+
+
+      #grid :hover{
+        box-shadow: 0px 0px 18px rgba(33,33,33,.2); 
+      }
+
       #grid_box img {
            float: right;
+           width: 80px;
+           margin-top: 30px;
+           /* margin-left: 10px; */
        }
+
        #grid_box > h3 {
+           /* border: 1px solid red; */
            float:left;
            line-height: 21px;
            clear: both;
-          margin: 12px 10px;
-        font-size: 18px;
+           margin: 12px 10px;
+          font-size: 18px;
        }
+
        #grid_box a {
                 float:left;
                 font-family: sans-serif;
                 font-weight: 700;
             font-size: 15px;
-            color: #00afae;
+            color: #00c2c1;
                 clear: both;
             margin: 2px 10px;
             margin-bottom: 20px;
             text-transform: capitalize;
        }
 
+
        #cl{
            clear: both;
        }
+
        #sports {
-box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
-border-radius: 4px;
-width: 68%;
-margin: 50px auto;
-       }
-#sports h1{
-padding: 0px 20px;
-background-color: #fff;
-}
-      .second {
-        width:97%;
-        border-radius: 10px;
-        padding-bottom: 1px;
-        padding-top: 1px;
-        /* margin-bottom: 10px; */
-      }
-      #pop {
-        display: grid;
-        grid-template-columns: 200px 200px 200px 200px 200px;
-        grid-gap: 20px;
-        float: left;
-      } #pop div {
+        /* box-shadow: 0 3px 6px rgb(0 0 0 / 16%); */
+        border-radius: 4px;
+        width: 70%;
+        height: 250px;
+        margin: 50px auto;
+        /* border: 1px solid black;      */
+    }
+
+    #sports {
+        box-shadow: 0px 0px 18px rgba(33,33,33,.2); 
+    }
+
+    #sports h1{
+        width: 98%;
+        /* border: 1px solid red; */
+        margin: auto;
+        padding-left: 20px;
+        height: 50px;
+        margin-top: 10px;
+        background-color:#fff;
+        margin-top: 10px;
         padding-top: 10px;
-        border-radius: 10px;
+    }
+
+    #sports #pop{
+        width: 97%;
+        /* border: 1px solid red; */
+        /* margin: 10px 7px; */
+        background-color: white;
+        display: grid;
+        grid-template-columns: 18% 18% 18% 18% 18%;
+        grid-gap: 2%;
+        margin-top: 30px;
+        margin-left: 13px;
+        border-radius: 3px;
         text-align: center;
-      }
-#pop img{
-width: 40%;
-}
-      /* srinivas footer code */
+        padding-top: 10px;
+        } 
+
+        #pop img{
+        width: 40%;
+        }
+         
+        /* srinivas footer code */
+
       #foot {
+          
        background-color: #fff;
-  display: grid;
+       display: grid;
         grid-template-columns: 280px 280px 280px 280px;
         width:100%;
-        grid-gap: 0px;
+        grid-gap: 1 px;
         margin: auto;
         height:270px;
-padding: 20px;
+        padding: 20px;
     }
-.footer{
 
-}
+    #foot{
+        /* border: 1px solid red; */
+        width: 80%;
+        height: 250px;
+        margin: auto;
+        padding-left: 220px;      
+    }
+
     #foot div {
-        border:1px solid black;
-        text-align: center;
-        padding: 40px ;
+       border: 0.001em solid #dddada ;
+        /* width: 80%; */
+        height: 250px;
+        margin: auto;
+       /* padding-left: 10px; */
+       
+    
+        
     }
     .clear{
         clear: both;
         margin-bottom: 50px;
     }
-    .plus {
-        width:80%;
+    
+    #extra{
+        width: 98%;
+        background-color: white;
         margin: auto;
-        border:1px solid black;
-        height:80px;
-       padding-top: 30px;
+        margin-top: 20px;
+        height: 80px;
     }
-    #footer {
-        background-color: #e3e3e3e1;
-        width: 100%;
+    #extra .spend{
+        width: 70%;
+        display: flex;
+        margin: auto;
+        height: 30px;
+        padding-bottom: 20px;
+        background-color:#ffe08a ;
+        color: #9d6200;
+        border-radius: 2px;
+        opacity: 0.8;
+    
+    }
+    #extra .spend p{
+        margin-top: 10px;
+        margin-left: 20px;
+        color: #9d6200;
+    }
+    #extra .spend img{
+    padding-left: 5px;
+    padding-top: 5px;
+    }
+
+    #plus{
+        width: 98%;
+        height: 100px;
+        margin: auto;
+        background-color: white;
+    }
+    .plus {
+        width:70%;
+        margin: auto;
+        border:0.01em solid rgb(236, 236, 236);
+        height:50px;
+        padding-top: 10px;
+        margin-top: 20px;
+        
+    }
+    .plus p{
+        
+    }
+
+    #footer1 {
+        background-color: #f9f9f9;;
+        width: 97%;
         height: 600px;
         display: grid;
         grid-template-columns: 150px 150px 200px 150px 150px 300px;
         grid-gap: 20px;
         padding-top: 60px;
-        padding-left: 150px;
+        /* padding-left: 150px; */
         line-height: 25px;
+        border: 1px solid red;
+        margin: auto;
+        padding-left: 10px;
     }
-   #footer input {
+
+   #footer1 input {
         height: 20px;
         width: 150px;
     }
-   #footer button {
+   #footer1 button {
         background-color: hsl(177, 92%, 40%);
         color: white;
         padding: 4px;
@@ -606,7 +701,7 @@ padding: 20px;
         grid-gap: 30px;
     }
     hr {
-        width: 1200px;
+        /* width: 1000px; */
         margin-bottom: 300px;
     }
     .last {
@@ -622,6 +717,4 @@ padding: 20px;
         margin-right: 180px;
         margin-top: 20px;
     }
-    .bottom_left {
-        /* margin-left: 150px; */
-    }
+    
