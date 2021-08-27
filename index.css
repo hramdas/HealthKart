@@ -547,11 +547,8 @@ padding: 7px;
         width: 70%;
         height: 250px;
         margin: 50px auto;
-        /* border: 1px solid black;      */
-    }
-
-    #sports {
         box-shadow: 0px 0px 18px rgba(33,33,33,.2); 
+        /* border: 1px solid black;      */
     }
 
     #sports h1{
@@ -579,12 +576,23 @@ padding: 7px;
         border-radius: 3px;
         text-align: center;
         padding-top: 10px;
+        cursor:pointer;
         } 
+        
+
 
         #pop img{
         width: 40%;
+        margin: 6px 0;
         }
-         
+        #sports #pop h4{
+            margin: 5px 0;
+            
+        }
+        /* #sports #pop p{
+            border-left: 1px solid grey;
+            height: 10px;
+        } */
         /* srinivas footer code */
 
       #foot {
@@ -601,25 +609,34 @@ padding: 7px;
 
     #foot{
         /* border: 1px solid red; */
-        width: 82%;
+        width: 86%;
         height: 250px;
         margin: auto;
-        padding-left: 220px;  
-        
+        padding-left: 160px;    
     }
 
     #foot div {
        border: 0.001em solid #dddada ;
-        /* width: 80%; */
+       opacity: 0.9px;
         height: 250px;
-        margin: auto;
+        /* margin: auto; */
         text-align: center;
         padding-top: 10px;
-       /* padding-left: 10px; */
-       
-    
+        font-size: 14px;
+      padding-right: 10px;
         
     }
+    #foot div h6{
+        font-size: 15px;
+        margin-bottom: 20px;
+        opacity: 0.8;
+        font-weight: 400;
+    }
+    #foot div img{
+        margin-top: 10px;
+        justify-content: space-around;
+    }
+
     .clear{
         clear: both;
         margin-bottom: 50px;
@@ -691,7 +708,7 @@ padding: 7px;
     #footer1 h5{
         font-size: 14.5px;
         margin: 10px 0;
-        font-weight: 450;
+        font-weight: 400;
     }
 
 
@@ -734,7 +751,7 @@ padding: 7px;
     }
     .last p{
         font-size: 13px;
-        line-height: 24px;
+        line-height: 20px;
     }
     .bottom {
         margin-left: 80px;
