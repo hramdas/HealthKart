@@ -24,7 +24,11 @@
   }
 
 </style>
-<body >
+<body>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
     <h1>Cart Page</h1>
    <div id="cart_data"></div>
    <h1 id ="total_cart"></h1>
@@ -52,7 +56,6 @@ cart_data.forEach(function(product) {
             data_div.append(div);
 
             total+= Number(product.price2);
-
     });
     let total_cart = document.getElementById("total_cart");
     total_cart.innerHTML= `Total Price ${total}`

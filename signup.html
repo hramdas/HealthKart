@@ -5,44 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login </title>
+    <title>Sign Up </title>
 </head>
 <style>
     * {
         margin: 0;
         padding: 0;
     }
-a{
-text-decoration: none;
-}
+
+    a {
+        text-decoration: none;
+    }
 
     #login {
         background-image: url('https://images.unsplash.com/photo-1599447332412-6bc6830c815a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height: 500vh;
+        height: 800vh;
         background-attachment: fixed;
-        padding: 7% 0px;
-
+        padding: 5% 0px;
+        margin: auto;
     }
 
     #login .container {
         width: 700px;
-        height: 550px;
+        height: 600px;
         background-color: burlywood;
+        /* margin-left: 450px; */
+        margin: auto 25%;
         position: fixed;
         display: flex;
-
-        margin-left: 450px;
-
-        margin: auto 28%;
     }
 
     .leftSidePopUp {
         width: 250px;
         background-color: cadetblue;
         padding: 1rem;
+
     }
 
     .leftSidePopUp .whySide {
@@ -65,29 +65,45 @@ text-decoration: none;
     }
 
     .rightSidePopUp .loginPage {
-        margin: 20px 5px;
+        margin: 30px 5px;
     }
 
     .rightSidePopUp .loginPage h1 {
         float: right;
+
+    }
+
+    #timeBar {
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .userPanel {
+        display: flex;
+        margin: 20px 35px;
+        padding: 2px;
+
+    }
+
+    #signup {
+        margin: 0px 20px;
     }
 
     .rightSidePopUp .loginPage h3 {
-        margin: 35px 10px;
         color: rgb(112, 109, 109);
         font-size: 20px;
     }
 
     .rightSidePopUp .loginPage label {
-        margin: 0px 35px;
+        margin: 5px 35px;
         color: rgb(112, 109, 109);
-
+        font-size: 20px;
     }
 
     .rightSidePopUp .loginPage input {
         width: 300px;
         height: 25px;
-        margin: 0px 35px;
+        margin: 3px 35px;
         padding: 8px 20px;
         outline: none;
     }
@@ -95,16 +111,12 @@ text-decoration: none;
     .rightSidePopUp .loginPage #btn {
         width: 343px;
         height: 45px;
-        margin: 30px 35px;
+        margin: 20px 35px;
         text-transform: uppercase;
         font-size: 20px;
         background-color: #00afae;
         border: 1px solid #00c2c1;
         color: #f7f7f7;
-    }
-
-    .rightSidePopUp .loginPage a {
-        margin: 10px 35px;
     }
 
     .rightSidePopUp .loginPage #or {
@@ -132,25 +144,24 @@ text-decoration: none;
 
     .rightSidePopUp .loginPage #social {
         border: 1px solid rgb(112, 109, 109);
-        padding: 8px 18px;
+        padding: 08px 18px;
         width: 80px;
         margin: 0px 35px;
         text-decoration: none;
         color: rgb(112, 109, 109);
     }
 
-.signup{
-cursor: pointer;
-}
+
 
     .socialink {
-        margin: 30px 0px;
+        margin: 20px 0px;
     }
 
     .hr {
         border-bottom: 1px solid rgb(112, 109, 109);
         padding: 1px 0px;
         margin: 10px 35px;
+
     }
 
     .rightSidePopUp .loginPage #pTaglast {
@@ -166,32 +177,29 @@ cursor: pointer;
         <div class="container">
             <div class="leftSidePopUp">
                 <div class="whySide">
-                    <h2>Why login?</h2>
-                    <p>Manage your orders</p>
-                    <p>Get exclusive deals and offers</p>
-                    <p>Personalized Recommendations</p>
+                    <h2>Why Sign Up?</h2>
+                    <p>Over 1.5 million satisfied customers</p>
+                    <p>Earn HK cash on every order</p>
+                    <p>Get personal fitness expert advice</p>
                 </div>
             </div>
             <div class="rightSidePopUp">
                 <div class="loginPage">
-
                     <h1 id="timeBar">&times</h1>
                     <div class="userPanel">
-                        <h3>Login</h3>
-                        <h3 id="signup"><a class="singup" href="signup.html">Signup</a></h3>
-                        </div>
-                    <form action="" id="loginForm">
-
-                        <label for="mobile">Mobile Number</label><br>
-                        <input type="text" name="mobile" id="mobileNo" placeholder="Enter Mobile Number" required>
-                        <label for="password">Password</label><br>
-                        <input type="password" name="password" id="password" placeholder="Enter Password"><br><br>
-                       
-
-                        <input type="password" name="password" id="password" placeholder="Enter Password" autocomplete="on" required>
-                        <a href="#" class="passwordForget">Forget Password</a>
-                        <a href="#" class="passwordForget">Login Password</a><br>
-                        <button id="btn">Login</button>
+                        <h3><a href="login.html">Login</a></h3>
+                        <h3 id="signup"><a href="signup.html">Signup</a></h3>
+                    </div>
+                    <form action="" id="loginForm" onsubmit="formSubmit(event)">
+                        <label for="name">Full Name</label>
+                        <input type="text" name="fullname" id="name" placeholder="Enter Your Full Name" required>
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" name="mobile" id="mobileNo" placeholder="Enter 10 digit no." required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" autocomplete="on" required>
+                        <label for="password">Re-Enter Password</label>
+                        <input type="password" id="rePassword" placeholder="Re-Enter Password" autocomplete="on" required>
+                        <button id="btn">Sign Up</button>
                     </form>
                     <div class="lines">
                         <div class="oneline"></div>
@@ -203,13 +211,45 @@ cursor: pointer;
                         <a href="https://www.facebook.com/" id="social">Facebook</a>
                     </div>
                     <div class="hr"></div>
-                    <p id="pTaglast">By logging in you agree to our Terms & Conditions</p>
-
+                    <p id="pTaglast">By logging in you agree to our <a href="#">Terms & Conditions</a></p>
                 </div>
             </div>
         </div>
     </div>
-<script src="login.js"></script>
+    <script>
+
+        function formSubmit(e)
+        {
+            e.preventDefault();
+            let userData = {
+                name: document.getElementById('name').value,
+                mobileNum: document.getElementById('mobileNo').value,
+                password: document.getElementById('password').value,
+                rePassword: document.getElementById('rePassword').value
+            }
+            if (password.value !== rePassword.value) {
+                alert("Not match");
+                window.location.href = "signup.html"
+
+            }
+
+            else {
+                window.location.href = "login.html"
+
+            }
+
+            localStorage.setItem("Data-User", JSON.stringify(userData));
+            console.log(userData);
+
+        }
+
+        let bar = document.getElementById('timeBar');
+        bar.addEventListener('click', function ()
+        {
+            window.location.href = 'index.html'
+        })
+
+    </script>
 </body>
 
 </html>
