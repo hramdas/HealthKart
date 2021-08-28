@@ -1,13 +1,13 @@
 /* Pooja Head */
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap'); */
 
 /* pooja css -1sr */
 *{
 margin: 0;
 padding: 0;
-font-family: 'Roboto', sans-serif;
+font-family: sans-serif;
 }
 body{
 /* width: 100%; */
@@ -340,10 +340,9 @@ margin-left: 20px;
     display : grid;
     grid-gap : 5px;
 }
-#grid-row {
-    display : grid;
-    grid-template-columns: 50% 40%;
-    grid-gap: 10%;
+#left-sidebar > categories{
+     display : grid;
+    grid-gap: 10px;
 }
 
 #float-left{
@@ -358,19 +357,31 @@ margin-left: 20px;
     clear : left;
 }
 
-.main-poster{
-    display : grid;
-    grid-template-columns: 63% 35%;
-    grid-gap: 3%;
+#maincont{
+    margin: auto auto;
     /* margin-bottom: 10px auto; */
 }
-#read-text div{
-    display : grid;
-    grid-template-columns: 50% 24% 24%;
-    margin: 20px auto;
+
+#left-sidebar > #categories{
+    display: grid;
+    line-height: 30px;
+    padding: 10px
 }
-#read-text p{
-    font-size: 13px;
+#categories #catitem {
+    padding: 10px;
+    overflow-y: scroll;
+    height: 200px;
+}
+#categories #catitem h5 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+#read-text{
+   margin: 20px auto;
+   font-size: 24px;
+   font-weight: 400px;
 }
 #read-text div > span{
     display : grid;

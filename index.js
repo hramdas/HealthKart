@@ -115,84 +115,84 @@ medProduct();
 
 // Trending by Ramdas
 
-  const trend = [
-    {
-      name : "MuscleBlaze Creatine Monohydrate- Unflavoured 0.55 lb",
-      price: '569',
-      image: 'https://img10.hkrtcdn.com/14847/prd_1484609-MuscleBlaze-Creatine-Monohydrate-Unflavoured-0.55-lb_o.jpg',
-      rating: '4.6',
-      pricefinal : '560',
-      discount: "25% off",
-  },
-  {
-      name : "MuscleBlaze PRE Workout 200- 0.22 lb Green Apple",
-      price: '649',
-      image: 'https://img6.hkrtcdn.com/14369/prd_1436875-MuscleBlaze-PRE-Workout-200-0.22-lb-Green-Apple_c_m.jpg',
-      rating: '4.1',
-      pricefinal : '',
-      discount: "17%",
-  },
-  {
-      name : "HealthKart Caffeine 200 mg- 90 capsules Unflavoured",
-      price: '699',
-      image: 'https://img4.hkrtcdn.com/15129/prd_1512843-HealthKart-Caffeine-200-mg-90-capsules-Unflavoured_o.jpg',
-      rating: '4.5',
-      pricefinal : '',
-      discount: "15%",
-  },
-  {
-      name : "MuscleBlaze Pre Workout Ripped- 0.55 lb Fruit Splash",
-      price: '1699',
-      image: 'https://img8.hkrtcdn.com/10610/prd_1060997-MuscleBlaze-Pre-Workout-Ripped-0.55-lb-Fruit-Splash_o.jpg',
-      rating: '4.5',
-      pricefinal : '1599',
-      discount: "10%",
-  }
-  ];
+  // const trend = [
+  //   {
+  //     name : "MuscleBlaze Creatine Monohydrate- Unflavoured 0.55 lb",
+  //     price: '569',
+  //     image: 'https://img8.hkrtcdn.com/10610/prd_1060997-MuscleBlaze-Pre-Workout-Ripped-0.55-lb-Fruit-Splash_o.jpg',
+  //     rating: '4.6',
+  //     pricefinal : '560',
+  //     discount: "25% off",
+  // },
+  // {
+  //     name : "MuscleBlaze PRE Workout 200- 0.22 lb Green Apple",
+  //     price: '649',
+  //     image: 'https://img6.hkrtcdn.com/14369/prd_1436875-MuscleBlaze-PRE-Workout-200-0.22-lb-Green-Apple_c_m.jpg',
+  //     rating: '4.1',
+  //     pricefinal : '',
+  //     discount: "17%",
+  // },
+  // {
+  //     name : "HealthKart Caffeine 200 mg- 90 capsules Unflavoured",
+  //     price: '699',
+  //     image: 'https://img4.hkrtcdn.com/15129/prd_1512843-HealthKart-Caffeine-200-mg-90-capsules-Unflavoured_o.jpg',
+  //     rating: '4.5',
+  //     pricefinal : '',
+  //     discount: "15%",
+  // },
+  // {
+  //     name : "MuscleBlaze Pre Workout Ripped- 0.55 lb Fruit Splash",
+  //     price: '1699',
+  //     image: 'https://img8.hkrtcdn.com/13068/prd_1306707-Cellucor-C4-Explosive-Preworkout-0.85-lb-Watermelon_o.jpg',
+  //     rating: '4.5',
+  //     pricefinal : '1599',
+  //     discount: "10%",
+  // }
+  // ];
 
-  const trend_json = JSON.stringify(trend);
-    localStorage.setItem("trending", trend_json);
-    let trend_item = localStorage.getItem("trending");
-    trend_item = JSON.parse(trend_item);
+  // const trend_json = JSON.stringify(trend);
+  //   localStorage.setItem("trending", trend_json);
+  //   let trend_item = localStorage.getItem("trending");
+  //   trend_item = JSON.parse(trend_item);
 
-    function trendProducts() {
-      let trenddata = document.getElementById("trenddata")
+  //   function trendProducts() {
+  //     let trenddata = document.getElementById("trenddata")
 
-      trend_item.forEach(function(products){
-        let div = document.createElement("div");
-        let pricecart = document.createElement('div');
+  //     trend_item.forEach(function(products){
+  //       let div = document.createElement("div");
+  //       let pricecart = document.createElement('div');
 
-       let t_name = document.createElement("h4")
-        t_name.innerHTML = products.name
+  //      let t_name = document.createElement("h4")
+  //       t_name.innerHTML = products.name
 
-        let image = document.createElement("img")
-        image.src = products.image
+  //       let image = document.createElement("img")
+  //       image.src = products.image
 
-        let t_price = document.createElement("b");
-        t_price.innerHTML = '₹'+ products.price;
+  //       let t_price = document.createElement("b");
+  //       t_price.innerHTML = '₹'+ products.price;
 
-        let t_rating = document.createElement("p");
-        t_rating.innerHTML = '★ ' + products.rating;
+  //       let t_rating = document.createElement("p");
+  //       t_rating.innerHTML = '★ ' + products.rating;
 
-        let t_pricefinal = document.createElement('h4'); 
-        t_pricefinal.innerHTML = products.pricefinal;
+  //       let t_pricefinal = document.createElement('h4'); 
+  //       t_pricefinal.innerHTML = products.pricefinal;
 
-        let t_discount = document.createElement('h5'); 
-        t_discount.innerHTML = products.discount;
+  //       let t_discount = document.createElement('h5'); 
+  //       t_discount.innerHTML = products.discount;
 
-        let t_button = document.createElement('button');
-        t_button.innerHTML = "🛒 ADD";
-        t_button.onclick = function (){
-            addtocart(products);
-        };
+  //       let t_button = document.createElement('button');
+  //       t_button.innerHTML = "🛒 ADD";
+  //       t_button.onclick = function (){
+  //           addtocart(products);
+  //       };
 
-        pricecart.append(t_price, t_button)
-        div.append(image,t_discount,t_name, t_rating, pricecart, t_pricefinal);
-        trenddata.append(div);
+  //       pricecart.append(t_price, t_button)
+  //       div.append(image,t_discount,t_name, t_rating, pricecart, t_pricefinal);
+  //       trenddata.append(div);
 
-      })
-    }
-    trendProducts()
+  //     })
+  //   }
+  //   trendProducts()
 
 
 
