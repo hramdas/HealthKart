@@ -103,16 +103,35 @@ function showProteins() {
 
         let quick_btn = document.createElement('button')
         quick_btn.innerText = '🗲Quick Buy';
-
         quick_btn.onclick = function () {
-            location.href = "/address.html";
+            location.href = "checkout.html";
+         };
+
+        let wish_btn = document.createElement('button')
+         wish_btn.innerText = '♡';
+        wish_btn.onclick = function () {
+            addtoWish(product)
          };
 
         price_quick.append(p_price, quick_btn);
-        div.append(p_image, p_name, p_rating, price_quick);
+        div.append(wish_btn, p_image, p_name, p_rating, price_quick);
 
         div_data.append(div)
 
     });
 }
 // showProteins()
+
+if(localStorage.getItem("wish")===null){
+    localStorage.setItem("wish", JSON.stringify([]));
+}
+
+function addtoWish(p){
+     let wish_data = JSON.parse(localStorage.getItem("wish"));
+     wish_data.push(p);
+     localStorage.setItem("wish", JSON.stringify(wish_data));
+
+    //  wishbtn = document.getElementById("button");
+    //  wishbtn.style.color = "Red"
+
+}

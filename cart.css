@@ -37,6 +37,7 @@ height: 70px;
 background-color:white ;
 width: 100%;
 border-bottom: 1px solid #d3cfcf;
+
 /* border: 1px solid red; */
 
 }
@@ -52,6 +53,7 @@ margin-left: 350px;
     height: 50px;
     margin-top: 10px;
     }
+
 #navbar .process{
 display: flex;
 }

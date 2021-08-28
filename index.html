@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="index.css">
     <!-- icon CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAXVBMVEUAv7////8AvLy26Ojr+vqv4+Mew8Pk9fWA2dkyxcUAurq45ub3/f2y5+fw+/vW8vJZzs7L7+/D7Ox/2Nik4uJk0dGZ399CycmJ29t01dWd4eFPzMze9fW+6+tv1NQj4399AAAEAElEQVR4nO3d61LbQAwFYHuTmsY4hPsd3v8x2+lQIJa81i4EfA7n/IWm+oYZRdYuoWn503x3AV8QGTnyo4zDdsWW7TAyrvvEln49NqaGLUlGisjIERk5IiNHZOSIjByRkSMyckRGjsjIERk5IiNHZOSIjByRkSMyckRGjsjIERk5IiNHZOSIjByRkSMyckRGjsjIERk5IiNHZOSIjO/T7Sf6+vuZ/L7iV+/G2UzXEDWmo3Yvv0M/7+54P1PFd/sv3k4X/JJ1O87jtxmDtRca084Qh8x3Ixr7rSG2m+l6EI3p1hKvMuUAGtOpJd7mqgE0bixx1eeKADSeGOIuXwuc0Wmp65ki0IxeS52bGMCMXks9nasEy+i11IvZQrCMTku9zLZUQKNtqWeBMpCMvdNSI1UAGdPKEIfQIx6O0WupN6EiYIxeS72L7SxgjE5LvQ+uZWCMtqWez79rQBmdKfUxvFzDMPZOS40KQYz1LRXG6LXU3G4D0ei01OuSTTeC0bbU/G4Dz+i01JndBpzRaaknRcLlG72WOntQgGVMV5Y4u9sAMzotNbsuRjTalrotaqnLN/ZnhrgrJy7amO4NcW5djGZMz4Y4uy7+XOP8WvOjRqffPFRdVqg23toTeSfjOkuM9jg8uNv4NGNd4kan3wTWxVDG/tr82/BuA8TYOfNN9cWhhRofnH+7qkUu1Gjnm7bs2R/A6KeOiGU8q+s6UMbg4IFt/OJZ7nuM8eU4rrFs6QhqbG++0LgL/VmJ4083VtyTrjbehf4GxvhPnxQb7cNH+bJjoc/I/3PiXAJg2cu9ZOhSMmNdwakcgnGTmmTH89KHrEUb/602nM1V4bizZOPLc0Z6NF8pG3cWbHz9adnlVdmWdbnGt4kmXWS+iGx8/zaY7P6qZNxZqvF8/+WH8ddLxp2FGkcnxc4R3SX8vY5x40z2Gnl83Fmo0XzfR8YdFGNzY36QbPfl/v7/dnH+zHbvsemrxx0co/MeGhx3gIzpziBj9x+AjN5xXeiqDpKxdtyBMjqXPCPjDpSxctzBMr6W+5aBzug8Lz/NFoJmrBl30Izeld25IuCM3rgzUwqesXzcwTM2/ZNB5scdQKNzq/UoWwyi0TkeyI47iMYmXRpk7kYkpNE51M79PgSm0Rt3pp+XQY3Or31MjzugRud4YHoXiWp0npcntztx4+hNKbZKOZzROR6YOsw68GfodavYZ69V5ADnHbWVBD9D75DRZyFyREaOyMgRGTkiI0dk5IiMHJGRIzJyREaOyMgRGTkiI0dk5IiMHJGRIzJyREaOyMgRGTkiI0dk5IiMHJGRIzJyREaOyMgRGTkiI0d+pjH0GcBQ6cfG4RdfhpGRODJy5CcY/wCy8l9VoXLB9wAAAABJRU5ErkJggg==" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.healthkart.com/favicon.ico" type="image/x-icon">
 
 </head>
+
 <body>
     <!-- NAVBAR START -->
     <div id="navbar">
@@ -23,7 +25,7 @@
                 <input type="text" id="search" placeholder="Search for products, brands or Health Goals">
             </form>
             <div class="oneItem margin">
-                <p id="hover">Loyalty Rewards</p>
+                <p id="hover"> <p id="hover"><a href="/wishlist.html">Wishlist</a></p></p>
             </div>
             <p class="borderLine"></p>
             <div class="twoItem margin">
@@ -48,19 +50,18 @@
                 <a href="cart.html">
                     <img src="https://img2.hkrtcdn.com/react/static/media/common/header/cart.svg" alt="" id="cartItem">
                 </a>
-                <p id="cartOnNum">0</p>
-            <div class="cartAdd">
-                <p>Your Cart is Empty!</p>
-                <button onclick="cartBtn()" id="cart"><a href="payment.html">Proceed to Cart</a></button>
+                <p id="cartOnNum"></p>
+                <div class="cartAdd">
+                    <p>Your Cart is Empty!</p>
+                    <button onclick="cartBtn()" id="cart"><a href="cart.html">Proceed to Cart</a></button>
                 </div>
-                </div>
-                </div>
+            </div>
+        </div>
     </div>
     <div class="clearDiv"></div>
-
     <!-- <div class="clear"></div> -->
 
-
+    <!-- <div class="clear"></div> -->
 
 
     <!-- aftar navbar categories part -->
@@ -111,17 +112,25 @@
     <!-- CAROUSEL END -->
 
     <!-- FLASH SALES START  -->
+<div>
     <div id="FlashSale">
         <div class="container flashColor">
-            <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/flash-sale-black.svg" alt="">
-            <p>Flash Sale</p>
-            <p><a href="#">View All</a> </p>
+            <p>🗲Flash Sale</p>
+            <h3><a href="#">View All</a> </h3>
         </div>
         <hr>
         <div id="data"></div>
     </div>
     <!-- FLASH SALES END  -->
-
+    <!-- Ramdas
+    <div id="trending">
+        <div id='trendhead'>
+            <h2>Trending Now</h2>
+            <button>View All</button>
+        </div>
+        <div id='trenddata'></div>
+    </div>
+</div> -->
     <!-- Srinivas -->
 
     <!-- What are you looking for -->
@@ -171,8 +180,8 @@
         </div>
         <!-- <div id="cl"></div> -->
 
-        <div id="sports"> 
-              <h1>Popular in Sports Nutrition</h1>
+        <div id="sports">
+            <h1>Popular in Sports Nutrition</h1>
 
             <div id="pop">
 
@@ -180,7 +189,7 @@
                     <img src="https://img2.hkrtcdn.com/6544/bnr_654341_o.png" />
                     <h4>Whey Protiens</h4>
                 </div>
-  
+
                 <div>
                     <img src="https://img6.hkrtcdn.com/6544/bnr_654345_o.png" />
                     <h4>Whey Protien Isolate</h4>
@@ -190,7 +199,7 @@
                     <img src="https://img4.hkrtcdn.com/6544/bnr_654343_o.png" />
                     <h4>Mass Gainers</h4>
                 </div>
-                
+
                 <div>
                     <img src="https://img8.hkrtcdn.com/6544/bnr_654347_o.png" />
                     <h4>Amino Acids / BCAAs</h4>
@@ -204,77 +213,77 @@
             </div>
         </div>
 
- 
-    <div id="sports">
-      
+
+        <div id="sports">
+
             <h1>Popular in Weight Loss</h1>
-      
-        <div id="pop">
 
-            <div>
-                <img src="https://img6.hkrtcdn.com/6542/bnr_654165_o.png" />
-                <h4>Meal Replacement</h4>
-            </div>
+            <div id="pop">
 
-            <div>
-                <img src="https://img6.hkrtcdn.com/9523/bnr_952235_o.png" />
-                <h4>Energy Drinks</h4>
-            </div>
+                <div>
+                    <img src="https://img6.hkrtcdn.com/6542/bnr_654165_o.png" />
+                    <h4>Meal Replacement</h4>
+                </div>
 
-            <div>
-                <img src="https://img8.hkrtcdn.com/4045/bnr_404407_o.png" />
-                <h4>Green coffee Bean extract</h4>
-            </div>
+                <div>
+                    <img src="https://img6.hkrtcdn.com/9523/bnr_952235_o.png" />
+                    <h4>Energy Drinks</h4>
+                </div>
 
-            <div>
-                <img src="https://img8.hkrtcdn.com/6543/bnr_654237_o.png" />
-                <h4>Probiotics</h4>
-            </div>
+                <div>
+                    <img src="https://img8.hkrtcdn.com/4045/bnr_404407_o.png" />
+                    <h4>Green coffee Bean extract</h4>
+                </div>
 
-            <div>
-                <img src="https://img6.hkrtcdn.com/6543/bnr_654235_o.png" />
-                <h4>Green Tea</h4>
+                <div>
+                    <img src="https://img8.hkrtcdn.com/6543/bnr_654237_o.png" />
+                    <h4>Probiotics</h4>
+                </div>
+
+                <div>
+                    <img src="https://img6.hkrtcdn.com/6543/bnr_654235_o.png" />
+                    <h4>Green Tea</h4>
+                </div>
+
             </div>
-            
         </div>
-    </div>
 
-    <div id="sports">
+        <div id="sports">
             <h1>Popular in Health Foods & Drinks</h1>
-        
-        <div id="pop">
-            <div>
-                <img src="https://img2.hkrtcdn.com/6543/bnr_654291_o.png" />
-                <h4>Apple Cedar Venigar</h4>
-            </div>
 
-            <div>
-                <img src="https://img4.hkrtcdn.com/6543/bnr_654293_o.png" />
-                <h4>Penaut Butter</h4>
-            </div>
-           
-            <div>
-                <img src="https://img2.hkrtcdn.com/6544/bnr_654301_o.png" />
-                <h4>Protein Bars</h4>
-            </div>
+            <div id="pop">
+                <div>
+                    <img src="https://img2.hkrtcdn.com/6543/bnr_654291_o.png" />
+                    <h4>Apple Cedar Venigar</h4>
+                </div>
 
-            <div>
-                <img src="https://img10.hkrtcdn.com/6543/bnr_654299_o.png" />
-                <h4>Cereals</h4>
-            </div>
+                <div>
+                    <img src="https://img4.hkrtcdn.com/6543/bnr_654293_o.png" />
+                    <h4>Penaut Butter</h4>
+                </div>
 
-            <div>
-                <img src="https://img6.hkrtcdn.com/6543/bnr_654295_o.png" />
-                <h4>Nutrition For Chlidren</h4>
-            </div>
+                <div>
+                    <img src="https://img2.hkrtcdn.com/6544/bnr_654301_o.png" />
+                    <h4>Protein bars</h4>
+                </div>
 
+                <div>
+                    <img src="https://img10.hkrtcdn.com/6543/bnr_654299_o.png" />
+                    <h4>Cerals</h4>
+                </div>
+
+                <div>
+                    <img src="https://img6.hkrtcdn.com/6543/bnr_654295_o.png" />
+                    <h4>Nutrition For Chlidren</h4>
+                </div>
+
+            </div>
         </div>
-    </div>
-    
-    <div id="sports">
-        <div>
-            <h1>Popular In Fitness</h1>
-        </div>
+
+        <div id="sports">
+            <div>
+                <h1>Popular In Fitness</h1>
+            </div>
 
             <div id="pop">
                 <div>
@@ -298,165 +307,173 @@
                 </div>
 
             </div>
-    </div> 
+        </div>
 
-   
-    <!-- srinivas footer -->
-         <div id="foot">
 
-                    <div>
-                    <img src="https://img2.hkrtcdn.com/react/static/media/common/misc/hk-cash-icon.svg" />
-                    <h6>Earn HK Cash</h6>
-                    <p>Shop with us and get HK Cash to redeem on your next purchase. Know more about</p>
-                    <a href="index.html">Hk Cash</a>
-                    </div>
-        
-                    <div>
-                    <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/safe-payment-icon.svg" />
-                    <h6>Safe Payments</h6>
-                    <p>Pay with the world’s most popular and secure payment methods.</p>
-                    </div>
+        <!-- srinivas footer -->
+        <div id="foot">
 
-                    <div>
-                    <img src="https://img2.hkrtcdn.com/react/static/media/common/misc/hk-cash-icon.svg" />
-                    <h6>Authenticity Guaranteed</h6>
-                    <p>100% Authentic products for our customers</p>
-                    </div>
-            
-                    <div>
-                    <img src="https://img2.hkrtcdn.com/react/static/media/common/misc/andriod-icon.svg " />
-                    <img src=" https://img2.hkrtcdn.com/react/static/media/common/misc/apple-icon.svg">
-                    <h6>Download Healthkart App</h6>
-                    <p>Get the best experience of Healthkart at your fingertips.</p>
-                    <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/playstore-icon.svg" />
-                    <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/appstore-icon.svg" />
-                    </div>     
+            <div>
+                <img src="https://img2.hkrtcdn.com/react/static/media/common/misc/hk-cash-icon.svg" />
+                <h6>Earn HK Cash</h6>
+                <p>Shop with us and get HK Cash to redeem on your next purchase. Know more about</p>
+                <a href="index.html">Hk Cash</a>
             </div>
+
+            <div>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/safe-payment-icon.svg" />
+                <h6>Safe Payments</h6>
+                <p>Pay with the world’s most popular and secure payment methods.</p>
+            </div>
+
+            <div>
+                <img src="https://img2.hkrtcdn.com/react/static/media/common/misc/hk-cash-icon.svg" />
+                <h6>Authenticity Guaranteed</h6>
+                <p>100% Authentic products for our customers</p>
+            </div>
+
+            <div>
+                <img src="https://img2.hkrtcdn.com/react/static/media/common/misc/andriod-icon.svg " />
+                <img src=" https://img2.hkrtcdn.com/react/static/media/common/misc/apple-icon.svg">
+                <h6>Download Healthkart App</h6>
+                <p>Get the best experience of Healthkart at your fingertips.</p>
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/playstore-icon.svg" />
+                <img src="https://img10.hkrtcdn.com/react/static/media/common/misc/appstore-icon.svg" />
+            </div>
+        </div>
 
         <div>
             <div id="extra">
-                <div class="spend" >
-                <img src="https://img2.hkrtcdn.com/10330/bnr_1032991_o.png"/>
-                <p>Spend ₹10000 more to reach HK Premium</p>
-              </div>
+                <div class="spend">
+                    <img src="https://img2.hkrtcdn.com/10330/bnr_1032991_o.png" />
+                    <p>Spend ₹10000 more to reach HK Premium</p>
+                </div>
             </div>
 
-           <div id="plus">
-            <div class="plus">
-               <p>+ More Details about Health, Nutrition & Body Building Supplements</p>
+            <div id="plus">
+                <div class="plus">
+                    <p>+ More Details about Health, Nutrition & Body Building Supplements</p>
+                </div>
             </div>
         </div>
-    </div>
-                
-            <div class="clear"></div>
-            
+
+        <div class="clear"></div>
+
         <div class="clear"></div>
 
         <div>
-        <div id="footer1">
-       
-            <div>
-                <h5>HEALTHKART</h5>
-                <p>About Us</p>
-                <p>Contact Us</p>
-                <p>Refer & Earn</p>
-                <p>Loyalty Program</p>
-                <p>HK Consult</p>
-                <p>Blogs, Videos & More</p>
-                <p>Brand Directory</p>
-                <p>Authenticity Guaranteed</p>
-                <p>Careers</p>
-            </div>
-            <div>
-                <h5>BRANDS</h5>
-                <p>MuscleBlaze</p>
-                <p>TrueBasics</p>
-                <p>JustHer</p>
-                <p>Nouriza</p>
-                <p>Gritzo</p>
-                <p>bGREEN</p>
-            </div>
-            <div>
-                <h5>HEALTH & FITNESS</h5>
-                <p>Bodybuilding</p>
-                <p>Weight Loss</p>
-                <p>Hair & Skin Care</p>
-                <p>Sports Nutrition</p>
-                <p>Vitamins & Supplements</p>
-                <p>Ayurveda & Herbs</p>
-                <p>Health Food & Drinks</p>
-                <p>Fitness</p>
-                <p>Wellness</p>
-                <p>Consult Plans</p>
-            </div>
-            <div>
-                <h5>POLICIES</h5>
-                <p>Terms & Conditions</p>
-                <p>Delivery Policy</p>
-                <p>Privacy Policy</p>
-                <p>Returns Policy</p>
-            </div>
-            <div>
-                <h5>QUICK LINKS</h5>
-                <p>My Account</p>
-                <p>Track Your Order</p>
-                <p>Store Locator</p>
-                <p>HK Cash</p>
-                <p>HK Coupons</p>
-                <p>FAQs</p>
-                <p>Sell On HealthKart</p>
-            </div>
+            <div id="footer1">
 
-            <div>
-                <h5>ABOUT HEALTHKART</h5>
-            <p>HealthKart.com is India’s largest online health & fitness store for men and women. Shop online from the
-                latest collections of health, fitness and similar products featuring the best brands.</p>
-            <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
-            <p>Be the first one to receive amazing offers, deals and news</p>
-            <dv></dv>
-            <!-- <input type="email" placeholder=" Enter your email" required>
-            <button onclick="function1()"> SUBSCRIBE</button> -->
-            <h5>CONNECT WITH US</h5>
-            <div class="contact">
-                <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/facebook.svg" />
-                <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/instagram.svg" />
-                <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/twitter.svg" />
-                <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/youtube.svg" />
-                <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/pinterest.svg" />
-                </div>
-                </div>
-            </div>
-
-                <div class="clear1"></div>
-                <hr>
                 <div>
+                    <h5>HEALTHKART</h5>
+                    <p>About Us</p>
+                    <p>Contact Us</p>
+                    <p>Refer & Earn</p>
+                    <p>Loyalty Program</p>
+                    <p>HK Consult</p>
+                    <p>Blogs, Videos & More</p>
+                    <p>Brand Directory</p>
+                    <p>Authenticity Guaranteed</p>
+                    <p>Careers</p>
+                </div>
+                <div>
+                    <h5>BRANDS</h5>
+                    <p>MuscleBlaze</p>
+                    <p>TrueBasics</p>
+                    <p>JustHer</p>
+                    <p>Nouriza</p>
+                    <p>Gritzo</p>
+                    <p>bGREEN</p>
+                </div>
+                <div>
+                    <h5>HEALTH & FITNESS</h5>
+                    <p>Bodybuilding</p>
+                    <p>Weight Loss</p>
+                    <p>Hair & Skin Care</p>
+                    <p>Sports Nutrition</p>
+                    <p>Vitamins & Supplements</p>
+                    <p>Ayurveda & Herbs</p>
+                    <p>Health Food & Drinks</p>
+                    <p>Fitness</p>
+                    <p>Wellness</p>
+                    <p>Consult Plans</p>
+                </div>
+                <div>
+                    <h5>POLICIES</h5>
+                    <p>Terms & Conditions</p>
+                    <p>Delivery Policy</p>
+                    <p>Privacy Policy</p>
+                    <p>Returns Policy</p>
+                </div>
+                <div>
+                    <h5>QUICK LINKS</h5>
+                    <p>My Account</p>
+                    <p>Track Your Order</p>
+                    <p>Store Locator</p>
+                    <p>HK Cash</p>
+                    <p>HK Coupons</p>
+                    <p>FAQs</p>
+                    <p>Sell On HealthKart</p>
+                </div>
+
+                <div>
+                    <h5>ABOUT HEALTHKART</h5>
+                    <p>HealthKart.com is India’s largest online health & fitness store for men and women. Shop online
+                        from the
+                        latest collections of health, fitness and similar products featuring the best brands.</p>
+                    <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
+                    <p>Be the first one to receive amazing offers, deals and news</p>
+                    <dv></dv>
+                    <!-- <input type="email" placeholder=" Enter your email" required>
+            <button onclick="function1()"> SUBSCRIBE</button> -->
+                    <h5>CONNECT WITH US</h5>
+                    <div class="contact">
+                        <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/facebook.svg" />
+                        <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/instagram.svg" />
+                        <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/twitter.svg" />
+                        <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/youtube.svg" />
+                        <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/pinterest.svg" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="clear1"></div>
+            <hr>
+            <div>
                 <div class="last">
-            <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/hk-consult.svg" />
-            <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/A-G.svg" />
-            <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/RP.svg" />
-            <p><strong>Disclaimer:</strong> The information contained on HealthKart (www.healthkart.com or subdomains) is provided for
-                informational purposes only and is not meant to substitute for the advice provided by your doctor or
-                other healthcare professional. Information and statements regarding products, supplements, programs etc
-                listed on HealthKart have not been evaluated by the Food and Drug Administration or any government
-                authority and are not intended to diagnose, treat, cure, or prevent any disease. Please read product
-                packaging carefully prior to purchase and use. The results from the products will vary from person to
-                person. No individual result should be seen as typical.</p>
+                    <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/hk-consult.svg" />
+                    <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/A-G.svg" />
+                    <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/RP.svg" />
+                    <p><strong>Disclaimer:</strong> The information contained on HealthKart (www.healthkart.com or
+                        subdomains) is provided for
+                        informational purposes only and is not meant to substitute for the advice provided by your
+                        doctor or
+                        other healthcare professional. Information and statements regarding products, supplements,
+                        programs etc
+                        listed on HealthKart have not been evaluated by the Food and Drug Administration or any
+                        government
+                        authority and are not intended to diagnose, treat, cure, or prevent any disease. Please read
+                        product
+                        packaging carefully prior to purchase and use. The results from the products will vary from
+                        person to
+                        person. No individual result should be seen as typical.</p>
+                </div>
             </div>
+            <hr>
         </div>
-          <hr>
-            </div>
-            
-            <div class="bottom">
-                <h5>DOWNLOAD OUR APP</h5>
-        <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/App-Store.svg" />
-        <img src="https://img10.hkrtcdn.com/react/static/media/common/footer/Google-Play.svg" />
-    </div>
-    <div class="bottom_left">
-        <p>Copyright © 2021, HealthKart.com, or its affiliates</p>
-    </div>
+
+        <div class="bottom">
+            <h5>DOWNLOAD OUR APP</h5>
+            <img src="https://img2.hkrtcdn.com/react/static/media/common/footer/App-Store.svg" />
+            <img src="https://img10.hkrtcdn.com/react/static/media/common/footer/Google-Play.svg" />
+        </div>
+        <div class="bottom_left">
+            <p>Copyright © 2021, HealthKart.com, or its affiliates</p>
+        </div>
 
 
 </body>
 
 </html>
 <script src="index.js"></script>
+<script src="cartcount.js"></script>
