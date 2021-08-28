@@ -111,8 +111,8 @@ function showProteins() {
          wish_btn.innerText = '♡';
         wish_btn.onclick = function () {
             addtoWish(product)
+            wish_btn.style.color = 'red';
          };
-
         price_quick.append(p_price, quick_btn);
         div.append(wish_btn, p_image, p_name, p_rating, price_quick);
 
@@ -132,6 +132,5 @@ function addtoWish(p){
      localStorage.setItem("wish", JSON.stringify(wish_data));
 
     //  wishbtn = document.getElementById("button");
-    //  wishbtn.style.color = "Red"
 
 }
