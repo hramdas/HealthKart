@@ -10,9 +10,7 @@ let shipping = document.getElementById('shipping');
 let count = 0;
 // let data_div = document.getElementById("cart_data");
 
-let data_div = document.getElementById("cart_data");
-
-
+let datadiv = document.getElementById("cart_data");
 
 function Cart_items() {
         let total = 0;
@@ -39,7 +37,7 @@ function Cart_items() {
                 image.src = product.image;
 
                 div.append(image, m_name, increment, btn, decrement, m_price1);
-                data_div.append(div);
+                datadiv.append(div);
 
                 increment.addEventListener('click', function () {
                         let value = parseInt(btn.value, 15);
