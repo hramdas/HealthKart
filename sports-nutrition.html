@@ -11,54 +11,58 @@
 </head>
 <body onload="showProteins()">
 
-    <div class="main_head">
-        <!-- NAVBAR START -->
+    <!-- NAVBAR START -->
     <div id="navbar">
         <div class="container">
             <div class="logo">
                 <a href="index.html"><img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
-                  ></a> 
+                    ></a>
             </div>
             <form action="">
                 <a><i class="fa fa-search" id="searchIcon" aria-hidden="true"></i></a>
                 <input type="text" id="search" placeholder="Search for products, brands or Health Goals">
             </form>
             <div class="oneItem margin">
-                <p>Loyalty Rewards</p>
+                <p id="hover"><a href="/wishlist.html">Wishlist</a></p>
             </div>
             <p class="borderLine"></p>
             <div class="twoItem margin">
-                <p>Customer Support</p>
+                <p id="hover">Customer Support</p>
                 <i class="fa fa-chevron-down arrow"></i>
             </div>
             <p class="borderLine"></p>
 
             <div class="threeItem margin">
                 <div class="userBox">
-
                     <i class="fa fa-user-o" aria-hidden="true"></i>
-                    <p>My Account & Orders</p>
-
+                    <p id="hover">My Account & Orders</p>
                     <i class="fa fa-chevron-down arrow"></i>
-
                 </div>
                 <div class="userLogin">
                     <button id="loginBtn"><a href="login.html">Login</a></button>
                     <button id="signUp"><a id="a" href="signup.html">New User?/ Sign Up</a></button>
-
                 </div>
             </div>
             <p class="borderLine"></p>
-            <a href="cart.html"><img src="https://img2.hkrtcdn.com/react/static/media/common/header/cart.svg" alt=""
-                    id="cartItem"></a>
-            <p id="cartOnNum">0</p>
-            <div class="cartAdd">
-                <p>Your Cart is Empty!</p>
-                <button onclick="cartBtn()" id="cart">Proceed to Cart</button>
+            <div id="cartClick">
+                <a href="cart.html">
+                    <img src="https://img2.hkrtcdn.com/react/static/media/common/header/cart.svg" alt="" id="cartItem">
+                </a>
+                <p id="cartOnNum"></p>
+                
+                <div class="cartAdd">
+                    <button onclick="cartBtn()" id="cart"><a href="cart.html" >Proceed to Cart</a></button>
+                </div>
             </div>
         </div>
     </div>
+    <div class="clearDiv"></div>
+
     <!-- <div class="clear"></div> -->
+
+
+
+
     <!-- aftar navbar categories part -->
     <div id="categories">
         <div class="container">
@@ -97,9 +101,13 @@
         </div>
     </div>
     <!-- NAVBAR END -->
-    </div>
+
+    
+        <!-- NAVBAR START -->
+    <!-- NAVBAR END -->
+   
     <div class="cont">
-        <p class="bred">Home  /<span> Sports Nutrition</span></p>
+        <!-- <p class="bred">Home  /<span> Sports Nutrition</span></p> -->
         <div id="container">
             <div id="left-sidebar">
                 <h3>Categories</h3>

@@ -1,7 +1,7 @@
 /* Pooja Head */
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap'); */
 
 /* pooja css -1sr */
 *{
@@ -12,6 +12,7 @@ font-family: 'Roboto', sans-serif;
 body{
 /* width: 100%; */
 background-color: #f7f7f7;
+
 }
 ul li{
 list-style: none;
@@ -30,10 +31,8 @@ font-family: 'Roboto', sans-serif;
 p{
 font-family: 'Roboto', sans-serif;
     color: #3c3c3c;
-
-
 }
-.clear{
+.clearDiv{
 clear: both;
 }
 #navbar{
@@ -42,6 +41,7 @@ box-sizing: border-box;
 height: 87px;
 background-color:white ;
 border-bottom: 1px solid #d3cfcf;
+
 /* border:1px solid red; */
 }
 #navbar .container{
@@ -89,7 +89,10 @@ height: 15px;
 margin: 28px 0px;
 }
 
-.margin:hover{
+.userBox:hover{
+ color: #00a0a0;
+}
+#hover:hover{
  color: #00a0a0;
 }
 .fa-user-o{
@@ -112,19 +115,25 @@ display: flex;
 z-index: 9999999;
 position: absolute;
 width: 330px;
-height: 135px;
-background-color: whitesmoke;
+background-color: white;
 display: none;
 margin-top:30px;
 right: 21rem;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+
 }
 .userLogin > button{
 display: block;
-padding: 14px;
+padding: 10px;
 width: 310px;
 margin: 10px 10px;
 cursor: pointer;
 font-size: 19px;
+border-radius: 2px;
+background-color:transparent;
+border: 1px solid black;
+font-size: 15px;
+
 }
 .userLogin a{
 color: white;
@@ -156,44 +165,54 @@ width: 18px;
 height: 18px;
 border: 1px solid white;
 border-radius: 50px;
-background-color: chocolate;
+background: #f70;
 color: white;
 text-align: center;
 padding-top: 2px;
 cursor: pointer;
 
 }
-.cartShowsItem{
+#cartClick{
 display: flex;
 }
 .cartAdd{
-background-color: whitesmoke;
 z-index: 9999999;
-width: 280px;
-margin-top:70px;
-right: 25rem;
-padding: 10px;
+position: absolute;
+width: 290px;
+/* height: 100px; */
+background-color: white;
 display: none;
-cursor: pointer;
+margin-top:60px;
+right: 17rem;
+box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
 }
 .cartAdd p{
 text-align: center;
 margin: 5px 15px;
+font-size: 14px;
 }
+.cartAdd a{
+color: #fff;
+}
+
 .cartAdd > button{
-padding: 14px;
+padding: 10px;
 width: 260px;
-margin: 10px 10px;
+margin: 10px 15px;
 cursor: pointer;
-font-size: 20px;
+font-size: 13px;
+background: #df4723;
+border: 1px solid #df4723;
+
 }
- #cartItem:hover > .cartAdd {
+ #cartClick:hover  .cartAdd {
 display: block;
 }
+
+
 /* aftar navbar categories part */
 
  #categories{
-/* margin-top: 10px; */
 top:0;
 position: sticky;
 background-color:white;
@@ -203,10 +222,8 @@ z-index: 999999;
 }
 
 #categories .container{
- /* border: 1px solid green; */
 width: 73%;
 height: 50px;
-
 display: flex;
 margin-left: 155px;
 }
@@ -263,7 +280,7 @@ display: flex;
 font-size: 13.5px;
 width: 260px;
 margin-left: 100px;
-margin-top: 5px;
+margin-top: 10px;
 
 }
 .rightPart .consult{
@@ -323,6 +340,7 @@ margin-left: 20px;
     display: grid;
     grid-template-columns: 20% 75%;
     grid-gap: 5%;
+    color: #3c3c3c;
     
 }
 #offers_filt{
@@ -340,10 +358,9 @@ margin-left: 20px;
     display : grid;
     grid-gap : 5px;
 }
-#grid-row {
-    display : grid;
-    grid-template-columns: 50% 40%;
-    grid-gap: 10%;
+#left-sidebar > categories{
+     display : grid;
+    grid-gap: 10px;
 }
 
 #float-left{
@@ -358,19 +375,36 @@ margin-left: 20px;
     clear : left;
 }
 
-.main-poster{
-    display : grid;
-    grid-template-columns: 63% 35%;
-    grid-gap: 3%;
+#maincont{
+    margin: auto auto;
     /* margin-bottom: 10px auto; */
 }
-#read-text div{
-    display : grid;
-    grid-template-columns: 50% 24% 24%;
-    margin: 20px auto;
+
+#left-sidebar{
+    position: sticky;
+   
 }
-#read-text p{
-    font-size: 13px;
+
+#left-sidebar > #categories{
+    display: grid;
+    line-height: 30px;
+    padding: 10px
+}
+#categories #catitem {
+    padding: 10px;
+    overflow-y: scroll;
+    height: 200px;
+}
+#categories #catitem h5 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+#read-text{
+   margin: 20px auto;
+   font-size: 24px;
+   font-weight: 400px;
 }
 #read-text div > span{
     display : grid;
@@ -393,12 +427,12 @@ hr{
 #items {
     display : grid;
     grid-template-columns :32% 32% 32%;
-    grid-gap: 3%;
+    column-gap: 2%;
+    row-gap: 15px;
     font-family: roboto, arial, helvetica, sans-serif;
     font-weight: bold;
- 
-    
 }
+
 #items > div{
     background-color: white;
     padding: 10px;
@@ -423,12 +457,13 @@ img{
     font-size: 18px;
 }
 #items > div > span {  /* */
-    font-size: 12px
+    font-size: 12px;
+    color: #0b817b
    
 }
 #items > div > b {   /* Product name */
-    font-size: 13px;
-   
+    font-size: 14px;
+    color: #4e4e4e;
 }
 
 #items   button:nth-child(1){
