@@ -8,13 +8,16 @@
     <title>Login </title>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+
+    /* pooja css -1sr */
     * {
         margin: 0;
         padding: 0;
+        font-family: 'Roboto', sans-serif;
     }
-a{
-text-decoration: none;
-}
+
     #login {
         background-image: url('https://images.unsplash.com/photo-1599447332412-6bc6830c815a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
         background-repeat: no-repeat;
@@ -24,16 +27,14 @@ text-decoration: none;
         background-attachment: fixed;
         padding: 7% 0px;
     }
+
     #login .container {
         width: 700px;
         height: 550px;
         background-color: burlywood;
         position: fixed;
         display: flex;
-
         margin-left: 450px;
-
-        margin: auto 28%;
     }
 
     .leftSidePopUp {
@@ -49,7 +50,6 @@ text-decoration: none;
 
     .leftSidePopUp .whySide h2 {
         margin: 5px 10px;
-
     }
 
     .leftSidePopUp .whySide p {
@@ -62,21 +62,41 @@ text-decoration: none;
     }
 
     .rightSidePopUp .loginPage {
-        margin: 20px 5px;
+        margin: 10px 5px;
     }
 
     .rightSidePopUp .loginPage h1 {
         float: right;
     }
 
+    .rightSidePopUp .loginPage #timeBar {
+        cursor: pointer;
+        color: #00afae;
+
+    }
+
+    .rightSidePopUp .loginPage .userPanel {
+        display: flex;
+        color: rgb(112, 109, 109);
+
+    }
+
     .rightSidePopUp .loginPage h3 {
         margin: 35px 10px;
-        color: rgb(112, 109, 109);
         font-size: 20px;
     }
 
+    .rightSidePopUp .loginPage h3 a {
+        text-decoration: none;
+        color: #00afae;
+    }
+
+    .loginPage #loginH3 a{
+    border-bottom: 3px solid #00afae;
+    }
+
     .rightSidePopUp .loginPage label {
-        margin: 0px 35px;
+        margin: 10px 35px;
         color: rgb(112, 109, 109);
 
     }
@@ -84,7 +104,7 @@ text-decoration: none;
     .rightSidePopUp .loginPage input {
         width: 300px;
         height: 25px;
-        margin: 0px 35px;
+        margin: 5px 35px;
         padding: 8px 20px;
         outline: none;
     }
@@ -136,9 +156,10 @@ text-decoration: none;
         color: rgb(112, 109, 109);
     }
 
-.signup{
-cursor: pointer;
-}
+    .signup {
+        cursor: pointer;
+
+    }
 
     .socialink {
         margin: 30px 0px;
@@ -152,9 +173,14 @@ cursor: pointer;
 
     .rightSidePopUp .loginPage #pTaglast {
         margin: 10px 35px;
-        padding: 20px 0px;
+        padding: 5px 0px;
         color: rgb(112, 109, 109);
+        font-size: 15px;
+    }
 
+    .rightSidePopUp .loginPage #pTaglast a {
+        margin: 0px;
+        padding: 0px;
     }
 </style>
 
@@ -164,30 +190,28 @@ cursor: pointer;
             <div class="leftSidePopUp">
                 <div class="whySide">
                     <h2>Why login?</h2>
-                    <p>Manage your orders</p>
-                    <p>Get exclusive deals and offers</p>
-                    <p>Personalized Recommendations</p>
+                    <p> <img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt=""> Manage your orders</p>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Get exclusive deals and
+                        offers</p>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Personalized
+                        Recommendations</p>
                 </div>
             </div>
             <div class="rightSidePopUp">
                 <div class="loginPage">
-
                     <h1 id="timeBar">&times</h1>
                     <div class="userPanel">
-                        <h3>Login</h3>
+                        <h3 id="loginH3"><a href="login.html">Login</a></h3>
                         <h3 id="signup"><a class="singup" href="signup.html">Signup</a></h3>
-                        </div>
+                        <div class="animation hover"></div>
+                    </div>
                     <form action="" id="loginForm">
-
-                        <label for="mobile">Mobile Number</label><br>
+                        <label for="mobile">Mobile Number</label>
                         <input type="text" name="mobile" id="mobileNo" placeholder="Enter Mobile Number" required>
-                        <label for="password">Password</label><br>
-                        <input type="password" name="password" id="password" placeholder="Enter Password"><br><br>
-
-
-                        <input type="password" name="password" id="password" placeholder="Enter Password" autocomplete="on" required>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter Password">
                         <a href="#" class="passwordForget">Forget Password</a>
-                        <a href="#" class="passwordForget">Login Password</a><br>
+                        <a href="#" class="passwordForget">Login Password</a>
                         <button id="btn">Login</button>
                     </form>
                     <div class="lines">
@@ -200,13 +224,13 @@ cursor: pointer;
                         <a href="https://www.facebook.com/" id="social">Facebook</a>
                     </div>
                     <div class="hr"></div>
-                    <p id="pTaglast">By logging in you agree to our Terms & Conditions</p>
+                    <p id="pTaglast">By logging in you agree to our <a href="#">Terms & Conditions</a></p>
 
                 </div>
             </div>
         </div>
     </div>
-<script src="login.js"></script>
+    <script src="login.js"></script>
 </body>
 
 </html>

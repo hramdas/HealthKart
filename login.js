@@ -10,13 +10,13 @@ loginBtn.addEventListener('click', (e) => {
     let password = form.password.value;
     if (userMobile === getData.mobileNum && password === getData.password)
     {
-        alert("Successful");
+        alert("Login Successfully");
         window.location.href = 'index.html'
     }
 
     else
     {
-        alert("Invaild  Mobile Number & Password")
+        alert("Invaild Mobile Number or Password")
     }
 });
 

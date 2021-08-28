@@ -11,11 +11,7 @@ let count = 0;
 // let data_div = document.getElementById("cart_data");
 
 let datadiv = document.getElementById("cart_data");
-<<<<<<< HEAD
-
-=======
 let total = 0;
->>>>>>> cbc58bf44f99100123fd5a495c5ffbcfa4046281
 function Cart_items() {
        
 
@@ -41,31 +37,9 @@ function Cart_items() {
                 let image = document.createElement('img');
                 image.src = product.image;
 
-<<<<<<< HEAD
-                div.append(image, m_name, increment, btn, decrement, m_price1);
-                datadiv.append(div);
-
-                increment.addEventListener('click', function () {
-                        let value = parseInt(btn.value, 15);
-                        if (value < 10)
-                        {
-                                value++
-                        }
-                        btn.value = value;
-                });
-                decrement.addEventListener('click', function () {
-                        let value = parseInt(btn.value, 15);
-                        if (value > 1)
-                        {
-                                value--
-                        }
-                        btn.value = value;
-                });
-=======
                 divtxt.append(m_name, m_price1)
                 div.append(image, divtxt);
                 datadiv.append(div);
->>>>>>> cbc58bf44f99100123fd5a495c5ffbcfa4046281
 
                 total += Number(product.Price1);
 

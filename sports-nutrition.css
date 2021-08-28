@@ -442,13 +442,7 @@ img{
 }
 #items > div > b {   /* Product name */
     font-size: 15px;
-<<<<<<< HEAD
-    font-weight: 600;
-   
-=======
     font-weight: 590;
-
->>>>>>> cbc58bf44f99100123fd5a495c5ffbcfa4046281
 }
 #items   button:nth-child(1){
     float: right;

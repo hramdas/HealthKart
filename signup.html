@@ -8,14 +8,16 @@
     <title>Sign Up </title>
 </head>
 <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+
+    /* pooja css -1sr */
     * {
         margin: 0;
         padding: 0;
+        font-family: 'Roboto', sans-serif;
     }
 
-    a {
-        text-decoration: none;
-    }
 
     #login {
         background-image: url('https://images.unsplash.com/photo-1599447332412-6bc6830c815a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
@@ -32,8 +34,7 @@
         width: 700px;
         height: 600px;
         background-color: burlywood;
-        /* margin-left: 450px; */
-        margin: auto 25%;
+        margin-left: 450px;
         position: fixed;
         display: flex;
     }
@@ -51,48 +52,56 @@
     }
 
     .leftSidePopUp .whySide h2 {
-        margin: 5px 10px;
+        margin: 15px 10px;
+font-size: 24px;
+font-weight: 400;
 
     }
 
     .leftSidePopUp .whySide p {
-        margin: 5px 10px;
+        margin: 10px 10px;
+font-size: 17px;
     }
 
-    .rightSidePopUp {
+        .rightSidePopUp {
         background-color: #f7f7f7;
         width: 450px;
+
     }
 
     .rightSidePopUp .loginPage {
-        margin: 30px 5px;
+        margin: 10px 5px;
     }
 
     .rightSidePopUp .loginPage h1 {
         float: right;
-
     }
 
-    #timeBar {
-        margin-right: 20px;
+    .rightSidePopUp .loginPage #timeBar {
         cursor: pointer;
+        color: #00afae;
+
     }
 
-    .userPanel {
+    .rightSidePopUp .loginPage .userPanel {
         display: flex;
-        margin: 20px 35px;
-        padding: 2px;
+        color: rgb(112, 109, 109);
 
-    }
-
-    #signup {
-        margin: 0px 20px;
     }
 
     .rightSidePopUp .loginPage h3 {
-        color: rgb(112, 109, 109);
+        margin: 20px 10px;
         font-size: 20px;
     }
+
+    .rightSidePopUp .loginPage h3 a {
+        text-decoration: none;
+        color: #00afae;
+    }
+
+.loginPage #signup a{
+border-bottom: 3px solid #00afae;
+}
 
     .rightSidePopUp .loginPage label {
         margin: 5px 35px;
@@ -111,7 +120,7 @@
     .rightSidePopUp .loginPage #btn {
         width: 343px;
         height: 45px;
-        margin: 20px 35px;
+        margin: 15px 35px;
         text-transform: uppercase;
         font-size: 20px;
         background-color: #00afae;
@@ -144,7 +153,7 @@
 
     .rightSidePopUp .loginPage #social {
         border: 1px solid rgb(112, 109, 109);
-        padding: 08px 18px;
+        padding: 8px 18px;
         width: 80px;
         margin: 0px 35px;
         text-decoration: none;
@@ -166,9 +175,9 @@
 
     .rightSidePopUp .loginPage #pTaglast {
         margin: 10px 35px;
-        padding: 20px 0px;
+        padding: 10px 0px;
         color: rgb(112, 109, 109);
-
+font-size: 15px;
     }
 </style>
 
@@ -178,9 +187,12 @@
             <div class="leftSidePopUp">
                 <div class="whySide">
                     <h2>Why Sign Up?</h2>
-                    <p>Over 1.5 million satisfied customers</p>
-                    <p>Earn HK cash on every order</p>
-                    <p>Get personal fitness expert advice</p>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Over 1.5 million satisfied
+                        customers</p>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Earn HK cash on every
+                        order</p>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Get personal fitness
+                        expert advice</p>
                 </div>
             </div>
             <div class="rightSidePopUp">
@@ -228,7 +240,7 @@
                 rePassword: document.getElementById('rePassword').value
             }
             if (password.value !== rePassword.value) {
-                alert("Not match");
+                alert("Both Password are not match ");
                 window.location.href = "signup.html"
 
             }
