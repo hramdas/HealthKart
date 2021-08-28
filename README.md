@@ -5,8 +5,11 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 <h3>To create this clone we used HTML, CSS and JavaScript.</h3>
 
 <h2>Landing Page</h2>
-The Landing Page of HealthKart website displays various products, offers and categories.
-In header displays search, login, cart and dropdown menu of pages.
-At the bottom section there is a footer.
+<p>The Landing Page of HealthKart website displays various products, offers and categories.</p>
+<p>In header displays search, login, cart and dropdown menu of pages.</p>
+<p>At the bottom section there is a footer.</p>
+<img src="https://github.com/bhargavkatira/construct-week1/blob/master/source/home.png" alt="Landingpage">
 
+<h2>Signup page</h2>
+<img src="https://github.com/bhargavkatira/construct-week1/blob/master/source/Screenshot%20(241)%20(1).png" alt="Landingpage">
 
