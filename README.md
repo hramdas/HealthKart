@@ -4,4 +4,8 @@ We are cloning https://www.healthkart.com
 
 **he**
 
+var a = 2
+var b = 3
+2 + 3
+
 <b> hhh</b>
