@@ -31,7 +31,7 @@ window.onload = slidingShows;
         {
         image: "https://img4.hkrtcdn.com/14798/prd_1479773-HealthKart-HK-Vitals-Healthy-Joints-60-tablets_c_t.jpg",
           name : "MuscleBlaze Whey Protein, 4.4 lb, Rich Milk Chocolate",
-        Price1: " 4535",
+        Price1: "4535",
         discount: "18% off",
           button: "Add",
           pricefinal : "Premium Price : 4324",
@@ -40,7 +40,7 @@ window.onload = slidingShows;
         {
           image: "https://img6.hkrtcdn.com/11003/prd_1100235-MuscleBlaze-Gold-Gainer-XXL-2.2-lb-Chocolate-Bliss_c_t.jpg",
           name : "HealthKart Omega 3 1000mg with 180mg EPA and 120mg DHA, 60 softgels",
-          Price1: " 375",
+          Price1: "375",
           discount: "20% off",
           button: "Add",
           pricefinal : "Premium Price : 4324",
@@ -50,7 +50,7 @@ window.onload = slidingShows;
         {
           image: "https://img4.hkrtcdn.com/11965/prd_1196443-MuscleBlaze-High-Protein-Natural-Peanut-Butter-Unsweetened-0.750-kg-Crunchy_c_t.jpg",
           name : "MuscleTech NitroTech Performance Series, 4 lb, Milk Chocolate",
-          Price1: " 5635",
+          Price1: "5635",
           discount: "10% off",
           button: "Add",
           pricefinal : '',
@@ -59,7 +59,7 @@ window.onload = slidingShows;
         {
           image: "https://img10.hkrtcdn.com/15757/prd_1575689_c_t.jpg",
           name : "MuscleBlaze Natural Peanut Butter Unsweetened, 1 kg, Extra Crunchy",
-          Price1: " 403",
+          Price1: "403",
           discount: "26% off",
           button: "Add",
           pricefinal : "Premium Price : 350",
