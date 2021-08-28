@@ -399,6 +399,7 @@ padding:  20px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     margin: auto;
+    
  }
  #data div{
      margin: 10px;
@@ -407,6 +408,12 @@ padding:  20px;
      background-color: white;
      border-radius: 8px;
      height: 380px;
+ }
+
+ #data div:hover{
+    box-shadow: 0px 0px 18px rgba(33,33,33,.2); 
+    background-color: rgb(0, 194,193, 0.08) ;
+  
  }
  #data img{
      width: 70%;
@@ -469,6 +476,11 @@ cursor: pointer;
 padding: 7px;
 }
 
+#data button:hover{
+    background-color: #00c2c1;
+    color: white;
+}
+
 
 /* Srinivs 1st file*/
 /* /* What are you looking for? */
@@ -525,15 +537,15 @@ padding: 7px;
        }
 
        #grid_box a {
-                float:left;
-                font-family: sans-serif;
-                font-weight: 700;
-            font-size: 15px;
-            color: #00c2c1;
-                clear: both;
-            margin: 2px 10px;
-            margin-bottom: 20px;
-            text-transform: capitalize;
+                    float:left;
+                    font-family: sans-serif;
+                    font-weight: 700;
+                   font-size: 15px;
+                   color: #00c2c1;
+                    clear: both;
+                    margin: 2px 10px;
+                    margin-bottom: 20px;
+                    text-transform: capitalize;
        }
 
 
@@ -774,9 +786,9 @@ padding: 7px;
         opacity: 0.7;
     }
     .bottom_left{
-        margin-left: 150px;
-        font-size: 12px;
-        margin-top: 20px;
+                margin-left: 150px;
+                font-size: 12px;
+                margin-top: 20px;
     }
     
     

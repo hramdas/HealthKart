@@ -1,4 +1,4 @@
-//Pooja Js - 1st
+      //Pooja Js - 1st
 let count = 0;
 let images = [];
 let time = 2000;
