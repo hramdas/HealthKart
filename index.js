@@ -110,6 +110,7 @@ window.onload = slidingShows;
 
         });
     }
+
 medProduct();
 
 // Trending by Ramdas
@@ -159,7 +160,7 @@ medProduct();
 
       trend_item.forEach(function(products){
         let div = document.createElement("div");
-        let pricecart = document.createElement('span');
+        let pricecart = document.createElement('div');
 
        let t_name = document.createElement("h4")
         t_name.innerHTML = products.name
@@ -174,7 +175,7 @@ medProduct();
         t_rating.innerHTML = '★ ' + products.rating;
 
         let t_pricefinal = document.createElement('h4'); 
-        t_pricefinal.innerHTML = '₹'+ products.pricefinal;
+        t_pricefinal.innerHTML = products.pricefinal;
 
         let t_discount = document.createElement('h5'); 
         t_discount.innerHTML = products.discount;
@@ -197,17 +198,18 @@ medProduct();
 
 
 
-  // srinivas footer code
+// srinivas footer code
 
-  function function1() {
-    alert('subscribed successfully')
+function function1() {
+  alert('subscribed successfully')
 }
 
-    if(localStorage.getItem("cart")===null){
-        localStorage.setItem("cart",JSON.stringify([]));
-    }
-    function addtocart(p){
-         let cart_data = JSON.parse(localStorage.getItem("cart"));
-         cart_data.push(p);
-         localStorage.setItem("cart", JSON.stringify(cart_data));
-    }
+if (localStorage.getItem("cart") === null)
+{
+  localStorage.setItem("cart", JSON.stringify([]));
+}
+function addtocart(p) {
+  let cart_data = JSON.parse(localStorage.getItem("cart"));
+  cart_data.push(p);
+  localStorage.setItem("cart", JSON.stringify(cart_data));
+}

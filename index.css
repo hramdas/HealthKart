@@ -481,32 +481,52 @@ padding: 7px;
 
 /* Trending by Ramdas */
 #trending{
-    display: grid;
-    margin: auto 10%;
+    /* display: grid; */
+    margin: auto 8%;
+    height: 500px;
+    
 }
 
 #trending div:nth-child(1) {
     display: grid;
-    grid-template-columns: 50% 50% ;
+    grid-template-columns: 79% 10% ;
+    grid-gap: 10%;
     background-color: white;
     border-bottom: 1px solid #d3cfcf;
     margin: auto  2%;
     padding: 10px;
-} 
+}
+
+#trendhead button {
+    background-color: rgb(10, 190, 190);
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border : none;
+    border-radius : 3px;
+    width: 100px;
+}
 
 #trenddata{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: 21% 21% 21% 21%;
     grid-gap :5%;
-    margin: 10px auto;
+    margin: auto 20px;
+    
+  
 
 } 
 #trenddata > div{
     display: grid;
+    /* margin: auto auto; */
+    line-height: 20px;
+    padding: 5px;
 }
 #trenddata > div > span{
     display: grid;
-    grid-template-columns: 40% 50%
+    grid-template-columns: 40% 50%;
+    margin: auto auto;
 }
 #trenddata img {
     width: 150px;
@@ -518,10 +538,20 @@ padding: 7px;
     font-weight: normal;
 }
 
+#trenddata > div > div {
+    display : grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 15%;
+}
+
+#trenddata p {
+    border: 1px solid red;
+    width: 50px;
+    height: 20px;
+}
 
 /* Srinivs 1st file*/
 /* /* What are you looking for? */
-
 
     #grid {
         display:grid;
@@ -533,7 +563,7 @@ padding: 7px;
         width: 70%;
         }
 
-  .h1{
+     .h1{
         font-weight: 800;
         /* border: 1px solid red; */
         width: 60%;

@@ -1,12 +1,22 @@
 let cart_data = JSON.parse(localStorage.getItem("cart"));
+let data_div = document.querySelector("#cart_data");
+let totalAmount = document.getElementById('totalAmount');
+let proceedToPay = document.getElementById('proceedtopay');
+let cartItem = document.getElementById('cartItem');
+let pincode = document.getElementById('pincode');
+let coupon = document.getElementById('coupon');
+let order = document.getElementById('order');
+let shipping = document.getElementById('shipping');
+let count = 0;
+// let data_div = document.getElementById("cart_data");
 
 let data_div = document.getElementById("cart_data");
 
-cart_data.forEach(function(product) {
 
 
 function Cart_items() {
         let total = 0;
+
         cart_data.forEach(function (product) {
 
                 let div = document.createElement("div");
@@ -58,8 +68,11 @@ function Cart_items() {
         coupon.innerHTML = 'Apply Code →'
         order.innerHTML = "Order Summery";
         shipping.innerHTML = "Shipping Charges - Free"
-};
-Cart_items();
+}
 
-    });
+
+
+
+//     console.log(cart-data.length);
+Cart_items()
 
