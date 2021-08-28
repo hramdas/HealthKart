@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add to Cart</title>
-<link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
+
 <body>
     <!-- Navbar Start -->
     <div id="navbar">
@@ -43,13 +45,13 @@
             <div id="totalAmount"></div>
         </div>
 
-        </div>
+    </div>
 </body>
 
 <script src="cart.js"></script>
 </head>
+</head>
 <style>
-
     img {
         width: 20%;
     }
@@ -59,23 +61,54 @@
         grid-template-rows: 40% 40%;
         gap: 10%;
         width: 40%;
-        margin:auto;
+        margin: auto;
     }
 
-    #cart_data div{
+    #cart_data div {
         display: grid;
-  }
-
+    }
 </style>
+
 <body>
     <div>
         <div></div>
         <div></div>
     </div>
     <h1>Cart Page</h1>
-   <div id="cart_data"></div>
-   <h1 id ="total_cart"></h1>
+    <div id="cart_data"></div>
+    <h1 id="total_cart"></h1>
 </body>
 <script src="cart.js"></script>
-</html>
 
+<script>
+    let cart_data = JSON.parse(localStorage.getItem("cart"));
+    let data_div = document.querySelector("#cart_data");
+    let total = 0;
+    function Cart_items()
+    {
+        cart_data.forEach(function (product)
+        {
+
+            let div = document.createElement("div");
+
+            let m_name = document.createElement('p');
+            m_name.innerText = product.name;
+
+            let m_price1 = document.createElement('p');
+            m_price1.innerText = product.Price1;
+
+            let image = document.createElement('img');
+            image.src = product.image;
+
+            div.append(image, m_name, m_price1);
+            data_div.append(div);
+
+            total += Number(product.price2);
+        });
+        let total_cart = document.getElementById("total_cart");
+        total_cart.innerHTML = `Total Price ${total}`
+    };
+    Cart_items();
+</script>
+
+</html>

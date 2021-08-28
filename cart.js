@@ -10,6 +10,10 @@ let shipping = document.getElementById('shipping');
 let count = 0;
 // let data_div = document.getElementById("cart_data");
 
+let data_div = document.getElementById("cart_data");
+
+
+
 function Cart_items() {
         let total = 0;
 
@@ -71,3 +75,4 @@ function Cart_items() {
 
 //     console.log(cart-data.length);
 Cart_items()
+
