@@ -179,6 +179,10 @@ border-bottom: 3px solid #00afae;
         color: rgb(112, 109, 109);
 font-size: 15px;
     }
+
+    #social img {
+        width: 15px;
+    }
 </style>
 
 <body>
@@ -219,8 +223,8 @@ font-size: 15px;
                         <div class="twoline"></div>
                     </div>
                     <div class="socialink">
-                        <a href="https://accounts.google.com/" id="social">Google</a>
-                        <a href="https://www.facebook.com/" id="social">Facebook</a>
+                        <a href="https://accounts.google.com/" id="social"><img src="https://symbols.getvecta.com/stencil_82/45_google-icon.d8d982f8a1.svg" alt=""> Google</a>
+                        <a href="https://www.facebook.com/" id="social"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" alt=""> Facebook</a>
                     </div>
                     <div class="hr"></div>
                     <p id="pTaglast">By logging in you agree to our <a href="#">Terms & Conditions</a></p>
@@ -240,7 +244,7 @@ font-size: 15px;
                 rePassword: document.getElementById('rePassword').value
             }
             if (password.value !== rePassword.value) {
-                alert("Both Password are not match ");
+                alert("Password does not match ");
                 window.location.href = "signup.html"
 
             }
