@@ -14,7 +14,6 @@ let datadiv = document.getElementById("cart_data");
 let total = 0;
 function Cart_items() {
        
-
         cart_data.forEach(function (product) {
 
                 let div = document.createElement("div");
@@ -32,7 +31,7 @@ function Cart_items() {
                 m_name.innerText = product.name;
 
                 let m_price1 = document.createElement('p');
-                m_price1.innerText = '₹' + " " + product.Price1;
+                m_price1.innerText = '₹ ' + product.price;
 
                 let image = document.createElement('img');
                 image.src = product.image;
@@ -41,26 +40,7 @@ function Cart_items() {
                 div.append(image, divtxt);
                 datadiv.append(div);
 
-                total += Number(product.Price1);
-
-                // increment.addEventListener('click', function () {
-                //         let value = parseInt(btn.value, 15);
-                //         if (value < 10)
-                //         {
-                //                 value++
-                //         }
-                //         btn.value = value;
-                // });
-                // decrement.addEventListener('click', function () {
-                //         let value = parseInt(btn.value, 15);
-                //         if (value > 1)
-                //         {
-                //                 value--
-                //         }
-                //         btn.value = value;
-                        
-                // });
-                // console.log(product.Price1)
+                total += Number(product.price);
 
         });
        
