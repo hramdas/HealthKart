@@ -13,3 +13,6 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 <h2>Signup page</h2>
 <img src="https://github.com/bhargavkatira/construct-week1/blob/master/source/Screenshot%20(241)%20(1).png" alt="Landingpage">
 
+<h2>Category page</h2>
+<img src="https://github.com/hramdas/HealthKart/blob/master/source/Flash%20sale.jfif" alt="Landingpage">
+
