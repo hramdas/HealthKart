@@ -33,6 +33,8 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 
 <h2>Category page</h2>
 <img src="https://github.com/hramdas/HealthKart/blob/master/source/Flash%20sale.jfif" alt="Landingpage">
+<h2>Wiishlist</h2>
+<img src="https://github.com/hramdas/HealthKart/blob/master/source/Screenshot%20(247).png" alt="Wiishlist">
 
 ---
 
