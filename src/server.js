@@ -7,6 +7,7 @@ const connect = () =>{
     return mongoose.connect("mongodb+srv://hramdas:Ramdas1998@cluster0.or8t9.mongodb.net/HealthKart?retryWrites=true&w=majority")
 }
 
+// mongodb+srv://hramdas:<password>@cluster0.or8t9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 const app = express()
  app.use(express.json())
