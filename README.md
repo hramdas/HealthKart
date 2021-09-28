@@ -44,10 +44,10 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 <img src="https://github.com/bhargavkatira/construct-week1/blob/master/source/Screenshot%20(241)%20(1).png" alt="Landingpage">
 
 - ### Category page
-<img src="https://github.com/hramdas/HealthKart/blob/master/source/Flash%20sale.jfif" alt="Landingpage">
+<img src="https://github.com/hramdas/HealthKart/blob/master/source/Screenshot%20(245).png" alt="Landingpage">
 
 - ### Wiishlist
-<img src="https://github.com/hramdas/HealthKart/blob/master/source/Screenshot%20(247).png" alt="Wiishlist">
+<img src="https://github.com/hramdas/HealthKart/blob/master/source/Screenshot%20(305).png" alt="Wiishlist">
 
 ---
 
