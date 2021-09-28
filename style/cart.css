@@ -102,6 +102,13 @@ background-color: white;
 width: 90%;
 height: auto;
 }
+#cart_data > div{
+    display: grid;
+grid-template-columns: 20% 75%;
+}
+#cart_data > div > img{
+    max-width : 100px;
+}
 .rightSide{
 /* border: 1px solid blueviolet; */
 margin: 0px  0%  10% 10px;

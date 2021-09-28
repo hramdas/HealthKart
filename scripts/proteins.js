@@ -237,7 +237,6 @@ localStorage.setItem('proteins_json', proteins_str);
 
 let proteins_local = localStorage.getItem('proteins_json');
 proteins_parse = JSON.parse(proteins_local)
-console.log(proteins_parse)
 
 div_data = document.getElementById('items');
 

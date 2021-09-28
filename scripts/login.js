@@ -1,6 +1,5 @@
 let getData = JSON.parse(localStorage.getItem("Data-User"));
 
-console.log(getData);
 let loginBtn = document.getElementById('btn');
 let form = document.getElementById('loginForm');
 
