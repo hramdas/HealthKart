@@ -1,3 +1,14 @@
+products
+creat
+wishlisht
+user
+
+
+
+
+
+
+
 const proteins = [
     {
         name : "MuscleBlaze Beginner's Protein- 2.2 lb Cookies and Cream",
