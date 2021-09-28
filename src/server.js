@@ -9,10 +9,16 @@ const connect = () =>{
 
 // mongodb+srv://hramdas:<password>@cluster0.or8t9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
-const app = express()
- app.use(express.json())
+const User = require('../models/users');
+
+const userController = require("../controller/users");
 
 
+const app = express();
+
+app.use(express.json());
+
+app.use("/users", userController);
 
 app.listen(2200, async function(){
     await connect()
