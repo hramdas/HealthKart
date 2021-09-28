@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const tags = require("../models/tags");
+const User = require('../models/users')
+
 
 const connect = () => {
   return mongoose.connect(
@@ -16,6 +18,10 @@ app.use(express.json());
 
 const tagsController = require("../controller/tags");
 app.use("/tags", tagsController);
+
+const userController = require("../controller/users")
+app.use("/users", userController)
+
 
 app.listen(2200, async function () {
   await connect();
