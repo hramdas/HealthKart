@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require("mongoose")
+const products = require('../models/products')
 
 
 
@@ -12,6 +13,8 @@ const connect = () =>{
 const app = express()
  app.use(express.json())
 
+ const productController = require('../controller/products')
+app.use("/products", productController)
 
 
 app.listen(2200, async function(){
