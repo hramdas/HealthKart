@@ -238,17 +238,37 @@ const proteins = [
 
 ]
 
-const proteins_str = JSON.stringify(proteins);
 
-localStorage.setItem('proteins_json', proteins_str);
+async function productData(){
 
-let proteins_local = localStorage.getItem('proteins_json');
-proteins_parse = JSON.parse(proteins_local)
+    try{
+    let res = await fetch('http://localhost:2200/products')
+    let data = await res.json()
+
+    productDB = data.product
+    // console.log(productDB)
+    showProteins(productDB)
+    console.log(productDB)
+    } catch (error){
+        //console.log(error)
+    }
+}
+
+productData()
+
+
+// const proteins_str = JSON.stringify(proteins);
+
+// localStorage.setItem('proteins_json', proteins_str);
+
+// let proteins_local = localStorage.getItem('proteins_json');
+// proteins_parse = JSON.parse(proteins_local)
 
 div_data = document.getElementById('items');
 
-function showProteins() {
-    proteins_parse.forEach(function(product){
+function showProteins(productDB) {
+    //console.log(proteins)
+    productDB.forEach(function(product){
         
         let div = document.createElement('div');
         let price_quick = document.createElement('div')
@@ -260,7 +280,7 @@ function showProteins() {
         p_price.innerHTML = '₹' + product.price;
 
         let p_image = document.createElement('img')
-        p_image.src = product.image;
+        p_image.src = product.img;
 
         let p_rating = document.createElement('span')
         p_rating.innerHTML = '★ '+ product.rating;

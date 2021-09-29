@@ -1,12 +1,11 @@
 
 const express = require('express')
 const mongoose = require("mongoose");
+const cors = require('cors')
 
 
 const products = require('../models/products')
-
 const tags = require("../models/tags");
-
 const User = require('../models/users');
 
 
@@ -20,7 +19,7 @@ const connect = () => {
 
 const app = express();
 app.use(express.json());
-
+app.use(cors())
 
 const productController = require('../controller/products')
 app.use("/products", productController);
