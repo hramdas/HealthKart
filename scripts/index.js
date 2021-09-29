@@ -196,8 +196,6 @@ medProduct();
 
 
 
-
-
 // srinivas footer code
 
 function function1() {

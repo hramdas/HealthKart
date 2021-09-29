@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <%
     <div id="login">
         <div class="container">
             <div class="leftSidePopUp">
@@ -30,6 +31,7 @@
                         <h3><a href="login.html">Login</a></h3>
                         <h3 id="signup"><a href="signup.html">Signup</a></h3>
                     </div>
+
                     <form action="" id="loginForm" onsubmit="formSubmit(event)">
                         <label for="name">Full Name</label>
                         <input type="text" name="fullname" id="name" placeholder="Enter Your Full Name" required>
@@ -41,6 +43,7 @@
                         <input type="password" id="rePassword" placeholder="Re-Enter Password" autocomplete="on" required>
                         <button id="btn">Sign Up</button>
                     </form>
+
                     <div class="lines">
                         <div class="oneline"></div>
                         <p id="or">or</p>
@@ -56,8 +59,9 @@
             </div>
         </div>
     </div>
-
+%>
 </body>
 
 <script src="../scripts/signup.js"></script>
+
 </html>
