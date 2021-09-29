@@ -8,10 +8,10 @@ const userSchema = new mongoose.Schema({
   mobile: { type: Number, require: true },
   password: { type: String, require: true },
   cart: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "products", require: false },
+    { type: mongoose.Schema.Types.ObjectId, ref: "product", require: false },
   ],
   wishlist: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "products", require: false },
+    { type: mongoose.Schema.Types.ObjectId, ref: "product", require: false },
   ],
 });
 
