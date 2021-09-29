@@ -117,6 +117,8 @@ border-bottom: 3px solid #00afae;
         background-color: #00afae;
         border: 1px solid #00c2c1;
         color: #f7f7f7;
+cursor: pointer;
+
     }
 
     .rightSidePopUp .loginPage #or {

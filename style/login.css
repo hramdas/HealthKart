@@ -109,7 +109,9 @@
         background-color: #00afae;
         border: 1px solid #00c2c1;
         color: #f7f7f7;
+cursor: pointer;
     }
+
 
     .rightSidePopUp .loginPage a {
         margin: 10px 35px;
