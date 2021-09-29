@@ -1,32 +1,57 @@
+// const products = require("../models/products");
 
-//Fetch Products Data
-async function productData(){
+    //Get sorting input
+    sortIn()
+    function sortIn(){
+        productData("none")
+        var sortData = document.getElementById('sortNutri')
+        var valueIN = sortData.options[sortData.selectedIndex].value
+        // console.log('sort', valueIN)
+        productData(valueIN)
+    }
+
+
+    //Fetch Products Data
+async function productData(valueIN){
+    // console.log(valueIN)
+
+    //fetchURl = 'http://localhost:2200/products'
+    if(valueIN == 'none'){
+        fetchURL = 'http://localhost:2200/products'
+    } else if(valueIN == 'rating'){
+        fetchURL = 'http://localhost:2200/products/popular'
+    } else if(valueIN == 'lhPrice'){
+        fetchURL = 'http://localhost:2200/products/priceL'
+    } else if(valueIN == 'hlPrice'){
+        fetchURL = 'http://localhost:2200/products/priceH'
+    } else if(valueIN == 'lhdisc'){
+        fetchURL = 'http://localhost:2200/products/discL'
+    } else if(valueIN == 'hldisc'){
+        fetchURL = 'http://localhost:2200/products/discH'
+    }
+   
+    // console.log('fetch', fetchURL)
 
     try{
-    let res = await fetch('http://localhost:2200/products')
+    let res = await fetch(fetchURL)
     let data = await res.json()
 
     productDB = data.product
-    // console.log(productDB)
+  
     showProteins(productDB)
-    console.log(productDB)
+  
     } catch (error){
-        //console.log(error)
+        showProteins(error)
     }
-}
+} setTimeout(2000, productData)
+// productData()
 
-productData()
 
-
-// const proteins_str = JSON.stringify(proteins);
-// localStorage.setItem('proteins_json', proteins_str);
-// let proteins_local = localStorage.getItem('proteins_json');
-// proteins_parse = JSON.parse(proteins_local)
-
+//Append Data
 div_data = document.getElementById('items');
 
 function showProteins(productDB) {
-    //console.log(proteins)
+    div_data.innerHTML = null
     productDB.forEach(function(product){
         
         let div = document.createElement('div');
@@ -61,9 +86,8 @@ function showProteins(productDB) {
 
         div_data.append(div)
 
-    });
-}
-// showProteins()
+    }); 
+} 
 
 if(localStorage.getItem("wish")===null){
     localStorage.setItem("wish", JSON.stringify([]));
