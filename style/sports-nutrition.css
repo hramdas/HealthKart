@@ -212,97 +212,115 @@
     
     /* aftar navbar categories part */
     
-     #categories{
-    top:0;
-    position: sticky;
-    background-color:white;
-    border-bottom: 1px solid #d3cfcf;
-    display: flex;
-    z-index: 999999;
-    }
-    
-    #categories .container{
-    /* width: 73%; */
-    height: 50px;
-    display: flex;
-    /* margin-left: 155px; */
-    margin: auto ;
-    }
-    
-    #catLinks {
-    /* border: 1px solid green; */
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    }
-    
-    #catLinks li {
-    margin:5px;
-    font-size: 14px;
-    padding-left: 10px;
-    margin-top: 15px;
-    }
-    
-    #catLinks  li a{
-    color: black;
-    }
-    #catLinks li:hover{
-     color: #00a0a0;
-    cursor: pointer;
-    }
-    
-    #catLinks li .dropdown{
-    top: 2rem;
-    position: absolute;
-    width: 250px;
-    height: 200px;
-    background-color: whitesmoke;
-    }
-    li .dropdown{
-    margin-top: 10px;
-    display: none;
-    }
-    li .dropdown li{
-    display: block;
-    float: none;
-    cursor: pointer;
-    }
-    #catLinks li:hover .dropdown{
-    display: block;
-    }
-    #catLinks:hover .dropdown li{
-    margin: 10px;
-    font-size: 14px;
-    }
-    
-    .rightPart{
-    /* border:1px solid red; */
-    display: flex;
-    font-size: 13.5px;
-    /* width: 260px; */
-    /* margin-left: 100px; */
-    margin-top: 10px;
-    
-    }
-    .rightPart .consult{
-    width: 100px;
-    height:30px ;
-    display: flex;
-    background-color: #d8faf9;
-    border-radius: 4px;
-    margin-left: 40px;
-    }
-    .rightPart .consult p{
-        text-align: center;
-        margin-top: 7px;
-        font-weight: 900;
-    
-    }
-    
-    .rightPart .consult i{
-    margin: 8px 7px;
-    
-    }
+    #categories{
+        top:0;
+        position: sticky;
+        background-color:white;
+        border-bottom: 1px solid #d3cfcf;
+        display: flex;
+        z-index: 999999;
+        }
+        
+        #categories .container{
+        width: 73%;
+        height: 50px;
+        display: flex;
+        margin-left: 155px;
+        }
+        
+        #catLinks {
+        /* border: 1px solid green; */
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        }
+        
+        #catLinks li {
+        margin:5px;
+        font-size: 14px;
+        padding-left: 10px;
+        margin-top: 15px;
+        }
+        
+        #catLinks  li a{
+        color: black;
+        }
+        #catLinks li:hover{
+         color: #00a0a0;
+        cursor: pointer;
+        }
+        
+        #catLinks li .dropdown{
+        top: 2rem;
+        position: absolute;
+        width: 250px;
+        height: 200px;
+        background-color: whitesmoke;
+        }
+        li .dropdown{
+        margin-top: 10px;
+        display: none;
+        }
+        li .dropdown li{
+        display: block;
+        float: none;
+        cursor: pointer;
+        }
+        #catLinks li:hover .dropdown{
+        display: block;
+        }
+        #catLinks:hover .dropdown li{
+        margin: 10px;
+        font-size: 14px;
+        }
+        
+        .rightPart{
+        /* border:1px solid red; */
+        display: flex;
+        font-size: 13.5px;
+        width: 260px;
+        margin-left: 100px;
+        margin-top: 10px;
+        
+        }
+        .rightPart .consult{
+        width: 100px;
+        height:30px ;
+        display: flex;
+        background-color: #d8faf9;
+        border-radius: 4px;
+        margin-left: 40px;
+        }
+        .rightPart .consult p{
+            text-align: center;
+            margin-top: 7px;
+            font-weight: 900;
+        
+        }
+        
+        .rightPart .consult i{
+        margin: 8px 7px;
+        
+        }
+        
+        .rightPart .findStore {
+        width: 100px;
+        height:30px ;
+        display: flex;
+        background-color: #e3e3e3;
+        border-radius: 4px;
+        margin-left: 20px;
+        }
+        .rightPart .findStore p{
+            text-align: center;
+            margin-top: 7px;
+            font-weight: 600;
+        
+        
+        }
+        .rightPart .findStore i{
+            margin: 8px 7px;
+        }
     
     .rightPart .findStore {
     width: 100px;
@@ -316,8 +334,6 @@
         text-align: center;
         margin-top: 7px;
         font-weight: 600;
-    
-    
     }
     .rightPart .findStore i{
         margin: 8px 7px;
@@ -326,7 +342,7 @@
 
 .cont{
     padding-top: 10px;
-    margin: auto 10%;
+    margin: auto 8%;
     /* max-width: 1000px; */
 }
 .bred{
@@ -340,10 +356,10 @@
 #container {
     /* max-width: 1000px; */
    padding : 10px;
-    display: grid;
-    grid-template-columns: 18% 77%;
-    grid-gap: 5%;
-
+    display: flex;
+    /* margin-left: 2%; */
+  justify-content: space-between;
+    /* grid-template-columns: 18% 77%; */
 }
 #left-sidebar > div  > a{
     font-size: 16px ;
@@ -355,7 +371,15 @@
 }
 
 #left-sidebar{
-     position: sticky;
+     /* position: sticky; */
+    /* overflow: auto; */
+    position: -webkit-sticky;
+    position: sticky;
+    top : 9%;
+    height: 24vh;
+    width: 50%;
+    /* min-height: 200px; */
+    /* float: left; */
 
    /* margin-top: 0; */
 }
@@ -365,6 +389,7 @@
     padding: 10px;
     background-color :white;
 }
+
 
 .main-poster{
     display : grid;
@@ -404,11 +429,15 @@ hr{
     margin: 15px auto;
 }
 
-
+#sortNutri{
+    font-size: 16px;
+    padding: 3px;
+}
 #items {
+    width: 100%;
     display : grid;
     grid-template-columns :32% 32% 32%;
-    column-gap: 3%;
+    column-gap: 2%;
     row-gap: 20px;
     font-family: roboto, arial, helvetica, sans-serif;
     font-weight: bold;
@@ -459,8 +488,8 @@ img{
 #items > div div button{
     border: 1px solid  rgb(0, 148, 148);
     border-radius: 4px;
-    height: 30px;
-    font-size: 12px;
+    padding: 2px;
+    font-size: 15px;
     font-weight:600;
     background-color: white;
     color: rgb(0, 148, 148);
