@@ -46,6 +46,7 @@ e.preventDefault();
         .then(response => response.json())
         .then(result => {
             alert("Account created");
+            window.location.href = 'login.html'
         })  
     }
     

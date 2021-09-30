@@ -1,4 +1,4 @@
-let txt = document.getElementById("cartOnNum");
+let txt = document.getElementById("cartClick");
 
 let cart;
 async function cartFetch() {
@@ -13,13 +13,13 @@ async function cartFetch() {
     cart = data.user.cart;
     let spantext = document.createElement("span");
     var len = cart.length;
-    //console.log(len);
+    
     spantext.innerHTML = len;
 
     txt.appendChild(spantext);
     //Cart_items();
   } catch (error) {}
-}
+} setTimeout(1000, cartFetch)
 cartFetch();
 
 //let cart = JSON.parse(localStorage.getItem('cart'))
