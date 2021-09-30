@@ -11,9 +11,11 @@ images[4] = "https://img8.hkrtcdn.com/14853/bnr_1485287_o.jpg";
 images[5] = "https://img6.hkrtcdn.com/15632/bnr_1563185_o.png";
 function slidingShows() {
   document.silde.src = images[count];
-  if (count < images.length - 1) {
+  if (count < images.length - 1)
+  {
     count++;
-  } else {
+  } else
+  {
     count = 0;
   }
   setTimeout("slidingShows()", time);
@@ -62,14 +64,16 @@ window.onload = slidingShows;
 
 // ]
 async function productdata() {
-  try {
+  try
+  {
     let res = await fetch("http://localhost:2200/products/flashsale");
     let data = await res.json();
 
     productDB = data.product;
 
     showProduct(productDB);
-  } catch (error) {
+  } catch (error)
+  {
     showProduct(error);
   }
 }
@@ -290,7 +294,8 @@ function function1() {
   alert("subscribed successfully");
 }
 
-if (localStorage.getItem("cart") === null) {
+if (localStorage.getItem("cart") === null)
+{
   localStorage.setItem("cart", JSON.stringify([]));
 }
 function addtocart(p) {

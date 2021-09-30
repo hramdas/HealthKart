@@ -1,0 +1,320 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+
+/* pooja css -1sr */
+*{
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+}
+body{
+/* width: 100%; */
+background-color: #f7f7f7;
+
+}
+ul li{
+list-style: none;
+font-family: 'Source Sans Pro', sans-serif;
+color: #3c3c3c;
+}
+a{
+text-decoration: none;
+}
+ h1{
+font-family: 'Roboto', sans-serif;
+}
+h2{
+font-family: 'Roboto', sans-serif;
+}
+p{
+font-family: 'Roboto', sans-serif;
+    color: #3c3c3c;
+}
+.clearDiv{
+clear: both;
+}
+#navbar{
+/* width: 100%; */
+box-sizing: border-box;
+height: 87px;
+background-color:white ;
+border-bottom: 1px solid #d3cfcf;
+/* border:1px solid red; */
+}
+#navbar .container{
+width: 85%;
+margin: auto 12rem;
+display: flex;
+
+/* border:1px solid red; */
+}
+.logo img{
+width: 220px;
+height: 80px;
+}
+form{
+ margin: 20px 10px 30px 28px;
+}
+#search{
+    border: 1px solid #a0a0a0;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    color: #3c3c3c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .55px;
+    line-height: 19px;
+    margin: 0;
+    padding: 10px 10px 10px 39px;
+    height: 15px;
+    width: 350px;
+}
+#searchIcon{
+position: absolute;
+    margin-left: 15px;
+    top: 30px;
+}
+.margin{
+margin: 30px 10px;
+display: flex;
+font-size: 14px;
+cursor: pointer;
+}
+#wishclr > a{
+    color:rgb(27, 27, 27);
+}
+.borderLine{
+border: 1px solid rgb(112, 109, 109);
+height: 15px;
+margin: 28px 0px;
+}
+
+.userBox:hover{
+ color: #00a0a0;
+}
+#hover:hover{
+ color: #00a0a0;
+}
+.fa-user-o{
+margin: 0px 3px;
+}
+
+.arrow{
+font-weight: lighter;
+width: 3px;
+color: rgb(112, 109, 109);
+margin: 0px 10px;
+}
+.arrow:hover{
+ color: #00a0a0
+}
+.userBox {
+display: flex;
+}
+.userLogin{
+z-index: 9999999;
+position: absolute;
+width: 330px;
+background-color: white;
+display: none;
+margin-top:30px;
+right: 21rem;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+
+}
+.userLogin > button{
+display: block;
+padding: 10px;
+width: 310px;
+margin: 10px 10px;
+cursor: pointer;
+font-size: 19px;
+border-radius: 2px;
+background-color:transparent;
+border: 1px solid black;
+font-size: 15px;
+
+}
+.userLogin a{
+color: white;
+}
+.userLogin #a{
+color: black;
+}
+.userLogin > button:nth-child(1){
+background-color: #00afae;
+border: 1px solid #00c2c1;
+color: white;
+}
+.margin:hover > .userLogin {
+display: block;
+}
+#cartItem {
+margin: 26px 15px;
+color: rgb(112, 109, 109);
+width: 30px !important;
+position: absolute;
+cursor: pointer;
+}
+#cartOnNum{
+position: relative;
+margin: 35px 35px;
+color: rgb(112, 109, 109);
+font-size: 12px;
+width: 18px;
+height: 18px;
+border: 1px solid white;
+border-radius: 50px;
+background: #f70;
+color: white;
+text-align: center;
+padding-top: 2px;
+cursor: pointer;
+
+}
+#cartClick{
+display: flex;
+}
+.cartAdd{
+z-index: 9999999;
+position: absolute;
+width: 290px;
+/* height: 100px; */
+background-color: white;
+display: none;
+margin-top:60px;
+right: 17rem;
+box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+.cartAdd p{
+text-align: center;
+margin: 5px 15px;
+font-size: 14px;
+}
+.cartAdd a{
+color: #fff;
+}
+
+.cartAdd > button{
+padding: 10px;
+width: 260px;
+margin: 10px 15px;
+cursor: pointer;
+font-size: 13px;
+background: #df4723;
+border: 1px solid #df4723;
+
+}
+ #cartClick:hover  .cartAdd {
+display: block;
+}
+/* aftar navbar categories part */
+
+ #categories{
+top:0;
+position: sticky;
+background-color:white;
+border-bottom: 1px solid #d3cfcf;
+display: flex;
+z-index: 999999;
+}
+
+#categories .container{
+width: 73%;
+height: 50px;
+display: flex;
+margin-left: 12rem;
+}
+
+#catLinks {
+/* border: 1px solid green; */
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+
+#catLinks li {
+margin:5px;
+font-size: 14px;
+padding-left: 10px;
+margin-top: 15px;
+}
+
+#catLinks  li a{
+color: black;
+}
+#catLinks li:hover{
+ color: #00a0a0;
+cursor: pointer;
+}
+
+#catLinks li .dropdown{
+top: 2rem;
+position: absolute;
+width: 250px;
+height: 200px;
+background-color: whitesmoke;
+}
+li .dropdown{
+margin-top: 10px;
+display: none;
+}
+li .dropdown li{
+display: block;
+float: none;
+cursor: pointer;
+}
+#catLinks li:hover .dropdown{
+display: block;
+}
+#catLinks:hover .dropdown li{
+margin: 10px;
+font-size: 14px;
+}
+
+.rightPart{
+/* border:1px solid red; */
+display: flex;
+font-size: 13.5px;
+width: 260px;
+margin-left: 100px;
+margin-top: 10px;
+
+}
+.rightPart .consult{
+width: 100px;
+height:30px ;
+display: flex;
+background-color: #d8faf9;
+border-radius: 4px;
+margin-left: 40px;
+}
+.rightPart .consult p{
+    text-align: center;
+    margin-top: 7px;
+    font-weight: 900;
+
+}
+
+.rightPart .consult i{
+margin: 8px 7px;
+
+}
+
+.rightPart .findStore {
+width: 100px;
+height:30px ;
+display: flex;
+background-color: #e3e3e3;
+border-radius: 4px;
+margin-left: 20px;
+}
+.rightPart .findStore p{
+    text-align: center;
+    margin-top: 7px;
+    font-weight: 600;
+}
+.rightPart .findStore i{
+    margin: 8px 7px;
+}
