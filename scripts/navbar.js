@@ -1,29 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist</title>
-    <link rel="shortcut icon" href="https://www.healthkart.com/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style\wishlist.css">
-    <link rel="stylesheet" href="style\navbar.css">
-
-</head>
-<body>
-    <!-- NAVBAR START -->
-    <div id="navbar">
+function navbar() {
+    return `
         <div class="container">
             <div class="logo">
-                <a href="index.html"><img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
-                    ></a>
+                <img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
+                    alt="">
             </div>
             <form action="">
                 <a><i class="fa fa-search" id="searchIcon" aria-hidden="true"></i></a>
                 <input type="text" id="search" placeholder="Search for products, brands or Health Goals">
             </form>
             <div class="oneItem margin">
-                <p id="hover"> <p id="hover"><a href="/wishlist.html">Wishlist</a></p></p>
+                <p id="hover"> <p id="wishclr"><a id="hover" href="/wishlist.html">Wishlist</a></p></p>
             </div>
             <p class="borderLine"></p>
             <div class="twoItem margin">
@@ -49,20 +36,20 @@
                     <img src="https://img2.hkrtcdn.com/react/static/media/common/header/cart.svg" alt="" id="cartItem">
                     <p id="cartOnNum"></p>
                 </a>
-            <div class="cartAdd">
-                
-                <button onclick="cartBtn()" id="cart"><a href="payment.html">Proceed to Cart</a></button>
+
+                <div class="cartAdd">
+                    <button onclick="cartBtn()" id="cart"><a href="./cart.html" >Items in cart</a></button>
                 </div>
-                </div>
-                </div>
+            </div>
     </div>
     <div class="clearDiv"></div>
+`
+}
 
-    <!-- <div class="clear"></div> -->
 
-    <!-- aftar navbar categories part -->
-    <div id="categories">
-        <div class="container">
+
+function navbarSec() {
+    return `        <div class="container">
             <ul id="catLinks">
                 <li>
                     <a href="#">Category</a>
@@ -97,22 +84,9 @@
             </div>
         </div>
     </div>
-    <!-- NAVBAR END -->
 
-   <div class='wish'>
-    <div id="count"></div>
-    <div id="data"> </div>
-   </div>
-</body>
 
-</html>
-   <script type="module">
-import {navbar , navbarSec} from "./scripts/navbar.js";
-let nav = document.getElementById('navbar');
-let navSec = document.getElementById('categories');
- nav.innerHTML = navbar();
-navSec.innerHTML = navbarSec();
-</script>
-<script src="scripts\cartcount.js"></script>
-<script src="scripts\wishlist.js"></script>
+           `
+}
 
+export { navbar, navbarSec };
