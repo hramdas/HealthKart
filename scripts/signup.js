@@ -1,10 +1,7 @@
 async function formSubmit(e) {
     e.preventDefault();
 
-    let res = await fetch(`http://localhost:2200/users`);
-    // console.log(res);
-    let data = await res.json();
-    data.userData;
+
 
     let userData = {
         name: document.getElementById('name').value,
@@ -21,6 +18,10 @@ async function formSubmit(e) {
 
     // localStorage.setItem("Data-User", JSON.stringify(userData));
     // console.log(userData);
+    let res = await fetch(`http://localhost:2200/users`);
+    console.log(res);
+    let data = await res.json();
+
 
 }
 

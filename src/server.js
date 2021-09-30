@@ -1,8 +1,8 @@
 const express = require('express')
 const mongoose = require("mongoose");
-const cors = require('cors')
+const cors = require('cors');
 
-const products = require('../models/products')
+const products = require('../models/products');
 const tags = require("../models/tags");
 const User = require('../models/users');
 
@@ -18,7 +18,8 @@ app.use(express.json());
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.use(express.static('views'));
-app.use(cors())
+
+app.use(cors());
 
 const productController = require('../controller/products')
 app.use("/products", productController);

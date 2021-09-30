@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style\sports-nutrition.css" type="text/css">
     <!-- <script src="proteins.js"></script> -->
 </head>
-<body onload="showProteins()">
+<body >
 
     <!-- NAVBAR START -->
     <div id="navbar">
@@ -59,9 +59,6 @@
     <div class="clearDiv"></div>
 
     <!-- <div class="clear"></div> -->
-
-
-
 
     <!-- aftar navbar categories part -->
     <div id="categories">
@@ -161,6 +158,16 @@
                 </div>
                 <hr />
                 <div class="trending">
+                    <span><b>Sort by:</b></span>
+                    <select onchange='sortIn()' name="sortNutri" id="sortNutri">
+                        <option value="none">None</option>
+                        <option value="rating">Popularity</option>
+                        <option value="lhPrice">Price - Low to High</option>
+                        <option value="hlPrice">Price - High to Low</option>
+                        <option value="lhdisc">Discount - Low to High</option>
+                        <option value="hlDisc">Discount - High to Low</option>
+                    </select>
+                    <hr>
                     <!-- <h2>Trending Now</h2> -->
                     <div id="items"></div>
                 </div>
@@ -169,7 +176,6 @@
         </div>
     </div>
 
-    
 </body>
 <script src="scripts\proteins.js"></script>
 <script src="scripts\cartcount.js"></script>

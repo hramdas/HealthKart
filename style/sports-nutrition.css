@@ -222,10 +222,11 @@
     }
     
     #categories .container{
-    width: 73%;
+    /* width: 73%; */
     height: 50px;
     display: flex;
-    margin-left: 155px;
+    /* margin-left: 155px; */
+    margin: auto ;
     }
     
     #catLinks {
@@ -278,8 +279,8 @@
     /* border:1px solid red; */
     display: flex;
     font-size: 13.5px;
-    width: 260px;
-    margin-left: 100px;
+    /* width: 260px; */
+    /* margin-left: 100px; */
     margin-top: 10px;
     
     }
