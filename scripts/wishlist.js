@@ -8,7 +8,7 @@ wish.forEach(function(product){
     let divtxt = document.createElement('span');
 
     let w_image = document.createElement('img');
-    w_image.src = product.image;
+    w_image.src = product.img;
 
     let w_name = document.createElement('h4');
     w_name.innerHTML = product.name;

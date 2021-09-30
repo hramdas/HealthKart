@@ -4,11 +4,6 @@ const mongoose = require("mongoose");
 const cors = require('cors')
 
 
-const products = require('../models/products')
-const tags = require("../models/tags");
-const User = require('../models/users');
-
-
 const connect = () => {
   return mongoose.connect(
     "mongodb+srv://hramdas:Ramdas1998@cluster0.or8t9.mongodb.net/HealthKart?retryWrites=true&w=majority"
