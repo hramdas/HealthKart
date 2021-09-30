@@ -1,33 +1,57 @@
+// const { response } = require("express");
 
+   async function formSubmit(e) {
+    e.preventDefault();
 
-        function formSubmit(e)
-        {
-            e.preventDefault();
-            let userData = {
-                name: document.getElementById('name').value,
-                mobileNum: document.getElementById('mobileNo').value,
-                password: document.getElementById('password').value,
-                rePassword: document.getElementById('rePassword').value
-            }
-            if (password.value !== rePassword.value) {
-                alert("Password does not match ");
-                window.location.href = "signup.html"
-
-            }
-
-            else {
-                window.location.href = "login.html"
-
-            }
-
-            localStorage.setItem("Data-User", JSON.stringify(userData));
-            console.log(userData);
-
+    // getting all users data for verification
+        async function allUsers(){
+            let res = await fetch('http://localhost:2200/users')
+            let data = await res.json()
+            //alluser = data.user
+            return data
         }
+       
+        // SignUp form data
+        let name = document.getElementById('name').value;
+        let mobile = document.getElementById('mobile').value;
+        let password = document.getElementById('password').value;
+        let rePassword =  document.getElementById('rePassword').value
 
-        let bar = document.getElementById('timeBar');
-        bar.addEventListener('click', function ()
-        {
-            window.location.href = 'index.html'
-        })
+        let userData = await allUsers()   //
+
+        // Checking mobile number with database
+        for (var i = 0; i < userData.user.length; i++){
+            if (userData.user[i].mobile == mobile){
+                console.log('mob', userData.user[i].mobile)
+                var result = true
+                break;
+            } else result = false
+        }
+    
+
+        if (result == true){   //if Mobile  present
+            alert("User already registered")
+        } else if (password !== rePassword ) {  //Same password 2 times
+            alert("Password does not matched");
+        }
+        else {  //Post user data to DB
+            fetch("http://localhost:2200/users",{
+                "method" : "POST",
+                "headers" : {
+                    "content-type" : "application/json"
+                },
+                "body": JSON.stringify({
+                    name,
+                    mobile,
+                    password
+                })
+            })
+            .then(response => response.json())
+            .then(result => {
+                alert("Account created");
+            })  
+        }
+        
+    } setTimeout(3000, formSubmit)
+
 
