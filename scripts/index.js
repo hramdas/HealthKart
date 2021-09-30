@@ -80,11 +80,98 @@ function showProduct(product) {
   let div_data = document.getElementById("data");
 
   product.forEach(function (products) {
-    let div = document.createElement("div");
-    let pricecart = document.createElement("div");
+    const medicine = [
+      {
+        image:
+          "https://img4.hkrtcdn.com/14798/prd_1479773-HealthKart-HK-Vitals-Healthy-Joints-60-tablets_c_t.jpg",
+        name: "MuscleBlaze Whey Protein, 4.4 lb, Rich Milk Chocolate",
+        price: "4535",
+        discount: "18% off",
+        button: "Add",
+        pricefinal: "Premium Price : 4324",
+        rating: "4.4(1034)",
+      },
+      {
+        image:
+          "https://img6.hkrtcdn.com/11003/prd_1100235-MuscleBlaze-Gold-Gainer-XXL-2.2-lb-Chocolate-Bliss_c_t.jpg",
+        name: "HealthKart Omega 3 1000mg with 180mg EPA and 120mg DHA, 60 softgels",
+        price: "375",
+        discount: "20% off",
+        button: "Add",
+        pricefinal: "Premium Price : 4324",
+        rating: "4.3(1634)",
+      },
+      {
+        image:
+          "https://img4.hkrtcdn.com/11965/prd_1196443-MuscleBlaze-High-Protein-Natural-Peanut-Butter-Unsweetened-0.750-kg-Crunchy_c_t.jpg",
+        name: "MuscleTech NitroTech Performance Series, 4 lb, Milk Chocolate",
+        price: "5635",
+        discount: "10% off",
+        button: "Add",
+        pricefinal: "",
+        rating: "4.6(1234)",
+      },
+      {
+        image: "https://img10.hkrtcdn.com/15757/prd_1575689_c_t.jpg",
+        name: "MuscleBlaze Natural Peanut Butter Unsweetened, 1 kg, Extra Crunchy",
+        price: "403",
+        discount: "26% off",
+        button: "Add",
+        pricefinal: "Premium Price : 350",
+        rating: "4.5(1831)",
+      },
+    ];
+    const medicine_json = JSON.stringify(medicine);
+    localStorage.setItem("MyMedicine", medicine_json);
+    let med = localStorage.getItem("MyMedicine");
+    med = JSON.parse(med);
+    // console.log("med", med);
 
-    let m_name = document.createElement("h4");
-    m_name.innerText = products.name;
+    function medProduct() {
+      let div_data = document.getElementById("data");
+
+      med.forEach(function (products) {
+        let div = document.createElement("div");
+        let pricecart = document.createElement("div");
+
+        let m_name = document.createElement("h4");
+        m_name.innerText = products.name;
+
+        let m_price = document.createElement("b");
+        m_price.innerText = "₹" + products.price;
+
+        let m_button = document.createElement("button");
+        m_button.innerHTML = "🛒 ADD";
+        m_button.onclick = function () {
+          addtocart(products);
+        };
+
+        let m_discount = document.createElement("h5");
+        m_discount.innerText = products.discount;
+
+        let image = document.createElement("img");
+        image.src = products.image;
+
+        let m_pricefinal = document.createElement("h6");
+        m_pricefinal.innerText = products.pricefinal;
+
+        let m_rating = document.createElement("p");
+        m_rating.innerHTML = "★ " + products.rating;
+
+        pricecart.append(m_price, m_button);
+        div.append(
+          image,
+          m_discount,
+          m_name,
+          m_rating,
+          pricecart,
+          m_pricefinal
+        );
+        div_data.append(div);
+      });
+    }
+
+    medProduct();
 
     let m_price = document.createElement("b");
     m_price.innerText = "₹" + products.price;
@@ -211,4 +298,74 @@ function addtocart(p) {
   let cart_data = JSON.parse(localStorage.getItem("cart"));
   cart_data.push(p);
   localStorage.setItem("cart", JSON.stringify(cart_data));
+}
+
+//code for searching - antony
+
+let searchOutsDiv = document.getElementById("search");
+
+async function search(n) {
+  try {
+    //var res = await fetch(`https://swapi.dev/api/people/?search=${n}`);
+
+    var data = await res.json();
+    console.log(data);
+    return data.results;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// function apend(m) {
+//   m.forEach(({ name, birth_year, gender, url }) => {
+//     let div = document.createElement("div");
+//     let p = document.createElement("p");
+
+//     p.innerHTML = name;
+
+//     p.addEventListener("click", () => {
+//       // alert("11111111111111");
+//       append(url);
+//     });
+
+//     let p2 = document.createElement("p");
+
+//     p2.innerHTML = birth_year;
+
+//     let p3 = document.createElement("p");
+
+//     p3.innerHTML = gender;
+
+//     div.append(p, p2, p3);
+//     searchOutsDiv.append(div);
+//   });
+// }
+
+async function main() {
+  let searchItem = document.getElementById("search").value;
+  console.log(searchItem);
+  if (searchItem == "") {
+    searchOutsDiv.innerHTML = "";
+    return;
+  }
+  let searchResults = await search(searchItem);
+  //console.log(searchResults);
+  searchOutsDiv.innerHTML = "";
+  if (searchResults == undefined) {
+    return;
+  }
+  console.log(searchResults);
+  // apend(chars);
+}
+
+//Debouncing for minimum API calls--------------------------------------------------------------------
+
+var timerId;
+function debounce(func, delay) {
+  if (timerId) {
+    console.log("------------dobounce waiting-------------");
+    clearTimeout(timerId);
+  }
+
+  timerId = setTimeout(func, delay);
 }
