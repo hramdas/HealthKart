@@ -1,4 +1,4 @@
-let txt = document.getElementById("cartClick");
+let txt = document.getElementById("cartOnNum");
 
 let cart;
 async function cartFetch() {
@@ -11,6 +11,7 @@ async function cartFetch() {
 
     // console.log(data.user.cart);
     cart = data.user.cart;
+    console.log(cart);
     let spantext = document.createElement("span");
     var len = cart.length;
     
