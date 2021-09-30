@@ -12,20 +12,23 @@
     #login {
         background-image: url('https://images.unsplash.com/photo-1599447332412-6bc6830c815a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
         background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 500vh;
-        background-attachment: fixed;
-        padding: 7% 0px;
+        background-size:cover;
+        /* width: 90%; 
+        /* height: 400px; */
+        /* background-attachment: fixed; */
+        padding: 100px 0;
+        display: flex;
+        align-items:center;  
+        justify-content: center;
     }
 
     #login .container {
-        width: 700px;
-        height: 550px;
+        /* width: 700px; */
+        /* height: 550px; */
         background-color: burlywood;
-        position: fixed;
+        /* position: fixed; */
         display: flex;
-        margin-left: 450px;
+        
     }
 
     .leftSidePopUp {

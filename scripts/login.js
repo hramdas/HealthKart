@@ -11,16 +11,14 @@ loginBtn.addEventListener('click', (e) => {
     {
         alert("Login Successfully");
         window.location.href = 'index.html'
-    }
-
-    else
+    } else
     {
         alert("Invaild Mobile Number or Password")
     }
 });
 
+ // close form
 let bar = document.getElementById('timeBar');
-
 bar.addEventListener('click', function () {
     window.location.href = 'index.html'
 })
