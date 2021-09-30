@@ -20,7 +20,6 @@ e.preventDefault();
     // Checking mobile number with database
     for (var i = 0; i < userData.user.length; i++){
         if (userData.user[i].mobile == mobile){
-            console.log('mob', userData.user[i].mobile)
             var result = true
             break;
         } else result = false
