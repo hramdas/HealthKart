@@ -1,12 +1,18 @@
 //code for searching - antony
 
-let searchOutsDiv = document.getElementById("search");
+let searchInput = document.getElementById("search");
+searchInput.oninput = () => {
+  //   if (name == "") {
+  //     console.log("emmmmmmpppppptyyyyyyyyyyyyyyyy");
+  //     window.location.href = "index.html";
+  //   }
+  debounce(main, 1000);
+};
 
 async function search(n) {
   try {
-    //var res = await fetch(`https://swapi.dev/api/people/?search=${n}`);
-
-    var data = await res.json();
+    var res = await fetch(`http://localhost:2200/products/search/${n}`);
+    data = await res.json();
     console.log(data);
     return data.results;
   } catch (error) {
@@ -43,12 +49,12 @@ async function main() {
   let searchItem = document.getElementById("search").value;
   console.log(searchItem);
   if (searchItem == "") {
-    searchOutsDiv.innerHTML = "";
+    //searchOutsDiv.innerHTML = "";
     return;
   }
   let searchResults = await search(searchItem);
   //console.log(searchResults);
-  searchOutsDiv.innerHTML = "";
+  //   searchOutsDiv.innerHTML = "";
   if (searchResults == undefined) {
     return;
   }

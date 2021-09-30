@@ -17,8 +17,8 @@ router.get("", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
-  console.log("req.params.id");
-  console.log(req.params.id);
+  // console.log("req.params.id");
+  //console.log(req.params.id);
   let user = await User.findById(req.params.id).populate("cart");
   return res.status(200).send({ user });
 });
