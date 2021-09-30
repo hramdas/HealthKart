@@ -24,59 +24,69 @@ function slidingShows() {
 }
 window.onload = slidingShows;
 
-
-
 //Bhargav js -1st
-    const medicine = [
-        {
-        image: "https://img4.hkrtcdn.com/14798/prd_1479773-HealthKart-HK-Vitals-Healthy-Joints-60-tablets_c_t.jpg",
-          name : "MuscleBlaze Whey Protein, 4.4 lb, Rich Milk Chocolate",
-        price: "4535",
-        discount: "18% off",
-          button: "Add",
-          pricefinal : "Premium Price : 4324",
-          rating : "4.4(1034)",
-        },
-        {
-          image: "https://img6.hkrtcdn.com/11003/prd_1100235-MuscleBlaze-Gold-Gainer-XXL-2.2-lb-Chocolate-Bliss_c_t.jpg",
-          name : "HealthKart Omega 3 1000mg with 180mg EPA and 120mg DHA, 60 softgels",
-          price: "375",
-          discount: "20% off",
-          button: "Add",
-          pricefinal : "Premium Price : 4324",
-          rating : "4.3(1634)",
+    // const medicine = [
+    //     {
+    //     image: "https://img4.hkrtcdn.com/14798/prd_1479773-HealthKart-HK-Vitals-Healthy-Joints-60-tablets_c_t.jpg",
+    //       name : "MuscleBlaze Whey Protein, 4.4 lb, Rich Milk Chocolate",
+    //     price: "4535",
+    //     discount: "18% off",
+    //       button: "Add",
+    //       pricefinal : "Premium Price : 4324",
+    //       rating : "4.4(1034)",
+    //     },
+    //     {
+    //       image: "https://img6.hkrtcdn.com/11003/prd_1100235-MuscleBlaze-Gold-Gainer-XXL-2.2-lb-Chocolate-Bliss_c_t.jpg",
+    //       name : "HealthKart Omega 3 1000mg with 180mg EPA and 120mg DHA, 60 softgels",
+    //       price: "375",
+    //       discount: "20% off",
+    //       button: "Add",
+    //       pricefinal : "Premium Price : 4324",
+    //       rating : "4.3(1634)",
 
-        },
-        {
-          image: "https://img4.hkrtcdn.com/11965/prd_1196443-MuscleBlaze-High-Protein-Natural-Peanut-Butter-Unsweetened-0.750-kg-Crunchy_c_t.jpg",
-          name : "MuscleTech NitroTech Performance Series, 4 lb, Milk Chocolate",
-          price: "5635",
-          discount: "10% off",
-          button: "Add",
-          pricefinal : '',
-          rating: "4.6(1234)",
-        },
-        {
-          image: "https://img10.hkrtcdn.com/15757/prd_1575689_c_t.jpg",
-          name : "MuscleBlaze Natural Peanut Butter Unsweetened, 1 kg, Extra Crunchy",
-          price: "403",
-          discount: "26% off",
-          button: "Add",
-          pricefinal : "Premium Price : 350",
-          rating: "4.5(1831)",
-        },
+    //     },
+    //     {
+    //       image: "https://img4.hkrtcdn.com/11965/prd_1196443-MuscleBlaze-High-Protein-Natural-Peanut-Butter-Unsweetened-0.750-kg-Crunchy_c_t.jpg",
+    //       name : "MuscleTech NitroTech Performance Series, 4 lb, Milk Chocolate",
+    //       price: "5635",
+    //       discount: "10% off",
+    //       button: "Add",
+    //       pricefinal : '',
+    //       rating: "4.6(1234)",
+    //     },
+    //     {
+    //       image: "https://img10.hkrtcdn.com/15757/prd_1575689_c_t.jpg",
+    //       name : "MuscleBlaze Natural Peanut Butter Unsweetened, 1 kg, Extra Crunchy",
+    //       price: "403",
+    //       discount: "26% off",
+    //       button: "Add",
+    //       pricefinal : "Premium Price : 350",
+    //       rating: "4.5(1831)",
+    //     },
 
-    ]
-    const medicine_json = JSON.stringify(medicine);
-    localStorage.setItem("MyMedicine", medicine_json);
-    let med = localStorage.getItem("MyMedicine");
-    med = JSON.parse(med);
-    // console.log("med", med);
+    // ]
 
-    function medProduct(){
+    async function productdata(){
+
+     try{
+      let res = await fetch('http://localhost:2200/products/flashsale')
+      let data = await res.json()
+
+      productDB = data.product
+
+      showProduct(productDB)
+
+      } catch (error){
+        showProduct(error)
+     }
+    }
+    productdata()
+
+
+    function showProduct(product){
         let div_data = document.getElementById("data");
-        
-        med.forEach(function(products) {
+
+        product.forEach(function(products) {
             let div = document.createElement('div');
             let pricecart = document.createElement('div');
 
@@ -93,10 +103,10 @@ window.onload = slidingShows;
             };
 
             let m_discount = document.createElement('h5');
-            m_discount.innerText = products.discount;
+            m_discount.innerText = products.discount + '% off' ;
 
             let image = document.createElement('img');
-            image.src = products.image;
+            image.src = products.img;
 
             let m_pricefinal = document.createElement('h6');
             m_pricefinal.innerText = products.pricefinal;
@@ -105,13 +115,15 @@ window.onload = slidingShows;
             m_rating.innerHTML = '★ ' + products.rating;
 
             pricecart.append(m_price, m_button)
-            div.append(image,m_discount,m_name, m_rating, pricecart, m_pricefinal);
+
+            div.append(image,m_discount,m_name, m_rating, pricecart);
+
             div_data.append(div);
 
         });
     }
 
-medProduct();
+// medProduct();
 
 // Trending by Ramdas
 
@@ -174,10 +186,10 @@ medProduct();
   //       let t_rating = document.createElement("p");
   //       t_rating.innerHTML = '★ ' + products.rating;
 
-  //       let t_pricefinal = document.createElement('h4'); 
+  //       let t_pricefinal = document.createElement('h4');
   //       t_pricefinal.innerHTML = products.pricefinal;
 
-  //       let t_discount = document.createElement('h5'); 
+  //       let t_discount = document.createElement('h5');
   //       t_discount.innerHTML = products.discount;
 
   //       let t_button = document.createElement('button');

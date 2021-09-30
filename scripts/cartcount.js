@@ -1,9 +1,25 @@
+let txt = document.getElementById("cartOnNum");
 
-let txt = document.getElementById('cartOnNum')
-let cart = JSON.parse(localStorage.getItem('cart'))
+let cart;
+async function cartFetch() {
+  try {
+    //URL for fetch to be upfated with dynamic URL with user ID
+    let res = await fetch(
+      "http://localhost:2200/users/61549acf759d0c2bdd45aeb6"
+    );
+    let data = await res.json();
 
-let spantext = document.createElement('span')
-var len = cart.length;
-spantext.innerHTML = len;
+    // console.log(data.user.cart);
+    cart = data.user.cart;
+    let spantext = document.createElement("span");
+    var len = cart.length;
+    //console.log(len);
+    spantext.innerHTML = len;
 
-txt.appendChild(spantext)
+    txt.appendChild(spantext);
+    //Cart_items();
+  } catch (error) {}
+}
+cartFetch();
+
+//let cart = JSON.parse(localStorage.getItem('cart'))

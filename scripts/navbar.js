@@ -38,7 +38,7 @@ function navbar() {
                 </a>
 
                 <div class="cartAdd">
-                    <button onclick="cartBtn()" id="cart"><a href="cart.html" >Items in cart</a></button>
+                    <button onclick="cartBtn()" id="cart"><a href="./cart.html" >Items in cart</a></button>
                 </div>
             </div>
     </div>
@@ -46,4 +46,47 @@ function navbar() {
 `
 }
 
-export default navbar;
+
+
+function navbarSec() {
+    return `        <div class="container">
+            <ul id="catLinks">
+                <li>
+                    <a href="#">Category</a>
+                    <ul class="dropdown">
+                        <li id="li"><a href="sports-nutrition.html">Sports Nutrition</a></li>
+                        <li id="li">Vitamins & Supplements</li>
+                        <li id="li">Ayurveda & Herbs</li>
+                        <li id="li">Health Food & Drinks</li>
+                        <li id="li">Fitness</li>
+                        <li id="li">Wellness</li>
+                        <li id="li">Service Program</li>
+                    </ul>
+                </li>
+                <li>Brand</li>
+                <li>Gender</li>
+                <li>Goal</li>
+                <li>Bestsellers</li>
+                <li>Deals</li>
+                <li>Gift Cart</li>
+                <li>Blog, Videos & More</li>
+            </ul>
+            <!-- <div class="rightSideContaint"></div> -->
+            <div class="rightPart">
+                <div class="consult">
+                    <i class="fa fa-video-camera"></i>
+                    <p>Hk Consult</p>
+                </div>
+                <div class="findStore">
+                    <i class="fa fa-map-marker"></i>
+                    <p>Find a Store</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+           `
+}
+
+export { navbar, navbarSec };

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthKart - India</title>
     <link rel="stylesheet" href="style\index.css">
+    <link rel="stylesheet" href="style\navbar.css">
+
     <!-- icon CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="https://www.healthkart.com/favicon.ico" type="image/x-icon">
@@ -15,58 +17,13 @@
 <body>
     <!-- NAVBAR START -->
     <div id="navbar"></div>
-    <script type="module">
-        import navbar from "./scripts/navbar.js";
-let nav = document.getElementById('navbar');
- nav.innerHTML = navbar()
-    </script>
-
-    <!-- <div class="clear"></div> -->
-
-    <!-- <div class="clear"></div> -->
+    <div id="categories"></div>
 
 
-    <!-- aftar navbar categories part -->
-    <div id="categories">
-        <div class="container">
-            <ul id="catLinks">
-                <li>
-                    <a href="#">Category</a>
-                    <ul class="dropdown">
-                        <li id="li"><a href="sports-nutrition.html">Sports Nutrition</a></li>
-                        <li id="li">Vitamins & Supplements</li>
-                        <li id="li">Ayurveda & Herbs</li>
-                        <li id="li">Health Food & Drinks</li>
-                        <li id="li">Fitness</li>
-                        <li id="li">Wellness</li>
-                        <li id="li">Service Program</li>
-                    </ul>
-                </li>
-                <li>Brand</li>
-                <li>Gender</li>
-                <li>Goal</li>
-                <li>Bestsellers</li>
-                <li>Deals</li>
-                <li>Gift Cart</li>
-                <li>Blog, Videos & More</li>
-            </ul>
-            <!-- <div class="rightSideContaint"></div> -->
-            <div class="rightPart">
-                <div class="consult">
-                    <i class="fa fa-video-camera"></i>
-                    <p>Hk Consult</p>
-                </div>
-                <div class="findStore">
-                    <i class="fa fa-map-marker"></i>
-                    <p>Find a Store</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- NAVBAR END -->
+<!-- Navbar End -->
 
-    <!-- CAROUSEL START -->
-    <div id="carousel">
+
+ <div id="carousel">
         <!-- <i class="fa fa-chevron-left"></i>
         <i class="fa fa-chevron-right"></i> -->
         <img name='silde'>
@@ -78,18 +35,15 @@ let nav = document.getElementById('navbar');
         <div id="FlashSale">
             <div class="container flashColor">
                 <p>🗲Flash Sale</p>
-
                 <h3><a href="flashsale.html">View All</a> </h3>
-
             </div>
             <hr>
             <div id="data"></div>
         </div>
         <!-- FLASH SALES END  -->
-        <!-- Srinivas -->
 
+        <!-- Srinivas -->
         <!-- What are you looking for -->
-        <div>
             <h1 class="h1">Hi, What are you looking for?</h1>
             <div id="grid">
                 <div id="grid_box">
@@ -418,5 +372,12 @@ let nav = document.getElementById('navbar');
 </body>
 
 </html>
+   <script type="module">
+import {navbar , navbarSec} from "./scripts/navbar.js";
+let nav = document.getElementById('navbar');
+let navSec = document.getElementById('categories');
+ nav.innerHTML = navbar();
+navSec.innerHTML = navbarSec();
+</script>
 <script src="scripts\index.js"></script>
 <script src="scripts\cartcount.js"></script>
