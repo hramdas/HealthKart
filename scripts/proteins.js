@@ -49,13 +49,6 @@ setTimeout(2000, productData)
 
 productData();
 
-
-// const proteins_str = JSON.stringify(proteins);
-// localStorage.setItem('proteins_json', proteins_str);
-// let proteins_local = localStorage.getItem('proteins_json');
-// proteins_parse = JSON.parse(proteins_local)
-
-//Append Data
 div_data = document.getElementById('items');
 
 function showProteins(productDB) {
