@@ -1,5 +1,5 @@
 function navbar() {
-    return `
+  return `
         <div class="container">
             <div class="logo">
                 <img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
@@ -43,13 +43,11 @@ function navbar() {
             </div>
     </div>
     <div class="clearDiv"></div>
-`
+`;
 }
 
-
-
 function navbarSec() {
-    return `        <div class="container">
+  return `        <div class="container">
             <ul id="catLinks">
                 <li>
                     <a href="#">Category</a>
@@ -86,7 +84,7 @@ function navbarSec() {
     </div>
 
 
-           `
+           `;
 }
 
 export { navbar, navbarSec };

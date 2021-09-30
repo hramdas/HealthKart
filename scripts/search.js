@@ -15,36 +15,42 @@ function ultraMain() {
       var res = await fetch(`http://localhost:2200/products/search/${n}`);
       data = await res.json();
       console.log(data);
-      return data.results;
+      return data.product;
     } catch (error) {
       console.log(error);
     }
   }
 
-  // function apend(m) {
-  //   m.forEach(({ name, birth_year, gender, url }) => {
-  //     let div = document.createElement("div");
-  //     let p = document.createElement("p");
+  function apend(m) {
+    console.log("yess");
+    datadiv = document.getElementById("showSearchresult");
+    m.forEach(({ name, img, price }) => {
+      //   let div = document.createElement("div");
+      //   let p = document.createElement("p");
+      //   p.innerHTML = name;
+      //   p.addEventListener("click", () => {
+      //   });
+      let div = document.createElement("div");
+      let maindiv = document.createElement("div");
+      let divtxt = document.createElement("span");
 
-  //     p.innerHTML = name;
+      let m_name = document.createElement("p");
+      m_name.innerText = name;
 
-  //     p.addEventListener("click", () => {
-  //       // alert("11111111111111");
-  //       append(url);
-  //     });
+      let m_price1 = document.createElement("p");
+      m_price1.innerText = "₹ " + price;
+      let div2 = document.createElement("div");
+      let image = document.createElement("img");
+      image.src = img;
 
-  //     let p2 = document.createElement("p");
-
-  //     p2.innerHTML = birth_year;
-
-  //     let p3 = document.createElement("p");
-
-  //     p3.innerHTML = gender;
-
-  //     div.append(p, p2, p3);
-  //     searchOutsDiv.append(div);
-  //   });
-  // }
+      divtxt.append(m_name, m_price1);
+      div.append(divtxt);
+      div2.append(image);
+      maindiv.append(div2, div);
+      datadiv.append(maindiv);
+      // console.log("finall");
+    });
+  }
 
   async function main() {
     let searchItem = document.getElementById("search").value;
@@ -60,7 +66,8 @@ function ultraMain() {
       return;
     }
     console.log(searchResults);
-    // apend(chars);
+    console.log("what");
+    apend(searchResults);
   }
 
   //Debouncing for minimum API calls--------------------------------------------------------------------
