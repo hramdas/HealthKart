@@ -14,7 +14,6 @@ router.post("", async (req, res) => {
 
 router.get("", async (req, res) => {
   const user = await User.find();
-
   return res.status(200).send({ user });
 });
 
