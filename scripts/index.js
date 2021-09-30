@@ -61,7 +61,6 @@ window.onload = slidingShows;
 //     },
 
 // ]
-/*
 async function productdata() {
   try {
     let res = await fetch("http://localhost:2200/products/flashsale");
@@ -299,4 +298,3 @@ function addtocart(p) {
   cart_data.push(p);
   localStorage.setItem("cart", JSON.stringify(cart_data));
 }
-*/
