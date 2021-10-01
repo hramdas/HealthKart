@@ -8,6 +8,7 @@ images[2] = 'https://img6.hkrtcdn.com/15538/bnr_1553705_o.jpg';
 images[3] = 'https://img8.hkrtcdn.com/15641/bnr_1564057_o.jpg';
 images[4] = 'https://img8.hkrtcdn.com/14853/bnr_1485287_o.jpg';
 images[5] = 'https://img6.hkrtcdn.com/15632/bnr_1563185_o.png';
+
 function slidingShows() {
   document.silde.src = images[count];
   if (count < images.length - 1)
@@ -38,8 +39,6 @@ window.onload = slidingShows;
       } 
     }
     productdata()
-
-
     function showProduct(product){
         let div_data = document.getElementById("data");
         
@@ -56,7 +55,7 @@ window.onload = slidingShows;
             let m_button = document.createElement('button');
             m_button.innerHTML = "🛒 ADD";
             m_button.onclick = function (){
-                addtocart(products);
+                addtocart(products._id);
             };
 
             let m_discount = document.createElement('h5');
@@ -86,12 +85,20 @@ function function1() {
   alert('subscribed successfully')
 }
 
-if (localStorage.getItem("cart") === null)
-{
-  localStorage.setItem("cart", JSON.stringify([]));
-}
 function addtocart(p) {
-  let cart_data = JSON.parse(localStorage.getItem("cart"));
-  cart_data.push(p);
-  localStorage.setItem("cart", JSON.stringify(cart_data));
+  let userID = JSON.parse(localStorage.getItem('HKuser'))
+  fetch('http://localhost:2200/users/'+userID,{
+    method: "PATCH",
+    headers: {
+      "content-type" : "application/json"
+    },
+    body: JSON.stringify({
+      cart: [p]
+    })
+  })
+  .then(res => res.json())
+  
+  // cart_data.push(p);
+ 
+  
 }

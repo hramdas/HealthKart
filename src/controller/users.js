@@ -1,5 +1,5 @@
 //get  --  login
-//post  --  sign
+//post --  sign
 
 const express = require("express");
 const { db } = require("../models/users");
@@ -16,10 +16,18 @@ router.get("", async (req, res) => {
   return res.status(200).send({ user });
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/cart/:id", async (req, res) => {
   let user = await User.findById(req.params.id).populate("cart");
   return res.status(200).send({ user });
 });
 
+router.get("/:id", async (req, res) => {
+  let user = await User.findById(req.params.id)
+  return res.status(200).send({ user });
+});
+
+// router.patch("/:id", async(req, req)=>{
+//   const user = await User.findByIdAndUpdate()
+// })
 
 module.exports = router;
