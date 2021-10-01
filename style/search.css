@@ -53,9 +53,6 @@
   font-weight: 600;
   color: rgb(33, 33, 33);
 }
-#showSearchresult p:nth-of-type(n) :mouse {
-  font-size: 14px;
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  color: rgb(33, 33, 33);
+#showSearchresult p:first-of-type:hover {
+  color: rgb(82, 191, 205);
 }

@@ -24,7 +24,7 @@ function ultraMain() {
   function apend(m) {
     console.log("yess");
     datadiv = document.getElementById("showSearchresult");
-    m.forEach(({ name, img, price }) => {
+    m.forEach(({ name, img, price, _id }) => {
       //   let div = document.createElement("div");
       //   let p = document.createElement("p");
       //   p.innerHTML = name;
@@ -47,6 +47,11 @@ function ultraMain() {
       div.append(divtxt);
       div2.append(image);
       maindiv.append(div2, div);
+
+      maindiv.onclick = () => {
+        localStorage.setItem("searchClickedItemId", _id);
+        location.href = "../searchResults.html";
+      };
       datadiv.append(maindiv);
       // console.log("finall");
     });
