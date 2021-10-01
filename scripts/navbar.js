@@ -5,7 +5,7 @@ function navbar() {
                 <img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
                     alt="">
             </div>
-            <form action="">
+            <form id="searchForm" action="">
                 <a><i class="fa fa-search" id="searchIcon" aria-hidden="true"></i></a>
                 <input type="text" id="search" placeholder="Search for products, brands or Health Goals">
             </form>

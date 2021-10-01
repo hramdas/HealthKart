@@ -54,20 +54,30 @@ function ultraMain() {
 
   async function main() {
     let searchItem = document.getElementById("search").value;
+    datadiv = document.getElementById("showSearchresult");
     console.log(searchItem);
     if (searchItem == "") {
-      //searchOutsDiv.innerHTML = "";
+      datadiv.innerHTML = "";
       return;
     }
     let searchResults = await search(searchItem);
     //console.log(searchResults);
-    //   searchOutsDiv.innerHTML = "";
+    datadiv.innerHTML = "";
     if (searchResults == undefined) {
       return;
     }
     console.log(searchResults);
-    console.log("what");
+    // console.log("what");
     apend(searchResults);
+    localStorage.setItem("searchResultsData", JSON.stringify(searchResults));
+
+    document.getElementById("searchForm").onkeydown = function (event) {
+      if (window.event.keyCode == "13") {
+        event.preventDefault();
+        // alert("entered");
+        location.href = "../searchResults.html";
+      }
+    };
   }
 
   //Debouncing for minimum API calls--------------------------------------------------------------------

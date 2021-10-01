@@ -15,7 +15,7 @@
   margin: auto;
   overflow-y: scroll;
   background-color: rgb(243, 244, 246);
-
+  padding-bottom: 20px;
   z-index: 3000000;
   margin-top: -30px;
 }
@@ -41,6 +41,19 @@
 }
 
 #showSearchresult p:nth-of-type(n) {
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: rgb(33, 33, 33);
+}
+#showSearchresult p:nth-of-type(2n) {
+  font-size: 14px;
+  margin-top: 10px;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  color: rgb(33, 33, 33);
+}
+#showSearchresult p:nth-of-type(n) :mouse {
   font-size: 14px;
   font-family: Roboto, sans-serif;
   font-weight: 400;
