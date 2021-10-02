@@ -36,15 +36,13 @@ clear: both;
 }
 
 .wish{
-    margin: 20px 30%;
+    margin: 20px 20%;
     line-height: 29px;
     box-shadow: 0px 0px 18px rgba(33,33,33,.2);
     padding: 15px;
     /* display: grid;
     grid-gap: 10px; */
-
 }
-
 #count {
     font-size: 24px;
     font-weight: 600;
@@ -61,6 +59,11 @@ clear: both;
     background-color: white;
     margin: 10px auto;
 }
+
+#data > div > span{
+    display: grid;
+}
+
 #data > div:hover {
     box-shadow: 0px 0px 18px rgba(33,33,33,.2);
   }

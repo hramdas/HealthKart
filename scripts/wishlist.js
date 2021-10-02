@@ -1,58 +1,117 @@
+
+
 let wish = JSON.parse(localStorage.getItem("wish"));
+//fetch wishlist
+async function wishData(){
+  try{
+    let res = await fetch("http://localhost:2200/wishlists");
+    let data = await res.json();
+    wish = data.wish
+    wishlist(wish)
+
+  } catch(error){}
+} wishData()
+
 let data = document.getElementById('data');
-
-function wishlist(){
-wish.forEach(function(product){
-
-    let div = document.createElement('div');
-    let divtxt = document.createElement('span');
-
-    let w_image = document.createElement('img');
-    w_image.src = product.img;
-
-    let w_name = document.createElement('h4');
-    w_name.innerHTML = product.name;
-
-    let w_price = document.createElement('b');
-    w_price.innerHTML = '₹'+ product.price;
-    
-    let cart_btn = document.createElement('button')
-    cart_btn.innerHTML = "Add to Cart"
-    cart_btn.onclick = function (){
-        addtocart(product);
-    };
-
-    let quick = document.createElement('button')
-    quick.innerHTML = "Quick Buy"
-    quick.onclick = function (){
-        location.href = "checkout.html";
-    }
-
-
-    divtxt.append(w_name, w_price, cart_btn, quick);
-    div.append(w_image, divtxt);
-    data.append(div);
-})
-
-}
-wishlist()
-
-// wishlist items count
 let count = document.getElementById('count')
 let text = document.createElement('p')
-text.innerHTML = 'My Wishlist ( ' +  wish.length + ' )';
+let userID = JSON.parse(localStorage.getItem("HKuser"));
 
-count.appendChild(text);
+//Append wishlist data
+function wishlist(wish){
+  wish.forEach(function(p){
+    product = p.item
 
+      let div = document.createElement('div');
+      let divtxt = document.createElement('span');
+      let divbtn = document.createElement('span');
 
-// Add to cart
-if(localStorage.getItem("cart")===null){
-    localStorage.setItem("cart",JSON.stringify([]));
+      let w_image = document.createElement('img');
+      w_image.src = product.img;
+
+      let w_name = document.createElement('h4');
+      w_name.innerHTML = product.name;
+
+      let w_price = document.createElement('b');
+      w_price.innerHTML = '₹'+ product.price;
+      
+      //Onclick add to cart
+      let cart_btn = document.createElement('button')
+      cart_btn.innerHTML = "Add to Cart"
+      cart_btn.onclick = function (){
+          if (userID == null) {
+              alert("Please login");
+              window.location.href = "../login.html";
+            } else {
+              cartItems(product._id);
+            }
+      };
+
+       //Onclick remove from wishlist
+      let remove = document.createElement('button')
+      remove.innerHTML = "Remove"
+      remove.onclick = function (){
+          removeWish(p._id)
+      }
+
+      divbtn.append(cart_btn, remove);
+      divtxt.append(w_name, w_price, divbtn);
+      
+      div.append(w_image, divtxt);
+      data.append(div);
+  })
+  //Wishlist item count
+  text.innerHTML = 'My Wishlist ( ' +  wish.length + ' )';
+  count.appendChild(text);
 }
-function addtocart(p){
-     let cart_data = JSON.parse(localStorage.getItem("cart"));
-     cart_data.push(p);
-     localStorage.setItem("cart", JSON.stringify(cart_data));
+//Cart item check
+async function cartItems(p) {
+    let res = await fetch("http://localhost:2200/users/" + userID + "/cart/");
+    let cartData = await res.json();
+
+    let items = cartData.items;
+    var result = false;
+    if (items.length == 0) {
+      var result = false;
+    } else {
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].item == p) {
+          var result = true;
+          alert("Product already available in cart")
+          break;
+        }
+      }
+    }
+    // else add item to cart
+    if (result == false) {
+      addtocart(p);
+    }
+  }
+  //add to cart
+function addtocart(p) {
+    fetch("http://localhost:2200/carts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        item: p,
+        user: userID,
+      }),
+    }).then((response) => response.json());
+} setTimeout(500, addtocart);
+
+// remove from wishlist
+async function removeWish(id){
+  fetch("http://localhost:2200/wishlists/remove/:id",{
+    "method" : "DELETE",
+    "headers" : {
+      "content-type" : "application/json"
+    },
+    "body" : JSON.stringify({
+      id: id
+    })
+  })
+  window.location.href = 'wishlist.html'
 }
-
-

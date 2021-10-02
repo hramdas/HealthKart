@@ -35,11 +35,10 @@ function Cart_items(data) {
     data.forEach(function (itemID) {
       async function itemFetch() {
         try {
-          let res = await fetch("http://localhost:2200/products/"+itemID.item);
+          let res = await fetch("http://localhost:2200/products/item/"+itemID.item);
          
           let data = await res.json();
           p = data.product
-          // itemAppend(data.product)
         } catch (error) {}
 
         let div = document.createElement("div");
@@ -90,12 +89,10 @@ function Cart_items(data) {
   order.innerHTML = "Order Summery";
   shipping.innerHTML = "Shipping Charges - Free";
   
-} setTimeout(1000, Cart_items)
+} //setTimeout(1000, Cart_items)
 
 // Remove item from cart
 async function removeCart(id){
-
- 
   fetch("http://localhost:2200/carts/remove/:id",{
     "method":"DELETE",
     "headers" : {

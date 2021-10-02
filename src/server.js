@@ -29,6 +29,9 @@ app.use("/users", userController);
 const cartController = require("./controller/cart");
 app.use("/carts", cartController)
 
+const wishController = require("./controller/wishlist");
+app.use("/wishlists", wishController)
+
 app.listen(2200, async function () {
   await connect();
   console.log("listening on 2200");

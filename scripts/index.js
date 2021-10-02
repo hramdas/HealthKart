@@ -60,11 +60,11 @@ function showProduct(product) {
         window.location.href = "../login.html";
       } else {
         cartItems(products._id);
+        m_button.innerHTML = "Added to cart";
+        m_button.style.background ='gray'
       }
-
     };
 
-    
     let m_discount = document.createElement("h5");
     m_discount.innerText = products.discount + "% off";
 
@@ -104,16 +104,11 @@ function showProduct(product) {
         }
       }
     }
-
     // else add item to cart
     if (result == false) {
       addtocart(p);
     }
   }
-
-
-
-
 
 function addtocart(p) {
     fetch("http://localhost:2200/carts", {

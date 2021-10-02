@@ -1,23 +1,19 @@
 async function productData(valueIN) {
-    // console.log(valueIN)
-
-    //fetchURl = 'http://localhost:2200/products'
     try {
         let res = await fetch('http://localhost:2200/products/popular')
         let data = await res.json()
         productDB = data.product
 
         showProteins(productDB)
-
     } catch (error) {
         showProteins(error)
     }
 }
 setTimeout(2000, productData)
     // productData()
-
 productData();
 
+let userID = JSON.parse(localStorage.getItem("HKuser"));
 div_data = document.getElementById('items');
 
 function showProteins(productDB) {
@@ -48,8 +44,13 @@ function showProteins(productDB) {
         let wish_btn = document.createElement('button')
         wish_btn.innerText = '♡';
         wish_btn.onclick = function() {
-            addtoWish(product)
-            wish_btn.style.color = 'red';
+            if (userID == null) {
+                alert("Please login");
+                window.location.href = "../login.html";
+              } else {
+                addtoWish(product._id)
+                wish_btn.style.color = 'red';
+              }
         };
         price_quick.append(p_price, quick_btn);
         div.append(wish_btn, p_image, p_name, p_rating, price_quick);
@@ -59,15 +60,39 @@ function showProteins(productDB) {
     });
 }
 
-if (localStorage.getItem("wish") === null) {
-    localStorage.setItem("wish", JSON.stringify([]));
-}
+async function addtoWish(p) {
+    let res = await fetch("http://localhost:2200/users/" + userID + "/wish/");
+    let cartData = await res.json();
 
-function addtoWish(p) {
-    let wish_data = JSON.parse(localStorage.getItem("wish"));
-    wish_data.push(p);
-    localStorage.setItem("wish", JSON.stringify(wish_data));
+    let items = cartData.items;
+    var result = false;
+    if (items.length == 0) {
+      var result = false;
+    } else {
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].item == p) {
+          var result = true;
+          alert("Product already available in wishlist")
+          break;
+        }
+      }
+    }
+    // else add item to cart
+    if (result == false) {
+      wish_data(p);
+    }
+  }
 
-    //  wishbtn = document.getElementById("button");
-
-}
+function wish_data(p) {
+    fetch("http://localhost:2200/wishlists", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        item: p,
+        user: userID,
+      }),
+    }).then((response) => response.json());
+} setTimeout(500, wish_data);

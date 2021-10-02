@@ -13,11 +13,10 @@ router.get("", async(req, res)=>{
    
 })
 
-// router.get("/:id", async(req, res)=>{
-//     const product = await Product.findById(req.params.id) 
-//     return res.status(201).send({product})
-   
-// })
+router.get("/item/:id", async(req, res)=>{
+    const product = await Product.findById(req.params.id) 
+    return res.status(201).send({product}) 
+})
 
 router.get("/popular", async(req, res)=>{
     const product = await Product.find().lean().exec();
