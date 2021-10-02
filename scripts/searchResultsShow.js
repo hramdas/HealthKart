@@ -3,13 +3,37 @@
 // //Get sorting input
 // sortIn();
 
-// function sortIn() {
-//   productData("none");
-//   var sortData = document.getElementById("sortNutri");
-//   var valueIN = sortData.options[sortData.selectedIndex].value;
-//   // console.log('sort', valueIN)
-//   productData(valueIN);
-// }
+function sortIn() {
+  // productData("none");
+  var sortData = document.getElementById("sortNutri");
+  var valueIN = sortData.options[sortData.selectedIndex].value;
+  console.log("sort", valueIN);
+  let results = localStorage.getItem("searchResultsData");
+  results = JSON.parse(results);
+  if (valueIN == "lhPrice") {
+    results.sort((a, b) => {
+      return a.price - b.price;
+    });
+  } else if (valueIN == "hlPrice") {
+    results.sort((a, b) => {
+      return b.price - a.price;
+    });
+  } else if (valueIN == "lhdisc") {
+    results.sort((a, b) => {
+      return a.discount - b.discount;
+    });
+  } else if (valueIN == "hldisc") {
+    results.sort((a, b) => {
+      return b.discount - a.discount;
+    });
+  } else if (valueIN == "rating") {
+    results.sort((a, b) => {
+      return b.rating - a.rating;
+    });
+  }
+  showProteins(results);
+  // productData(valueIN);
+}
 
 // //Fetch Products Data
 // async function productData(valueIN) {
