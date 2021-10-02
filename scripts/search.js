@@ -50,7 +50,7 @@ function ultraMain() {
 
       maindiv.onclick = () => {
         localStorage.setItem("searchClickedItemId", _id);
-        location.href = "../searchResults.html";
+        location.href = "../searchResultsSingle.html";
       };
       datadiv.append(maindiv);
       // console.log("finall");
