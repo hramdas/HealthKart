@@ -16,19 +16,13 @@ router.get("", async (req, res) => {
   return res.status(200).send({ user });
 });
 
-<<<<<<< HEAD:controller/users.js
-router.get("/:id", async (req, res) => {
-  // console.log("req.params.id");
-  //console.log(req.params.id);
-=======
 router.get("/cart/:id", async (req, res) => {
->>>>>>> 2fd0d2cd05ae8f626e3105b7c10eea056611fef3:src/controller/users.js
   let user = await User.findById(req.params.id).populate("cart");
   return res.status(200).send({ user });
 });
 
 router.get("/:id", async (req, res) => {
-  let user = await User.findById(req.params.id)
+  let user = await User.findById(req.params.id);
   return res.status(200).send({ user });
 });
 
