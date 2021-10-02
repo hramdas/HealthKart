@@ -70,13 +70,13 @@ function showProteins(productDB) {
       let p_name = document.createElement("b");
       p_name.innerHTML = product.name;
 
-      let p_price = document.createElement("span");
+      let p_price = document.createElement("p");
       p_price.innerHTML = "₹" + product.price;
 
       let p_image = document.createElement("img");
       p_image.src = product.img;
 
-      let p_rating = document.createElement("span");
+      let p_rating = document.createElement("p");
       p_rating.innerHTML = "★ " + product.rating;
 
       let quick_btn = document.createElement("button");
