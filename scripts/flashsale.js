@@ -1,40 +1,9 @@
-// const products = require("../models/products");
-
-//Get sorting input
-sortIn()
-
-function sortIn() {
-    productData("none")
-    var sortData = document.getElementById('sortNutri')
-    var valueIN = sortData.options[sortData.selectedIndex].value
-        // console.log('sort', valueIN)
-    productData(valueIN)
-}
-
-
-//Fetch Products Data
 async function productData(valueIN) {
     // console.log(valueIN)
 
     //fetchURl = 'http://localhost:2200/products'
-    if (valueIN == 'none') {
-        fetchURL = 'http://localhost:2200/products'
-    } else if (valueIN == 'rating') {
-        fetchURL = 'http://localhost:2200/products/popular'
-    } else if (valueIN == 'lhPrice') {
-        fetchURL = 'http://localhost:2200/products/priceL'
-    } else if (valueIN == 'hlPrice') {
-        fetchURL = 'http://localhost:2200/products/priceH'
-    } else if (valueIN == 'lhdisc') {
-        fetchURL = 'http://localhost:2200/products/discL'
-    } else if (valueIN == 'hldisc') {
-        fetchURL = 'http://localhost:2200/products/discH'
-    }
-
-    // console.log('fetch', fetchURL)
-
     try {
-        let res = await fetch(fetchURL)
+        let res = await fetch('http://localhost:2200/products/popular')
         let data = await res.json()
         productDB = data.product
 

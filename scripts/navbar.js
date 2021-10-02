@@ -2,7 +2,7 @@ function navbar() {
   return `
         <div class="container">
             <div class="logo">
-                <img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
+            <a href="/index.html"><img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
                     alt="">
             </div>
             <form id="searchForm" action="">

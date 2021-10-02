@@ -1,19 +1,24 @@
 //user id 6154854612a07358e8d59ce6
+
+
+
+
+
 let cart_data;
 async function cartFetch() {
-  try {
-    //URL for fetch to be upfated with dynamic URL with user ID
-    let res = await fetch(
-      "http://localhost:2200/users/61549acf759d0c2bdd45aeb6"
-    );
-    let data = await res.json();
+  let userID = JSON.parse(localStorage.getItem('HKuser'))
 
-    console.log(data.user.cart);
+  try {
+    //URL for fetch to be upated with dynamic URL with user ID
+    let res = await fetch(
+      'http://localhost:2200/users/cart/'+userID );
+    let data = await res.json();
     cart_data = data.user.cart;
     Cart_items();
   } catch (error) {}
-}
-cartFetch();
+} setTimeout(1000, cartFetch)
+cartFetch()
+
 
 //let cart_data = JSON.parse(localStorage.getItem("cart"));
 //let data_div = document.querySelector("#cart_data");
@@ -29,40 +34,46 @@ let data_div = document.getElementById("cart_data");
 
 let datadiv = document.getElementById("cart_data");
 let total = 0;
+
 function Cart_items() {
-  cart_data.forEach(function (product) {
-    let div = document.createElement("div");
-    let divtxt = document.createElement("span");
+  if(cart_data.length == 0){
+    datadiv.innerHTML = '<h2> Cart is empty</h2>'
+  } else {
 
-    let increment = document.createElement("button");
-    increment.innerHTML = "+";
-    let btn = document.createElement("input");
-    btn.value = 1;
-    let decrement = document.createElement("button");
-    decrement.innerHTML = "-";
+    cart_data.forEach(function (product) {
+      let div = document.createElement("div");
+      let divtxt = document.createElement("span");
 
-    let m_name = document.createElement("b");
-    m_name.innerText = product.name;
+      let increment = document.createElement("button");
+      increment.innerHTML = "+";
+      let btn = document.createElement("input");
+      btn.value = 1;
+      let decrement = document.createElement("button");
+      decrement.innerHTML = "-";
 
-    let m_price1 = document.createElement("p");
-    m_price1.innerText = "₹ " + product.price;
+      let m_name = document.createElement("b");
+      m_name.innerText = product.name;
 
-    let image = document.createElement("img");
-    image.src = product.img;
+      let m_price1 = document.createElement("p");
+      m_price1.innerText = "₹ " + product.price;
 
-    divtxt.append(m_name, m_price1);
-    div.append(image, divtxt);
-    datadiv.append(div);
+      let image = document.createElement("img");
+      image.src = product.img;
 
-    total += Number(product.price);
-  });
+      divtxt.append(m_name, m_price1);
+      div.append(image, divtxt);
+      datadiv.append(div);
+
+      total += Number(product.price);
+    });
+  }
 
   proceedToPay.innerHTML = `Proceed to Pay ₹ ${total} `;
   proceedToPay.addEventListener("click", function () {
     location.href = "checkout.html";
   });
   totalAmount.innerHTML = `Final Payable ₹ ${total} `;
-  cartItem.innerHTML = `My Cart`;
+  cartItem.innerHTML = `My Cart(`+ cart_data.length +')';
   pincode.innerHTML = "Pincode";
   coupon.innerHTML = "Apply Code →";
   order.innerHTML = "Order Summery";

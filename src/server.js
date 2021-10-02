@@ -11,16 +11,19 @@ const connect = () => {
 // mongodb+srv://hramdas:<password>@cluster0.or8t9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 const app = express();
+
 app.use(express.json());
+// app.use(express.urlencoded());
 app.use(cors());
 
-const productController = require("../controller/products");
+
+const productController = require("./controller/products");
 app.use("/products", productController);
 
-const tagsController = require("../controller/tags");
+const tagsController = require("./controller/tags");
 app.use("/tags", tagsController);
 
-const userController = require("../controller/users");
+const userController = require("./controller/users");
 app.use("/users", userController);
 
 app.listen(2200, async function () {

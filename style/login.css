@@ -181,16 +181,25 @@
 
 @media only screen and (max-width: 600px) {
     #login {
-        height: 90vh;
-        width: 100%;
-    }
-    #login .container {
-        width: 400px;
-        height: 600px;
+        background-image: url('https://images.unsplash.com/photo-1599447332412-6bc6830c815a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+        background-repeat: no-repeat;
+        background-size:cover;
+        /* width: 90%; 
+        /* height: 400px; */
+        /* background-attachment: fixed; */
+        padding: 100px 0;
         display: flex;
-        align-items: center;
-        justify-content: center
-    }
+        align-items:center;  
+        justify-content: center;
+  }
+    #login .container {
+        /* width: 700px; */
+        /* height: 550px; */
+        background-color: burlywood;
+        /* position: fixed; */
+        display: flex;
+        
+   }
     .leftSidePopUp {
         display: none;
     }
