@@ -73,4 +73,19 @@ router.get("/priceH", async (req, res) => {
   return res.status(201).send({ product });
 });
 
+// api for search -antony
+router.get("/search/:searchItem", async (req, res) => {
+  const product = [];
+  await (
+    await Product.find()
+  ).forEach((element) => {
+    if (
+      element.name.toLowerCase().includes(req.params.searchItem.toLowerCase())
+    ) {
+      product.push(element);
+    }
+  });
+
+  return res.status(201).send({ product });
+});
 module.exports = router;

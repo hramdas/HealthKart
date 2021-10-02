@@ -14,7 +14,7 @@ function ultraMain() {
     try {
       var res = await fetch(`http://localhost:2200/products/search/${n}`);
       data = await res.json();
-      console.log(data);
+      // console.log(data);
       return data.product;
     } catch (error) {
       console.log(error);
@@ -22,7 +22,7 @@ function ultraMain() {
   }
 
   function apend(m) {
-    console.log("yess");
+    //  console.log("yess");
     datadiv = document.getElementById("showSearchresult");
     m.forEach(({ name, img, price, _id }) => {
       //   let div = document.createElement("div");
@@ -60,7 +60,7 @@ function ultraMain() {
   async function main() {
     let searchItem = document.getElementById("search").value;
     datadiv = document.getElementById("showSearchresult");
-    console.log(searchItem);
+    // console.log(searchItem);
     if (searchItem == "") {
       datadiv.innerHTML = "";
       return;
@@ -71,7 +71,7 @@ function ultraMain() {
     if (searchResults == undefined) {
       return;
     }
-    console.log(searchResults);
+    // console.log(searchResults);
     // console.log("what");
     apend(searchResults);
     localStorage.setItem("searchResultsData", JSON.stringify(searchResults));
@@ -90,7 +90,7 @@ function ultraMain() {
   var timerId;
   function debounce(func, delay) {
     if (timerId) {
-      console.log("------------dobounce waiting-------------");
+      // console.log("------------dobounce waiting-------------");
       clearTimeout(timerId);
     }
 

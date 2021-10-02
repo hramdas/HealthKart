@@ -59,7 +59,7 @@ showProteins(results);
 function showProteins(productDB) {
   div_data.innerHTML = null;
   let ourItem = localStorage.getItem("searchClickedItemId");
-  console.log(ourItem);
+  // console.log(ourItem);
   productDB.forEach(function (product) {
     if (product._id == ourItem) {
       // console.log(product);
