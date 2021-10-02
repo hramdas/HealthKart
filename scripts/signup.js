@@ -18,11 +18,12 @@ e.preventDefault();
     let userData = await allUsers()   //
 
     // Checking mobile number with database
+    var result = false
     for (var i = 0; i < userData.user.length; i++){
         if (userData.user[i].mobile == mobile){
             var result = true
             break;
-        } else result = false
+        }
     }
 
 

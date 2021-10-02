@@ -6,13 +6,9 @@ const mongoose = require("mongoose");
 const userSchema = new mongoose.Schema({
   name: { type: String, require: true },
   mobile: { type: Number, require: true },
-  password: { type: String, require: true },
-  cart: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "product", require: false },
-  ],
-  wishlist: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "product", require: false },
-  ],
+  password: { type: String, require: true }
+}, {
+  versionKey:false,
 });
 
 const User = mongoose.model("user", userSchema);

@@ -7,16 +7,17 @@ router.post("", async(req, res)=>{
     return res.status(201).send({product})
 })
 
-// router.get("", async(req, res)=>{
-//     const product = await Product.find().lean().exec();
-//     return res.status(201).send({product})
-// })
-
 router.get("", async(req, res)=>{
-    const product = await Product.find().lean().exec();
+    const product = await Product.find() //.lean() //.exec();
     return res.status(201).send({product})
    
 })
+
+// router.get("/:id", async(req, res)=>{
+//     const product = await Product.findById(req.params.id) 
+//     return res.status(201).send({product})
+   
+// })
 
 router.get("/popular", async(req, res)=>{
     const product = await Product.find().lean().exec();

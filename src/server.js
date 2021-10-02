@@ -26,6 +26,9 @@ app.use("/tags", tagsController);
 const userController = require("./controller/users");
 app.use("/users", userController);
 
+const cartController = require("./controller/cart");
+app.use("/carts", cartController)
+
 app.listen(2200, async function () {
   await connect();
   console.log("listening on 2200");

@@ -2,9 +2,10 @@
 //post --  sign
 
 const express = require("express");
-const { db } = require("../models/users");
+const cart = require("../models/cart");
 const router = express.Router();
 const User = require("../models/users");
+const Cart = require("../models/cart");
 
 router.post("", async (req, res) => {
   const user = await User.create(req.body);
@@ -16,18 +17,16 @@ router.get("", async (req, res) => {
   return res.status(200).send({ user });
 });
 
-router.get("/cart/:id", async (req, res) => {
-  let user = await User.findById(req.params.id).populate("cart");
-  return res.status(200).send({ user });
-});
+//Get cart items for a user  && add to cart
+router.get("/:id/cart", async (req, res)=>{
+  let items = await Cart.find({user:req.params.id})
+  return res.status(200).send({items})
+})
 
-router.get("/:id", async (req, res) => {
-  let user = await User.findById(req.params.id)
-  return res.status(200).send({ user });
-});
+// get all and Remove from Cart
+router.get("/:id/cartR", async (req, res)=>{
+  let items = await Cart.find({user:req.params.id}).populate("item")
+  return res.status(200).send({items})
+})
 
-// router.patch("/:id", async(req, req)=>{
-//   const user = await User.findByIdAndUpdate()
-// })
-
-module.exports = router;
+module.exports = router; 

@@ -1,27 +1,17 @@
-//user id 6154854612a07358e8d59ce6
-
-
-
-
-
+// Fetch cart data using UserID from Db
+let userID = JSON.parse(localStorage.getItem('HKuser'))
 let cart_data;
 async function cartFetch() {
-  let userID = JSON.parse(localStorage.getItem('HKuser'))
-
   try {
-    //URL for fetch to be upated with dynamic URL with user ID
-    let res = await fetch(
-      'http://localhost:2200/users/cart/'+userID );
+    let res = await fetch("http://localhost:2200/users/"+userID+"/cart/");
     let data = await res.json();
-    cart_data = data.user.cart;
-    Cart_items();
+    cart_data = data.items
+    Cart_items(cart_data );
   } catch (error) {}
-} setTimeout(1000, cartFetch)
+} 
 cartFetch()
 
 
-//let cart_data = JSON.parse(localStorage.getItem("cart"));
-//let data_div = document.querySelector("#cart_data");
 let totalAmount = document.getElementById("totalAmount");
 let proceedToPay = document.getElementById("proceedtopay");
 let cartItem = document.getElementById("cartItem");
@@ -33,49 +23,89 @@ let count = 0;
 let data_div = document.getElementById("cart_data");
 
 let datadiv = document.getElementById("cart_data");
-let total = 0;
 
-function Cart_items() {
-  if(cart_data.length == 0){
+//Append cart data
+function Cart_items(data) {
+
+  var total = 0
+  if(data.length == 0){
     datadiv.innerHTML = '<h2> Cart is empty</h2>'
+    
   } else {
+    data.forEach(function (itemID) {
+      async function itemFetch() {
+        try {
+          let res = await fetch("http://localhost:2200/products/"+itemID.item);
+         
+          let data = await res.json();
+          p = data.product
+          // itemAppend(data.product)
+        } catch (error) {}
 
-    cart_data.forEach(function (product) {
-      let div = document.createElement("div");
-      let divtxt = document.createElement("span");
+        let div = document.createElement("div");
+        let divtxt = document.createElement("span");
 
-      let increment = document.createElement("button");
-      increment.innerHTML = "+";
-      let btn = document.createElement("input");
-      btn.value = 1;
-      let decrement = document.createElement("button");
-      decrement.innerHTML = "-";
+        let m_name = document.createElement("b");
+        m_name.innerText = p.name;
 
-      let m_name = document.createElement("b");
-      m_name.innerText = product.name;
+        let m_price1 = document.createElement("p");
+        m_price1.innerText = "₹ " + p.price;
 
-      let m_price1 = document.createElement("p");
-      m_price1.innerText = "₹ " + product.price;
+        let image = document.createElement("img");
+        image.src = p.img;
 
-      let image = document.createElement("img");
-      image.src = product.img;
+        //Onclick remove item from cart
+        let removeBtn = document.createElement("button")
+        removeBtn.innerHTML = "Remove";
+        removeBtn.onclick = function(){
+          removeCart(itemID)
+        } 
 
-      divtxt.append(m_name, m_price1);
-      div.append(image, divtxt);
-      datadiv.append(div);
+        divtxt.append(m_name, m_price1, removeBtn);
+        div.append(image, divtxt);
+        datadiv.append(div);
 
-      total += Number(product.price);
+        pPrice(p.price);
+        
+      } setTimeout(2000, itemFetch)
+      itemFetch()
+      
     });
+  } 
+
+  //Total price count
+  function pPrice(price){
+    total+= price
+    proceedToPay.innerHTML = `Proceed to Pay ₹ ${total} `;
+    totalAmount.innerHTML = `Final Payable ₹ ${total} `;
   }
 
-  proceedToPay.innerHTML = `Proceed to Pay ₹ ${total} `;
   proceedToPay.addEventListener("click", function () {
     location.href = "checkout.html";
   });
-  totalAmount.innerHTML = `Final Payable ₹ ${total} `;
+
   cartItem.innerHTML = `My Cart(`+ cart_data.length +')';
   pincode.innerHTML = "Pincode";
   coupon.innerHTML = "Apply Code →";
   order.innerHTML = "Order Summery";
   shipping.innerHTML = "Shipping Charges - Free";
+  
+} setTimeout(1000, Cart_items)
+
+// Remove item from cart
+async function removeCart(id){
+
+ 
+  fetch("http://localhost:2200/carts/remove/:id",{
+    "method":"DELETE",
+    "headers" : {
+      "content-type" : "application/json"
+    },
+    "body": JSON.stringify({
+      id:id._id
+    })
+  });
+
+  window.location.href = 'cart.html'
 }
+
