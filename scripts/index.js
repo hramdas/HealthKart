@@ -91,7 +91,6 @@ function showProduct(product) {
 } 
 
 //ADD to cart
-
 //fetch cart item of a user and check items if already added
 
   async function cartItems(p) {
