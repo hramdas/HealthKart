@@ -42,7 +42,7 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 <p>The Landing Page of HealthKart website displays various products, offers and categories.</p>
 <p>In header displays search, login, cart and dropdown menu of pages.</p>
 <p>At the bottom section there is a footer.</p>
-<img src="https://github.com/bhargavkatira/construct-week1/blob/master/source/home.png" alt="Landingpage">
+<img src="https://github.com/hramdas/HealthKart/blob/master/screenshots/Home.png" alt="Landingpage">
 
 - ### Signup page
  we are toring sign-Up details to Database. User can sign up only if the intered details not match with the database.
@@ -52,10 +52,13 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 
 Login authentication using signup database.
 - ### Category page
-<img src="https://github.com/hramdas/HealthKart/blob/master/source/Screenshot%20(245).png" alt="Landingpage">
+<img src="https://github.com/hramdas/HealthKart/blob/master/screenshots/Category%20page.jpg" alt="Landingpage">
 
 - ### Wiishlist
-<img src="https://github.com/hramdas/HealthKart/blob/master/source/Screenshot%20(305).png" alt="Wiishlist">
+<img src="https://github.com/hramdas/HealthKart/blob/master/screenshots/wishlist.png" alt="Wiishlist">
+
+- ### Cart
+<img src="https://github.com/hramdas/HealthKart/blob/master/screenshots/cart.png" alt="cart">
 
 ---
 
