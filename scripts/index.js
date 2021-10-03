@@ -4,6 +4,7 @@
 let count = 0;
 let images = [];
 let time = 2000;
+
 images[0] = "https://img6.hkrtcdn.com/15645/bnr_1564495_o.jpg";
 images[1] = "https://img10.hkrtcdn.com/15640/bnr_1563949_o.jpg";
 images[2] = "https://img6.hkrtcdn.com/15538/bnr_1553705_o.jpg";
@@ -23,6 +24,11 @@ function slidingShows() {
 window.onload = slidingShows;
 
 let userID = JSON.parse(localStorage.getItem("HKuser"));
+//Work n progress..............
+// let loginBtn = document.getElementById('loginBtn')
+// if(userID !== null){
+//   loginBtn.innerHTML = "Logout"
+// }
 
 //Flash sale products fetch
 async function productdata() {
@@ -30,6 +36,7 @@ async function productdata() {
     let res = await fetch("http://localhost:2200/products/flashsale");
     let data = await res.json();
     productDB = data.product;
+
     showProduct(productDB);
   } catch (error) {
     showProduct(error);
@@ -63,6 +70,7 @@ function showProduct(product) {
         m_button.innerHTML = "Added to cart";
         m_button.style.background ='gray'
       }
+
     };
 
     let m_discount = document.createElement("h5");
@@ -70,7 +78,6 @@ function showProduct(product) {
 
     let image = document.createElement("img");
     image.src = products.img;
-
     let m_rating = document.createElement("p");
     m_rating.innerHTML = "★ " + products.rating;
 
@@ -79,9 +86,9 @@ function showProduct(product) {
     div.append(image, m_discount, m_name, m_rating, pricecart);
 
     div_data.append(div);
+
   })
 } 
-
 
 //ADD to cart
 

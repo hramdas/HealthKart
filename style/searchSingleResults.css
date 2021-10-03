@@ -1,0 +1,87 @@
+#content {
+  display: block;
+}
+
+#container {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+#items {
+  width: 50%;
+  margin: auto;
+}
+
+#items {
+  width: 70%;
+  margin: auto;
+  display: block;
+  /* grid-template-columns: 32% 32% 32%;
+  column-gap: 2%;
+  row-gap: 20px; */
+  font-family: roboto, arial, helvetica, sans-serif;
+  font-weight: bold;
+}
+#items > div {
+  background-color: rgb(247, 247, 247);
+  padding: 10px;
+  display: grid;
+  border-radius: 8px;
+}
+#items > div > div:first-of-type {
+  /* background-color: aqua; */
+  margin-top: -40px;
+}
+#items > div:hover {
+  box-shadow: 0px 0px 18px rgba(33, 33, 33, 0.2);
+}
+
+img {
+  width: 100%;
+}
+#items > div > div {
+  /*price_quick*/
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-gap: 8%;
+  /* margin: auto auto; */
+}
+#items > div > div > span {
+  font-size: 18px;
+}
+#items > div > span {
+  /* */
+  font-size: 12px;
+}
+#items p:nth-of-type(1) {
+  /* */
+  font-size: 22px;
+  margin-top: 30px;
+}
+#items > div b {
+  /* Product name */
+  font-size: 25px;
+  font-weight: 600;
+}
+#items button:nth-child(1) {
+  /* float: right; */
+  width: 20px;
+  /* margin: 0 80%; */
+  /* margin-left: 80%; */
+  text-align: right;
+  border: none;
+  background-color: white;
+  font-size: 28px;
+}
+
+#items > div div button {
+  margin-top: 50px;
+  border: 1px solid rgb(0, 148, 148);
+  border-radius: 4px;
+  padding: 2px;
+  font-size: 15px;
+  /* margin-left: 20px; */
+  font-weight: 600;
+  background-color: white;
+  color: rgb(0, 148, 148);
+}

@@ -1,0 +1,14 @@
+#container > div:nth-of-type(2n) {
+  margin-left: 5px;
+}
+#container > div:nth-of-type(1) {
+  width: 100%;
+}
+#container {
+  /* max-width: 1000px; */
+  padding: 5px;
+  display: grid;
+  /* margin-left: 2%; */
+  /* justify-content: space-between; */
+  grid-template-columns: 20% 80%;
+}
