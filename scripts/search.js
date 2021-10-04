@@ -1,4 +1,5 @@
 //code for searching - antony
+document.getElementById("showSearchresult").style.display = "none";
 setTimeout(ultraMain, 1000);
 function ultraMain() {
   let searchInput = document.getElementById("search");
@@ -24,6 +25,7 @@ function ultraMain() {
   function apend(m) {
     //  console.log("yess");
     datadiv = document.getElementById("showSearchresult");
+    document.getElementById("showSearchresult").style.display = "grid";
     m.forEach(({ name, img, price, _id }) => {
       //   let div = document.createElement("div");
       //   let p = document.createElement("p");
@@ -63,6 +65,7 @@ function ultraMain() {
     // console.log(searchItem);
     if (searchItem == "") {
       datadiv.innerHTML = "";
+      document.getElementById("showSearchresult").style.display = "none";
       return;
     }
     let searchResults = await search(searchItem);
