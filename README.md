@@ -62,4 +62,9 @@ Login authentication using signup database.
 
 ---
 
+### Required Modules
+- Express
+- Mongoose
+- Cors
+
 
