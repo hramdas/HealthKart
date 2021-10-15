@@ -1,10 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+require('dotenv').config()
 
 const connect = () => {
   return mongoose.connect(
-    "mongodb+srv://hramdas:Ramdas1998@cluster0.or8t9.mongodb.net/HealthKart?retryWrites=true&w=majority"
+    process.env.DB_URL
   );
 };
 
