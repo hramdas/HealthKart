@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results - HealthKart</title>
+    <link
+      rel="icon"
+      href="https://www.healthkart.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style\sports-nutrition.css" type="text/css" />
+    <link rel="stylesheet" href="style\navbar.css" />
+    <link rel="stylesheet" href="style\searchResults.css" />
+    <link rel="stylesheet" href="style\search.css" />
+
+    <!-- <script src="proteins.js"></script> -->
+  </head>
+  <body>
+    <!-- NAVBAR START -->
+    <div id="navbar"></div>
+    <div id="showSearchresult"></div>
+    <div id="categories"></div>
+    <!-- NAVBAR END -->
+
+    <div class="cont">
+      <!-- <p class="bred">Home  /<span> Sports Nutrition</span></p> -->
+      <div id="container">
+        <div id="left-sidebar">
+          <h3>Categories</h3>
+          <div>
+            <h5>— Proteins</h5>
+            <a href="/">Whey Proteins</a> <br />
+            <a href="/">Beginners Whey Protein</a><br />
+            <a href="/">Whey Protein Isolate</a><br />
+            <a href="/">Raw Whey Proteins</a><br />
+            <a href="/">Plant Proteins</a><br />
+            <a href="/">Protein For Women</a><br />
+            <a href="/">Protein Blends</a><br />
+            <a href="/">Casein Proteins</a><br />
+            <a href="/">Soy Proteins</a>
+          </div>
+          <div id="filters">
+            <h5>— Gainers</h5>
+            <a href="/">Weight Gainers</a> <br />
+            <a href="/">Mass Gainers</a> <br />
+            <a href="/">Herbal Weight</a> <br />
+            <a href="/">Gainers</a>
+          </div>
+          <div>
+            <h5>— Pre/Post Workout</h5>
+            <a href="/">Pre-Workout</a> <br />
+            <a href="/">Creatine</a> <br />
+            <a href="/">BCAAs</a> <br />
+            <a href="/">Carb Blends</a> <br />
+            <a href="/">Electrolytes</a> <br />
+            <a href="/">Nitric Oxide</a> <br />
+            <a href="/">Other Supports</a> <br />
+            <a href="/">Citrulline Malate</a> <br />
+          </div>
+        </div>
+
+        <div id="content">
+          <hr />
+          <div class="trending">
+            <span><b>Sort by:</b></span>
+            <select onchange="sortIn()" name="sortNutri" id="sortNutri">
+              <option value="none">None</option>
+              <option value="rating">Popularity</option>
+              <option value="lhPrice">Price - Low to High</option>
+              <option value="hlPrice">Price - High to Low</option>
+              <option value="lhdisc">Discount - Low to High</option>
+              <option value="hlDisc">Discount - High to Low</option>
+            </select>
+            <hr />
+            <!-- <h2>Trending Now</h2> -->
+            <div id="items"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts\searchResultsShow.js"></script>
+  <script src="scripts\cartcount.js"></script>
+  <script src="scripts\search.js"></script>
+  <script type="module">
+    import { navbar, navbarSec } from "./scripts/navbar.js";
+    let nav = document.getElementById("navbar");
+    let navSec = document.getElementById("categories");
+    nav.innerHTML = navbar();
+    navSec.innerHTML = navbarSec();
+  </script>
+</html>

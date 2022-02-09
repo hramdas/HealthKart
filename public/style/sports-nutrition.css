@@ -1,0 +1,193 @@
+/* Pooja Head */
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+
+/* pooja css -1sr */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    }
+    body{
+    /* width: 100%; */
+    background-color: #f7f7f7;
+
+    }
+    ul li{
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #3c3c3c;
+    }
+    a{
+    text-decoration: none;
+    }
+     h1{
+    font-family: 'Roboto', sans-serif;
+    }
+    h2{
+    font-family: 'Roboto', sans-serif;
+    }
+    p{
+    font-family: 'Roboto', sans-serif;
+        color: #3c3c3c;
+    }
+    .clearDiv{
+    clear: both;
+    }
+
+.cont{
+    padding-top: 10px;
+    margin: auto 8%;
+    /* max-width: 1000px; */
+}
+.bred{
+    font-size: 10px;
+
+    /* margin-top: 0px; */
+}
+.bred span{
+    font-weight: bold;
+}
+#container {
+    /* max-width: 1000px; */
+   padding : 10px;
+    display: flex;
+    /* margin-left: 2%; */
+  justify-content: space-between;
+    /* grid-template-columns: 18% 77%; */
+}
+#left-sidebar > div  > a{
+    font-size: 16px ;
+    color : black;
+    text-decoration: none;
+    /* display : block */
+    margin-left : 5px;
+
+}
+
+#left-sidebar{
+     /* position: sticky; */
+    /* overflow: auto; */
+    position: -webkit-sticky;
+    position: sticky;
+    top : 9%;
+    height: 24vh;
+    width: 50%;
+    /* min-height: 200px; */
+    /* float: left; */
+
+   /* margin-top: 0; */
+}
+
+#left-sidebar > div{
+    margin-top: 10px;
+    padding: 10px;
+    background-color :white;
+}
+
+
+.main-poster{
+    display : grid;
+    grid-template-columns: 63% 35%;
+    grid-gap: 3%;
+    /* margin-bottom: 10px auto; */
+}
+#read-text div{
+    display : grid;
+    grid-template-columns: 50% 24% 24%;
+    margin: 20px auto;
+}
+#read-text p{
+    font-size: 13px;
+}
+#read-text div > span{
+    display : grid;
+    grid-template-columns: 30px 65%;
+    grid-gap: 3%;
+    margin: auto auto;
+    font-size: 15px;
+}
+#read-text img{
+    /* width: 40px; */
+    margin: auto auto;
+    /* width: 100%; */
+    /* height: 0%; */
+}
+
+hr{
+    border: .5px solid rgb(218, 217, 217);
+    margin: 15px auto;
+}
+.trending h2{
+    font-size:24px;
+    font-weight: 400;
+    margin: 15px auto;
+}
+
+#sortNutri{
+    font-size: 16px;
+    padding: 3px;
+}
+#items {
+    width: 100%;
+    display : grid;
+    grid-template-columns :32% 32% 32%;
+    column-gap: 2%;
+    row-gap: 20px;
+    font-family: roboto, arial, helvetica, sans-serif;
+    font-weight: bold;
+
+}
+#items > div{
+    background-color: white;
+    padding: 10px;
+    display : grid;
+    border-radius:  8px;
+}
+
+#items > div:hover {
+    box-shadow: 0px 0px 18px rgba(33,33,33,.2);
+  }
+
+img{
+    width: 100%;
+}
+#items > div >div {   /*price_quick*/
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 8%;
+    /* margin: auto auto; */
+}
+#items > div >div > span {
+    font-size: 18px;
+}
+#items > div > span {  /* */
+    font-size: 12px
+
+}
+#items > div > b {   /* Product name */
+    font-size: 15px;
+    font-weight: 590;
+}
+#items   button:nth-child(1){
+    float: right;
+    width: 20px;
+    /* margin: 0 80%; */
+    margin-left: 80% ;
+    text-align: right;
+    border : none;
+    background-color : white;
+    font-size: 28px;
+}
+
+#items > div div button{
+    border: 1px solid  rgb(0, 148, 148);
+    border-radius: 4px;
+    padding: 2px;
+    font-size: 15px;
+    font-weight:600;
+    background-color: white;
+    color: rgb(0, 148, 148);
+
+}

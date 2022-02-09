@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login </title>
+    <link rel="stylesheet" href="../style/login.css">
+</head>
+
+<body>
+    <div id="login">
+        <div class="container">
+            <div class="leftSidePopUp">
+                <div class="whySide">
+                    <h2>Why login?</h2>
+                    <p> <img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt=""> Manage your orders</p>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Get exclusive deals and
+                        offers</p>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Personalized
+                        Recommendations</p>
+                </div>
+            </div>
+            <div class="rightSidePopUp">
+                <div class="loginPage">
+                    <h1 id="timeBar">&times</h1>
+                    <div class="userPanel">
+                        <h3 id="loginH3"><a href="login.html">Login</a></h3>
+                        <h3 id="signup"><a class="singup" href="signup.html">Signup</a></h3>
+                        <div class="animation hover"></div>
+                    </div>
+                    <form action="" id="loginForm" onsubmit="loginForm(event)">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" name="mobile" id="mobile" placeholder="Enter Mobile Number" required>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter Password">
+                        <a href="#" class="passwordForget">Forget Password</a>
+                        <a href="#" class="passwordForget">Login Password</a>
+                        <button id="btn">Login</button>
+                    </form>
+                    <div class="lines">
+                        <div class="oneline"></div>
+                        <p id="or">or</p>
+                        <div class="twoline"></div>
+                    </div>
+                    <div class="socialink">
+                        
+                        <a href="https://accounts.google.com/" id="social"><img src="https://symbols.getvecta.com/stencil_82/45_google-icon.d8d982f8a1.svg" alt=""> Google</a>
+                        <a href="https://www.facebook.com/" id="social"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" alt=""> Facebook</a>
+                    </div>
+                    <div class="hr"></div>
+                    <p id="pTaglast">By logging in you agree to our <a href="#">Terms & Conditions</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/login.js"></script>
+</body>
+
+</html>

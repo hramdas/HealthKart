@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Powder Online in India at Best Price - HealthKart</title>
+    <link rel="icon" href="https://www.healthkart.com/favicon.ico" type="image/x-icon"> 
+
+    <link rel="stylesheet" href="./style/flashsale.css" type="text/css">
+    <link rel="stylesheet" href="style\navbar.css">
+    
+    <!-- <script src="proteins.js"></script> -->
+</head>
+<body >
+    <!-- NAVBAR START -->
+ <div id="navbar"></div>
+<div id="categories"></div>
+
+    <!-- NAVBAR END -->
+
+    <div class="cont">
+        
+        <div id="container">
+            <div id="left-sidebar">
+                <h2>Browse By</h2>
+                <br>
+                <div id="categories"> 
+                    <div>
+                        <h3>Categories</h3>
+                    </div>
+                    <div id="catitem">
+                        <h5>Whey Proteins</h5> 
+                        <h5>Meal Replacement</h5>
+                        <h5>Mass Gainers</h5>
+                        <h5>Whey Proteins</h5>
+                        <h5>Penaut Butter</h5>
+                        <h5>Other Snakes</h5>
+                        <h5>Moisturizer</h5>
+                        <h5>Oats</h5>
+                        <h5>Biotin</h5>
+                        <h5>Multivitamins</h5>
+                        <h5>MIlk Thistle</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="maincont">
+                <div>
+                    <img src="https://img2.hkrtcdn.com/react/static/media/common/flash/flash-sale.webp" alt="">
+                    <div id="read-text">
+                        <h3>Healthkart Flash Sale & Deals</h3>
+                    </div>
+                </div>
+
+                <hr />
+                <div id="items"></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+<script type="module">
+import {navbar , navbarSec} from "./scripts/navbar.js";
+let nav = document.getElementById('navbar');
+let navSec = document.getElementById('categories');
+ nav.innerHTML = navbar();
+navSec.innerHTML = navbarSec();
+</script>
+<script src="scripts\flashsale.js"></script>
+<script src="scripts\cartcount.js"></script>

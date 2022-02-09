@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Results - HealthKart</title>
+    <link
+      rel="icon"
+      href="https://www.healthkart.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style\sports-nutrition.css" type="text/css" />
+    <link rel="stylesheet" href="style\navbar.css" />
+    <link rel="stylesheet" href="style\searchResults.css" />
+    <link rel="stylesheet" href="style\searchSingleResults.css" />
+    <link rel="stylesheet" href="style\search.css" />
+
+    <!-- <script src="proteins.js"></script> -->
+  </head>
+  <body>
+    <!-- NAVBAR START -->
+    <div id="navbar"></div>
+    <div id="showSearchresult"></div>
+    <div id="categories"></div>
+    <!-- NAVBAR END -->
+
+    <div class="cont">
+      <!-- <p class="bred">Home  /<span> Sports Nutrition</span></p> -->
+      <div id="container">
+        <div id="content">
+          <!-- <hr /> -->
+          <div class="trending">
+            <!-- <span><b>Sort by:</b></span>
+            <select onchange="sortIn()" name="sortNutri" id="sortNutri">
+              <option value="none">None</option>
+              <option value="rating">Popularity</option>
+              <option value="lhPrice">Price - Low to High</option>
+              <option value="hlPrice">Price - High to Low</option>
+              <option value="lhdisc">Discount - Low to High</option>
+              <option value="hlDisc">Discount - High to Low</option>
+            </select> -->
+            <hr />
+            <!-- <h2>Trending Now</h2> -->
+            <div id="items"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts\searchSingleResultsShow.js"></script>
+  <script src="scripts\cartcount.js"></script>
+  <script src="scripts\search.js"></script>
+  <script type="module">
+    import { navbar, navbarSec } from "./scripts/navbar.js";
+    let nav = document.getElementById("navbar");
+    let navSec = document.getElementById("categories");
+    nav.innerHTML = navbar();
+    navSec.innerHTML = navbarSec();
+  </script>
+</html>

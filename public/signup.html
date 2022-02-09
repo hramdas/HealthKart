@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up </title>
+    <link rel="stylesheet" href="../style/signup.css">
+</head>
+
+<body>
+    <div id="login">
+        <div class="container">
+            <div class="leftSidePopUp">
+                <div class="whySide">
+                    <h2>Why Sign Up?</h2>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Over 1.5 million satisfied
+                        customers</p>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Earn HK cash on every
+                        order</p>
+                    <p><img src="https://img6.hkrtcdn.com/react/static/media/signupFlow/white-bg-tick.svg" alt="">Get personal fitness
+                        expert advice</p>
+                </div>
+            </div>
+            <div class="rightSidePopUp">
+                <div class="loginPage">
+                    <h1 id="timeBar">&times</h1>
+                    <div class="userPanel">
+                        <h3><a href="login.html">Login</a></h3>
+                        <h3 id="signup"><a href="signup.html">Signup</a></h3>
+                    </div>
+                    
+                    <form  id="loginForm" onsubmit="formSubmit(event)">
+                        <label for="name">Full Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter Your Full Name" required>
+                        <label for="mobile">Mobile Number</label>
+                        <input type="text" name="mobile" id="mobile" placeholder="Enter 10 digit no." required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" autocomplete="on" required>
+                        <label for="password">Re-Enter Password</label>
+                        <input type="password" id="rePassword" placeholder="Re-Enter Password" autocomplete="on" required>
+                        <button id="btn" >Sign Up</button>
+                    </form>
+
+                    <div class="lines">
+                        <div class="oneline"></div>
+                        <p id="or">or</p>
+                        <div class="twoline"></div>
+                    </div>
+                    <div class="socialink">
+                        <a href="https://accounts.google.com/" id="social"><img src="https://symbols.getvecta.com/stencil_82/45_google-icon.d8d982f8a1.svg" alt=""> Google</a>
+                        <a href="https://www.facebook.com/" id="social"><img src="https://image.flaticon.com/icons/png/512/124/124010.png" alt=""> Facebook</a>
+                    </div>
+                    <div class="hr"></div>
+                    <p id="pTaglast">By logging in you agree to our <a href="#">Terms & Conditions</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<script src="../scripts/signup.js"></script>
+</html>

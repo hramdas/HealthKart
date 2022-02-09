@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+
+/* pooja css -1sr */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#login {
+    background-image: url('https://images.unsplash.com/photo-1599447332412-6bc6830c815a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 89vh;
+    background-attachment: fixed;
+    margin: auto;
+    padding: 5% 0px;
+}
+    /* pooja css -1sr */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+    #login {
+        background-image: url('https://images.unsplash.com/photo-1599447332412-6bc6830c815a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fGV4ZXJjaXNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* width: 100%; */
+        /* height: 800vh; */
+        background-attachment: fixed;
+        padding: 5% 0px;
+        /* margin: auto; */
+        display: flex;
+        align-items:center;
+        justify-content: center
+    }
+
+    #login .container {
+        width: 700px;
+        height: 600px;
+        background-color: burlywood;
+        /* margin-left: 450px; */
+        /* position: fixed; */
+        display: flex;
+    }
+
+#login .container {
+    width: 700px;
+    height: 600px;
+    /* background-color: burlywood; */
+    display: flex;
+    margin: auto;
+}
+
+.leftSidePopUp {
+    width: 250px;
+    background-color: cadetblue;
+    padding: 1rem;
+}
+
+.leftSidePopUp .whySide {
+    margin: 10px 5px;
+    color: whitesmoke;
+}
+
+.leftSidePopUp .whySide h2 {
+    margin: 15px 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.leftSidePopUp .whySide p {
+    margin: 10px 10px;
+    font-size: 17px;
+}
+
+.rightSidePopUp {
+    background-color: #f7f7f7;
+    width: 450px;
+}
+
+.rightSidePopUp .loginPage {
+    margin: 10px 5px;
+}
+
+.rightSidePopUp .loginPage h1 {
+    float: right;
+}
+
+.rightSidePopUp .loginPage #timeBar {
+    cursor: pointer;
+    color: #00afae;
+}
+
+.rightSidePopUp .loginPage .userPanel {
+    display: flex;
+    color: rgb(112, 109, 109);
+}
+
+.rightSidePopUp .loginPage h3 {
+    margin: 20px 10px;
+    font-size: 20px;
+}
+
+.rightSidePopUp .loginPage h3 a {
+    text-decoration: none;
+    color: #00afae;
+}
+
+.loginPage #signup a {
+    border-bottom: 3px solid #00afae;
+}
+
+.rightSidePopUp .loginPage label {
+    margin: 5px 35px;
+    color: rgb(112, 109, 109);
+    font-size: 20px;
+}
+
+.rightSidePopUp .loginPage input {
+    width: 300px;
+    height: 25px;
+    margin: 3px 35px;
+    padding: 8px 20px;
+    outline: none;
+}
+
+.rightSidePopUp .loginPage #btn {
+    width: 343px;
+    height: 45px;
+    margin: 15px 35px;
+    text-transform: uppercase;
+    font-size: 20px;
+    background-color: #00afae;
+    border: 1px solid #00c2c1;
+    color: #f7f7f7;
+    cursor: pointer;
+}
+
+.rightSidePopUp .loginPage #or {
+    margin: 0px 5px;
+    font-size: 20px;
+}
+
+.loginPage .lines {
+    margin: 3px 35px;
+    display: flex;
+    color: rgb(112, 109, 109);
+}
+
+.rightSidePopUp .loginPage .oneline {
+    border-bottom: 1px solid rgb(112, 109, 109);
+    width: 160px;
+    margin-bottom: 7px;
+}
+
+.rightSidePopUp .loginPage .twoline {
+    border-bottom: 1px solid rgb(112, 109, 109);
+    width: 160px;
+    margin-bottom: 7px;
+}
+
+.rightSidePopUp .loginPage #social {
+    border: 1px solid rgb(112, 109, 109);
+    padding: 8px 18px;
+    width: 80px;
+    margin: 0px 35px;
+    text-decoration: none;
+    color: rgb(112, 109, 109);
+}
+
+.socialink {
+    margin: 20px 0px;
+}
+
+.hr {
+    border-bottom: 1px solid rgb(112, 109, 109);
+    padding: 1px 0px;
+    margin: 10px 35px;
+}
+
+.rightSidePopUp .loginPage #pTaglast {
+    margin: 10px 35px;
+    padding: 10px 0px;
+    color: rgb(112, 109, 109);
+    font-size: 15px;
+}
+
+#social img {
+    width: 15px;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+    #login {
+        height: 90vh;
+        width: 100%;
+    }
+    #login .container {
+        width: 400px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    .leftSidePopUp {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #login {
+        width: 120%;
+        height: 200vh;
+    }
+    #login .container {
+        width: 100px;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    .rightSidePopUp {
+        width: 450px;
+    }
+}

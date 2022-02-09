@@ -1,0 +1,141 @@
+/* 
+
+
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+
+/* pooja css -1sr */
+*{
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+}
+body{
+/* width: 100%; */
+background-color: #f7f7f7;
+
+}
+ul li{
+list-style: none;
+font-family: 'Source Sans Pro', sans-serif;
+color: #3c3c3c;
+}
+a{
+text-decoration: none;
+}
+ h1{
+font-family: 'Roboto', sans-serif;
+}
+h2{
+font-family: 'Roboto', sans-serif;
+}
+p{
+font-family: 'Roboto', sans-serif;
+    color: #3c3c3c;
+}
+#navbar{
+box-sizing: border-box;
+height: 70px;
+background-color:white ;
+width: 100%;
+border-bottom: 1px solid #d3cfcf;
+}
+#navbar .container{
+/* border: 1px solid red; */
+width: 50%;
+display: flex;
+margin-left: 400px;
+}
+#navbar .container .logo img {
+/* border: 1px solid red; */
+width: 200px;
+height: 50px;
+margin-top: 10px;
+}
+#navbar .process{
+display: flex;
+}
+#navbar .process img{
+width: 15px;
+}
+#navbar .process p{
+margin: 26px 5px;
+text-transform: uppercase;
+font-size: 12px;
+}
+#navbar .process .cartline{
+margin:32px 5px;
+width: 120px;
+height: 1px;
+background-color:  #5e5d5d;
+}
+
+/* form  */
+
+body  h2{
+    /* border: 1px solid red; */
+        opacity: 0.9;
+        width: 30%;
+        margin: auto;
+        text-align: center;
+        margin: 50PX auto;
+    
+    } 
+
+    #checkout{
+        /* border: 1px solid red; */
+         width: 35%;
+        height: 400px;
+        margin: auto auto;
+        /* margin: 20px; */
+        padding: 20px;
+        box-shadow: 0px 0px 18px rgba(33,33,33,.2);
+      } 
+      form{
+        display: grid;
+        /* width: 40%; */
+        /* max-width: 300px; */
+        grid-gap: 5%;
+        align-items: center;
+        margin: auto auto;
+        justify-content: center;
+        }
+
+        input{
+        font-size: 18px;
+        padding: 5px;
+        border-width:0px;
+        border:none;
+        outline:none;
+        opacity: 0.8;
+        /* box-shadow: 0px 0px 18px rgba(0,194,193,.2);  */
+        border: 0.1em solid rgba(64, 70, 70, 0.2);
+        border:  0.1em solid  rgba(33,33,33,.2);
+        border-radius: 2px;
+        }
+         
+        #btn{
+            background-color: rgb(204, 218, 218);
+            color: white;
+            border-radius: 2px;
+            border: none;
+            color: rgb(32, 50, 51);
+            cursor: pointer;
+        }
+        input, select {
+            font-size: 18px;
+            padding: 5px;
+        }
+        
+        select{
+            opacity: 0.8;
+            color: #5e5d5d;
+            border:  0.1em solid  rgba(33,33,33,.2);
+        }
+       
+        #btn:hover{
+            color: white;
+            background-color:  #00c2c1;
+        } 
