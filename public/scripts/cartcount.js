@@ -15,7 +15,9 @@ if (user == null) {
       if (user == null) {
         return;
       }
-      let res = await fetch(`http://localhost:2200/users/${user}/cart/`);
+      let res = await fetch(
+        `https://health-kart.herokuapp.com/users/${user}/cart/`
+      );
       let data = await res.json();
       // console.log(data);
       let cart_data = data.items;

@@ -4,16 +4,14 @@ setTimeout(ultraMain, 1000);
 function ultraMain() {
   let searchInput = document.getElementById("search");
   searchInput.oninput = () => {
-    //   if (name == "") {
-    //     console.log("emmmmmmpppppptyyyyyyyyyyyyyyyy");
-    //     window.location.href = "index.html";
-    //   }
     debounce(main, 1000);
   };
 
   async function search(n) {
     try {
-      var res = await fetch(`http://localhost:2200/products/search/${n}`);
+      var res = await fetch(
+        `https://health-kart.herokuapp.com/products/search/${n}`
+      );
       data = await res.json();
       // console.log(data);
       return data.product;
@@ -27,11 +25,6 @@ function ultraMain() {
     datadiv = document.getElementById("showSearchresult");
     document.getElementById("showSearchresult").style.display = "grid";
     m.forEach(({ name, img, price, _id }) => {
-      //   let div = document.createElement("div");
-      //   let p = document.createElement("p");
-      //   p.innerHTML = name;
-      //   p.addEventListener("click", () => {
-      //   });
       let div = document.createElement("div");
       let maindiv = document.createElement("div");
       let divtxt = document.createElement("span");

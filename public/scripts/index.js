@@ -1,5 +1,3 @@
-
-
 //Image slider
 let count = 0;
 let images = [];
@@ -33,7 +31,9 @@ let userID = JSON.parse(localStorage.getItem("HKuser"));
 //Flash sale products fetch
 async function productdata() {
   try {
-    let res = await fetch("http://localhost:2200/products/flashsale");
+    let res = await fetch(
+      `https://health-kart.herokuapp.com/products/flashsale`
+    );
     let data = await res.json();
     productDB = data.product;
 
@@ -41,7 +41,7 @@ async function productdata() {
   } catch (error) {
     showProduct(error);
   }
-} 
+}
 productdata();
 
 //Append flash sale on index page
@@ -68,9 +68,8 @@ function showProduct(product) {
       } else {
         cartItems(products._id);
         m_button.innerHTML = "Added to cart";
-        m_button.style.background ='gray'
+        m_button.style.background = "gray";
       }
-
     };
 
     let m_discount = document.createElement("h5");
@@ -86,49 +85,51 @@ function showProduct(product) {
     div.append(image, m_discount, m_name, m_rating, pricecart);
 
     div_data.append(div);
-
-  })
-} 
+  });
+}
 
 //ADD to cart
 //fetch cart item of a user and check items if already added
 
-  async function cartItems(p) {
-    let res = await fetch("http://localhost:2200/users/" + userID + "/cart/");
-    let cartData = await res.json();
+async function cartItems(p) {
+  let res = await fetch(
+    "https://health-kart.herokuapp.com/users/" + userID + "/cart/"
+  );
+  let cartData = await res.json();
 
-    let items = cartData.items;
+  let items = cartData.items;
+  var result = false;
+  if (items.length == 0) {
     var result = false;
-    if (items.length == 0) {
-      var result = false;
-    } else {
-      for (var i = 0; i < items.length; i++) {
-        if (items[i].item == p) {
-          var result = true;
-          alert("Product already available in cart")
-          break;
-        }
+  } else {
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].item == p) {
+        var result = true;
+        alert("Product already available in cart");
+        break;
       }
     }
-    // else add item to cart
-    if (result == false) {
-      addtocart(p);
-    }
   }
+  // else add item to cart
+  if (result == false) {
+    addtocart(p);
+  }
+}
 
 function addtocart(p) {
-    fetch("http://localhost:2200/carts", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        item: p,
-        user: userID,
-      }),
-    }).then((response) => response.json());
-} setTimeout(500, addtocart);
+  fetch("https://health-kart.herokuapp.com/carts", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      item: p,
+      user: userID,
+    }),
+  }).then((response) => response.json());
+}
+setTimeout(500, addtocart);
 
 function function1() {
   alert("subscribed successfully");

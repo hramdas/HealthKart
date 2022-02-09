@@ -81,10 +81,7 @@ function navbarSec() {
                 </div>
             </div>
         </div>
-    </div>
-
-
-           `;
+    </div>`;
 }
 
 export { navbar, navbarSec };
