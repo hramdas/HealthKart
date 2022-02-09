@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
+const port = process.env.PORT || 2200;
 
 const connect = () => {
   return mongoose.connect(process.env.DB_URL);
@@ -27,7 +28,7 @@ app.use("/carts", cartController);
 const wishController = require("./src/controller/wishlist");
 app.use("/wishlists", wishController);
 
-app.listen(2200, async function () {
+app.listen(port, async function () {
   await connect();
   console.log("listening on 2200");
 });
