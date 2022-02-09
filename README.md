@@ -4,15 +4,17 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 ---
 
 ## Tech Stack Used
+
 <ul>
-<li>HTML</li>
+  <li>HTML</li>
   <li>CSS</li>
   <li>JavaScript</li>
   <li>MongoDB</li>
-  <li>Express</li>
+  <li>Express</li>  
 </ul>
 
 ---
+
 ## Team Members
 
 - **[Ramdas Hedgapure](https://github.com/hramdas)**
@@ -20,6 +22,7 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 - **[Antony Chacko](https://github.com/tonyPooyappallil)**
 
 ## Pages and Features
+
 - `Home Page`: Carousel Slider
 - `Sign-Up Page`: Sign-Up details stored to Database.
 - `Sign-In Page`: Sign-In details authentication to check whether user's mobile number and password match with the database.
@@ -43,16 +46,20 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 <img src="https://github.com/hramdas/HealthKart/blob/master/screenshots/Home.png" alt="Landingpage">
 
 - ### Signup page
- we are toring sign-Up details to Database. User can sign up only if the intered details not match with the database.
-<img src="https://github.com/bhargavkatira/construct-week1/blob/master/source/Screenshot%20(241)%20(1).png" alt="Landingpage">
+
+  we are toring sign-Up details to Database. User can sign up only if the intered details not match with the database.
+  <img src="https://github.com/bhargavkatira/construct-week1/blob/master/source/Screenshot%20(241)%20(1).png" alt="Landingpage">
 
 - - ### Login page
 
 Login authentication using signup database.
+
 - ### Category page
+
 <img src="https://github.com/hramdas/HealthKart/blob/master/screenshots/Category%20page.jpg" alt="Landingpage">
 
 - ### Wiishlist
+
 <img src="https://github.com/hramdas/HealthKart/blob/master/screenshots/wishlist.png" alt="Wiishlist">
 
 - ### Cart
@@ -61,8 +68,8 @@ Login authentication using signup database.
 ---
 
 ### Required Modules
+
 - Express
 - Mongoose
 - Cors
-
-
+- Nodemon
