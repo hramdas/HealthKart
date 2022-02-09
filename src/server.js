@@ -1,21 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-require('dotenv').config()
+require("dotenv").config();
 
 const connect = () => {
-  return mongoose.connect(
-    process.env.DB_URL
-  );
+  return mongoose.connect(process.env.DB_URL);
 };
-
-// mongodb+srv://hramdas:<password>@cluster0.or8t9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 const app = express();
 
 app.use(express.json());
-// app.use(express.urlencoded());
 app.use(cors());
+
+app.get("/", async (req, res) => {
+  return res.status(200).send("Server is Running");
+});
 
 const productController = require("./controller/products");
 app.use("/products", productController);

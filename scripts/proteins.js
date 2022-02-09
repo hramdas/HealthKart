@@ -17,6 +17,7 @@ async function productData(valueIN) {
     // console.log(valueIN)
 
     //fetchURl = 'http://localhost:2200/products'
+    
     if (valueIN == 'none') {
         fetchURL = 'http://localhost:2200/products'
     } else if (valueIN == 'rating') {

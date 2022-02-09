@@ -81,6 +81,7 @@ function showProteins(productDB) {
 
       let quick_btn = document.createElement("button");
       quick_btn.innerText = "🗲Quick Buy";
+      
       quick_btn.onclick = function () {
         location.href = "checkout.html";
       };

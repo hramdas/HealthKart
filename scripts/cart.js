@@ -3,7 +3,7 @@ let userID = JSON.parse(localStorage.getItem('HKuser'))
 let cart_data;
 async function cartFetch() {
   try {
-    let res = await fetch("http://localhost:2200/users/"+userID+"/cart/");
+    let res = await fetch("/users/"+userID+"/cart/");
     let data = await res.json();
     cart_data = data.items
     Cart_items(cart_data );

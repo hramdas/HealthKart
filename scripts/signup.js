@@ -26,7 +26,6 @@ e.preventDefault();
         }
     }
 
-
     if (result == true){   //if Mobile present in data
         alert("User already registered")
     } else if (password !== rePassword ) {  // Enter Same password 2 times check
