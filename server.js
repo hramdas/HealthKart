@@ -1,39 +1,9 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
+const app = require("./src/index");
+const connect = require("./src/configs/db");
 require("dotenv").config();
 const port = process.env.PORT || 2200;
 
-const connect = () => {
-  return mongoose.connect(
-    "mongodb+srv://hramdas:Ramdas1998@cluster0.or8t9.mongodb.net/HealthKart"
-  );
-};
-
-const app = express();
-
-app.use(express.json());
-app.use(cors());
-app.get("/", async (req, res) => {
-  res.status(200).send("Server renning");
-});
-
-const productController = require("./src/controller/products");
-app.use("/products", productController);
-
-const tagsController = require("./src/controller/tags");
-app.use("/tags", tagsController);
-
-const userController = require("./src/controller/users");
-app.use("/users", userController);
-
-const cartController = require("./src/controller/cart");
-app.use("/carts", cartController);
-
-const wishController = require("./src/controller/wishlist");
-app.use("/wishlists", wishController);
-
-app.listen(port, async function () {
+app.listen(port, async () => {
   await connect();
   console.log("listening on 2200");
 });
