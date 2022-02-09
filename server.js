@@ -14,6 +14,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.get("/", async (req, res) => {
+  res.status(200).send("Server renning");
+});
 
 const productController = require("./src/controller/products");
 app.use("/products", productController);
