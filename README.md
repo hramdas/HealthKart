@@ -16,10 +16,8 @@ It's an E-Commerce website clone which sells wellness and fitness needs.
 ## Team Members
 
 - **[Ramdas Hedgapure](https://github.com/hramdas)**
-- **[Bhargav Katira](https://github.com/bhargavkatira)**
 - **[Pooja Sankhala](https://github.com/Pooja9783)**
 - **[Antony Chacko](https://github.com/tonyPooyappallil)**
-- **[Srinivas Gokarla](https://github.com/srinu217)**
 
 ## Pages and Features
 - `Home Page`: Carousel Slider
