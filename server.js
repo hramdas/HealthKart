@@ -5,7 +5,9 @@ require("dotenv").config();
 const port = process.env.PORT || 2200;
 
 const connect = () => {
-  return mongoose.connect(process.env.DB_URL);
+  return mongoose.connect(
+    "mongodb+srv://hramdas:Ramdas1998@cluster0.or8t9.mongodb.net/HealthKart"
+  );
 };
 
 const app = express();
