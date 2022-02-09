@@ -6,7 +6,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", async (req, res) => {
-  res.status(200).send("Server renning");
+  res.status(200).send("Server Running");
 });
 
 const productController = require("./controller/products");
