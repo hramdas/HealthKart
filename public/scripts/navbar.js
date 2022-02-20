@@ -2,7 +2,7 @@ function navbar() {
   return `
         <div class="container">
             <div class="logo">
-            <a href="/index.html"><img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
+            <a href="/"><img src="https://www.sofinagroup.com/wp-content/uploads/2019/07/Healthkart-transparent-logo.png"
                     alt="">
             </div>
             <form id="searchForm" action="">
@@ -50,24 +50,24 @@ function navbarSec() {
   return `        <div class="container">
             <ul id="catLinks">
                 <li>
-                    <a href="#">Category</a>
+                    <a href="sports-nutrition.html">Category</a>
                     <ul class="dropdown">
                         <li id="li"><a href="sports-nutrition.html">Sports Nutrition</a></li>
-                        <li id="li">Vitamins & Supplements</li>
-                        <li id="li">Ayurveda & Herbs</li>
-                        <li id="li">Health Food & Drinks</li>
-                        <li id="li">Fitness</li>
-                        <li id="li">Wellness</li>
-                        <li id="li">Service Program</li>
+                        <li id="li"><a href="sports-nutrition.html">Vitamins & Supplements</a></li>
+                        <li id="li"><a href="sports-nutrition.html">Ayurveda & Herbs</a></li>
+                        <li id="li"><a href="sports-nutrition.html">Health Food & Drinks</a></li>
+                        <li id="li"><a href="sports-nutrition.html">Fitness</a></li></a>
+                        <li id="li"><a href="sports-nutrition.html">Wellness</a></li>
+                        <li id="li"><a href="sports-nutrition.html">Service Program</a></li>
                     </ul>
                 </li>
-                <li>Brand</li>
-                <li>Gender</li>
-                <li>Goal</li>
-                <li>Bestsellers</li>
-                <li>Deals</li>
-                <li>Gift Cart</li>
-                <li>Blog, Videos & More</li>
+                <li><a href="sports-nutrition.html"> Brand</a></li>
+                <li><a href="sports-nutrition.html">Gender</a></li>
+                <li><a href="sports-nutrition.html">Goal</a></li>
+                <li><a href="flashsale.html">Bestsellers</a></li>
+                <li><a href="flashsale.html">Deals</a></li>
+                <li><a href="sports-nutrition.html">Gift Cart</a></li>
+                <li><a href="sports-nutrition.html">Blog, Videos & More</a></li>
             </ul>
             <!-- <div class="rightSideContaint"></div> -->
             <div class="rightPart">
