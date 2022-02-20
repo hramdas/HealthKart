@@ -3,7 +3,7 @@ async function loginForm(e) {
 
   // getting all users data for verification
   async function allUsers() {
-    let res = await fetch("/users");
+    let res = await fetch("https://health-kart.herokuapp.com/users");
     let data = await res.json();
     //alluser = data.user
     return data;
