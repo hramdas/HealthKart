@@ -3,7 +3,9 @@ let userID = JSON.parse(localStorage.getItem("HKuser"));
 let cart_data;
 async function cartFetch() {
   try {
-    let res = await fetch("/users/" + userID + "/cart/");
+    let res = await fetch(
+      "https://health-kart.herokuapp.com/users/" + userID + "/cart/"
+    );
     let data = await res.json();
     cart_data = data.items;
     Cart_items(cart_data);
