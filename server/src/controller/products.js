@@ -7,25 +7,23 @@ router.post("", async (req, res) => {
   return res.status(201).send({ product });
 });
 
-router.get("", async(req, res)=>{
-    const product = await Product.find() //.lean() //.exec();
-    return res.status(201).send({product})
-   
-})
+router.get("", async (req, res) => {
+  const product = await Product.find(); //.lean() //.exec();
+  return res.status(201).send({ product });
+});
 
-router.get("/item/:id", async(req, res)=>{
-    const product = await Product.findById(req.params.id) 
-    return res.status(201).send({product}) 
-})
+router.get("/item/:id", async (req, res) => {
+  const product = await Product.findById(req.params.id);
+  return res.status(201).send({ product });
+});
 
-router.get("/popular", async(req, res)=>{
-    const product = await Product.find().lean().exec();
-    product.sort((a,b)=>{
-        return b.rating - a.rating
-    })
-    return res.status(201).send({product})
-})
-
+router.get("/popular", async (req, res) => {
+  const product = await Product.find().lean().exec();
+  product.sort((a, b) => {
+    return b.rating - a.rating;
+  });
+  return res.status(201).send({ product });
+});
 
 router.get("/flashsale", async (req, res) => {
   const product = await Product.find().limit(10).lean().exec();
@@ -87,7 +85,6 @@ router.get("/search/:searchItem", async (req, res) => {
       product.push(element);
     }
   });
-
   return res.status(201).send({ product });
 });
 module.exports = router;
